@@ -1,0 +1,79 @@
+# assumptions/case-01.toml — every forward-looking number the model uses.
+#
+# Rule: no company-specific constant may live in src/pcd/model.py. Gate G10 fails
+# the build if a ticker literal appears there. This file is the only place an
+# analyst judgement enters the pipeline, which is what makes the judgement
+# reviewable, diffable in Git, and separable from arithmetic.
+#
+# Each assumption carries `basis`: what it is anchored on. `basis_metric` points at
+# a computed metric so the basis is checkable rather than rhetorical.
+
+[meta]
+case_id        = "case-01"
+version        = "assumptions-2026.04"
+prepared_by    = "Christian (analyst of record)"
+prepared_at    = "2026-05-04"
+forecast_years = [2026, 2027, 2028]
+note           = "Anchored on FY2022-FY2025 reported results in data/frozen/case-01. No market price is used."
+
+[discounting]
+risk_free          = 0.042
+equity_risk_premium = 0.050
+terminal_growth    = 0.025
+basis = "risk-free is the 10-year Treasury yield as of the cutoff; ERP is a long-run assumption; "
+basis_more = "terminal growth is below the risk-free rate, so terminal value is not doing the work."
+
+[sensitivity]
+ke_delta   = [-0.01, 0.0, 0.01]
+g_delta    = [-0.005, 0.0, 0.005]
+
+# --------------------------------------------------------------------------- V
+[V]
+beta            = 0.95
+growth          = [0.090, 0.080, 0.070]
+fcf_margin      = [0.530, 0.530, 0.530]
+basis_growth    = "FY2022-FY2025 revenue CAGR; three-year path decays toward terminal growth"
+basis_fcf_margin = "FY2025 realised FCF margin held flat: no announced margin programme in the frozen sources"
+basis_beta      = "analyst judgement; a licensed beta series is out of scope for this case"
+# V does not tag diluted shares or diluted EPS in XBRL at or before the cutoff.
+# The per-share value is therefore withheld, not estimated. An analyst may attest a
+# share count from the 10-K cover page; see docs/DESIGN_NOTE.md section 2.6.
+share_count_override = { value = 0, attested_by = "", attested_at = "", source = "" }
+
+# -------------------------------------------------------------------------- MA
+[MA]
+beta            = 1.05
+growth          = [0.120, 0.110, 0.100]
+fcf_margin      = [0.520, 0.520, 0.520]
+basis_growth    = "FY2022-FY2025 revenue CAGR of 13.8%; the path assumes two years of deceleration"
+basis_fcf_margin = "FY2025 realised FCF margin; Mastercard's mix is stable across the frozen window"
+basis_beta      = "analyst judgement; a licensed beta series is out of scope for this case"
+
+# ------------------------------------------------------------------------ PYPL
+[PYPL]
+beta            = 1.35
+growth          = [0.050, 0.050, 0.045]
+fcf_margin      = [0.180, 0.190, 0.190]
+basis_growth    = "FY2025 growth of 4.3% and a 6.4% three-year CAGR; assumes no acceleration"
+basis_fcf_margin = "FY2025 realised FCF margin of 16.8%, stepped up modestly on cost programme"
+basis_beta      = "analyst judgement; a licensed beta series is out of scope for this case"
+
+# -------------------------------------------------------------------------- FI
+[FI]
+beta            = 1.05
+growth          = [0.050, 0.050, 0.045]
+fcf_margin      = [0.210, 0.210, 0.210]
+basis_growth    = "organic growth is not separable from acquired growth in the frozen sources; "
+basis_growth_more = "the assumption sits below the 6.1% reported CAGR to avoid capitalising acquisitions"
+basis_fcf_margin = "FY2025 realised FCF margin of 20.3% held flat"
+basis_beta      = "analyst judgement; a licensed beta series is out of scope for this case"
+
+# ------------------------------------------------------------------------- GPN
+[GPN]
+beta            = 1.15
+growth          = [0.030, 0.030, 0.030]
+fcf_margin      = [0.270, 0.270, 0.270]
+basis_growth    = "FY2023-FY2025 only: earlier years are on a pre-divestiture basis, so the "
+basis_growth_more = "reported FY2022-FY2025 CAGR would understate growth. 2.2% two-year CAGR used instead"
+basis_fcf_margin = "FY2025 realised FCF margin of 26.5%; the divested businesses carried lower margins"
+basis_beta      = "analyst judgement; a licensed beta series is out of scope for this case"

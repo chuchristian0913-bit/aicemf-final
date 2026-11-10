@@ -24,7 +24,7 @@ blocking    = true
 description = "Every ticker in the universe carries every required metric for every required fiscal year. A missing value must be an explicit not_available with a reason, never 0 and never omitted."
 required_metrics = [
   "revenue", "operating_income", "net_income", "cfo", "capex",
-  "diluted_shares", "ebit_margin", "net_margin", "fcf_conversion",
+  "shares_diluted", "ebit_margin", "net_margin", "fcf_conversion",
   "revenue_growth", "fcf", "ebitda_proxy",
 ]
 

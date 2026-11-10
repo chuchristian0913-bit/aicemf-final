@@ -292,8 +292,13 @@ def standardize(case_id: str, case_dir: Path, out_dir: Path) -> dict:
     cutoff_evidence: dict[str, Any] = {}
 
     for ticker in universe:
-        payload_path = repo_root() / manifest["tickers"][ticker]["stored_path"]
+        # Resolved against the *given* case directory, not against the repository, so
+        # this function is a pure function of a directory. The leakage gate depends on
+        # that: it re-runs this same code over a perturbed copy of the snapshot.
+        payload_path = case_dir / "raw" / f"{ticker}.json"
         payload = read_json(payload_path)
+        if payload is None:
+            raise FileNotFoundError(f"missing frozen payload: {rel(payload_path)}")
         cik = manifest["tickers"][ticker]["cik"]
         rows = flatten(payload)
 

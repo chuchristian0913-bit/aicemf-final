@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 760" font-family="Georgia, 'Times New Roman', serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3a4a5a"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a03030"/>
+    </marker>
+  </defs>
+  <style>
+    .lane { fill: #f4f6f9; stroke: #c9d6e2; rx: 10; }
+    .lane-title { font: 600 13px ui-sans-serif, system-ui; letter-spacing: .12em; text-transform: uppercase; fill: #1f3a5f; }
+    .node { fill: #ffffff; stroke: #3a4a5a; stroke-width: 1.2; rx: 6; }
+    .node-code { fill: #eef4ee; stroke: #3a6a3a; stroke-width: 1.2; }
+    .node-gate { fill: #fdf3ec; stroke: #a05a2a; stroke-width: 1.2; }
+    .node-human { fill: #f3eefb; stroke: #5a3a8a; stroke-width: 1.4; }
+    .node-term { fill: #fbeeee; stroke: #a03030; stroke-width: 1.2; }
+    .label { font: 13px ui-sans-serif, system-ui; fill: #12212f; }
+    .small { font: 10.5px ui-sans-serif, system-ui; fill: #5b6b7b; }
+    .code-tag { font: 600 9.5px ui-monospace, monospace; fill: #3a6a3a; letter-spacing: .08em; }
+    .gate-tag { font: 600 9.5px ui-monospace, monospace; fill: #a05a2a; letter-spacing: .08em; }
+    .flow { stroke: #3a4a5a; stroke-width: 1.3; fill: none; marker-end: url(#arrow); }
+    .flow-red { stroke: #a03030; stroke-width: 1.2; fill: none; stroke-dasharray: 5 3; marker-end: url(#arrow-red); }
+  </style>
+
+  <text x="590" y="34" text-anchor="middle" style="font:700 19px Georgia" fill="#1f3a5f">PCD — one research cycle, from filing event to published note</text>
+  <text x="590" y="54" text-anchor="middle" class="small">candidate e8e5200a79a0 · case-01 · cutoff 2026-04-30 · every arrow is a recorded transition, not a conversation</text>
+
+  <!-- lane 1: deterministic compute -->
+  <rect x="20" y="70" width="1140" height="150" class="lane"/>
+  <text x="36" y="92" class="lane-title">1 · Deterministic stages — content-addressed, skippable, replayable</text>
+
+  <rect x="40" y="106" width="180" height="56" class="node-code"/>
+  <text x="50" y="126" class="code-tag">FREEZE</text>
+  <text x="50" y="142" class="label">EDGAR companyfacts →</text>
+  <text x="50" y="156" class="label">MANIFEST + sha256, once</text>
+
+  <rect x="260" y="106" width="180" height="56" class="node-code"/>
+  <text x="270" y="126" class="code-tag">STANDARDISE</text>
+  <text x="270" y="142" class="label">tag resolution + cutoff filter</text>
+  <text x="270" y="156" class="label">drift, recasts, breaks</text>
+
+  <rect x="480" y="106" width="180" height="56" class="node-code"/>
+  <text x="490" y="126" class="code-tag">MODEL</text>
+  <text x="490" y="142" class="label">ratios, CAGR, DCF + sensitivity</text>
+  <text x="490" y="156" class="label">405 metrics → registry</text>
+
+  <rect x="700" y="106" width="200" height="56" class="node-gate"/>
+  <text x="710" y="126" class="gate-tag">G03 G04 G08 G09 G10 G13</text>
+  <text x="710" y="142" class="label">completeness · cutoff · provenance</text>
+  <text x="710" y="156" class="label">arithmetic · integrity · leakage</text>
+
+  <rect x="940" y="106" width="200" height="56" class="node"/>
+  <text x="950" y="126" class="code-tag">CHECKPOINT</text>
+  <text x="950" y="142" class="label">state.json + fingerprint per stage</text>
+  <text x="950" y="156" class="label">skip on hash match · resume cheap</text>
+
+  <line x1="220" y1="134" x2="258" y2="134" class="flow"/>
+  <line x1="440" y1="134" x2="478" y2="134" class="flow"/>
+  <line x1="660" y1="134" x2="698" y2="134" class="flow"/>
+  <line x1="900" y1="134" x2="938" y2="134" class="flow"/>
+
+  <!-- lane 2: generator -->
+  <rect x="20" y="240" width="540" height="170" class="lane"/>
+  <text x="36" y="262" class="lane-title">2 · Generator role — drafts, never computes, never passes itself</text>
+
+  <rect x="40" y="278" width="170" height="60" class="node"/>
+  <text x="50" y="298" class="label">request.json</text>
+  <text x="50" y="314" class="small">request_id · limits · carried</text>
+  <text x="50" y="327" class="small">findings (the handoff contract)</text>
+
+  <rect x="250" y="278" width="150" height="60" class="node"/>
+  <text x="260" y="298" class="label">author_claims.py</text>
+  <text x="260" y="314" class="small">50 claims, quoted_value =</text>
+  <text x="260" y="327" class="small">registry value exactly</text>
+
+  <rect x="440" y="278" width="100" height="60" class="node"/>
+  <text x="450" y="298" class="label">claims.json</text>
+  <text x="450" y="314" class="small">prose + tables</text>
+  <text x="450" y="327" class="small">+ footnote markers</text>
+
+  <line x1="210" y1="308" x2="248" y2="308" class="flow"/>
+  <line x1="400" y1="308" x2="438" y2="308" class="flow"/>
+
+  <rect x="40" y="356" width="500" height="42" class="node-gate"/>
+  <text x="50" y="374" class="gate-tag">G01 G02 G05 G06 G07 G11 G12 — submission gate</text>
+  <text x="50" y="388" class="small">schema · identity · disclosure (cited concepts only) · tie-out · period alignment · observed writes</text>
+
+  <line x1="490" y1="338" x2="490" y2="354" class="flow"/>
+
+  <!-- lane 3: critics -->
+  <rect x="600" y="240" width="560" height="170" class="lane"/>
+  <text x="616" y="262" class="lane-title">3 · Critic roles — fresh context, re-derive, never edit the candidate</text>
+
+  <rect x="620" y="278" width="160" height="56" class="node"/>
+  <text x="630" y="296" class="label">pcd-tieout</text>
+  <text x="630" y="312" class="small">margins recomputed from</text>
+  <text x="630" y="325" class="small">standardized source values</text>
+
+  <rect x="800" y="278" width="160" height="56" class="node"/>
+  <text x="810" y="296" class="label">pcd-provenance</text>
+  <text x="810" y="312" class="small">snapshot re-hashed · sources</text>
+  <text x="810" y="325" class="small">filed ≤ cutoff · disclosure owed</text>
+
+  <rect x="980" y="278" width="160" height="56" class="node"/>
+  <text x="990" y="296" class="label">pcd-model-review</text>
+  <text x="990" y="312" class="small">DCF rebuilt from assumptions</text>
+  <text x="990" y="325" class="small">grid monotone both axes</text>
+
+  <rect x="620" y="352" width="520" height="44" class="node"/>
+  <text x="630" y="370" class="label">route_after_review</text>
+  <text x="630" y="386" class="small">2 consecutive clean reviews on the SAME candidate hash, else repair — a changed candidate resets the streak</text>
+
+  <line x1="700" y1="334" x2="700" y2="350" class="flow"/>
+  <line x1="880" y1="334" x2="840" y2="350" class="flow"/>
+  <line x1="1060" y1="334" x2="1020" y2="350" class="flow"/>
+
+  <!-- lane 4: human + publish -->
+  <rect x="20" y="430" width="1140" height="140" class="lane"/>
+  <text x="36" y="452" class="lane-title">4 · Consequential action — a named human, then publication</text>
+
+  <rect x="60" y="470" width="240" height="70" class="node-human"/>
+  <text x="70" y="490" class="label">human-analyst approval</text>
+  <text x="70" y="506" class="small">approve / reject / defer · empty approver</text>
+  <text x="70" y="519" class="small">rejected · bound to candidate hash</text>
+  <text x="70" y="532" class="small">approval.json recorded</text>
+
+  <rect x="360" y="470" width="220" height="70" class="node"/>
+  <text x="370" y="490" class="label">PUBLISH</text>
+  <text x="370" y="506" class="small">note.pdf (latexmk) · note.html</text>
+  <text x="370" y="519" class="small">panel.csv/json · claim_resolution</text>
+  <text x="370" y="532" class="small">result.json archived</text>
+
+  <rect x="640" y="470" width="240" height="70" class="node"/>
+  <text x="650" y="490" class="label">ARCHIVE</text>
+  <text x="650" y="506" class="small">published case is never silently</text>
+  <text x="650" y="519" class="small">recomputed · reopen_previous=false</text>
+  <text x="650" y="532" class="small">next cycle = new case id</text>
+
+  <rect x="940" y="470" width="200" height="70" class="node"/>
+  <text x="950" y="490" class="label">NEXT TRIGGER</text>
+  <text x="950" y="506" class="small">next 10-K filed among universe</text>
+  <text x="950" y="519" class="small">≤ cutoff · or monthly fallback</text>
+  <text x="950" y="532" class="small">compare without rewriting history</text>
+
+  <line x1="300" y1="505" x2="358" y2="505" class="flow"/>
+  <line x1="580" y1="505" x2="638" y2="505" class="flow"/>
+  <line x1="880" y1="505" x2="938" y2="505" class="flow"/>
+
+  <!-- rejection loop -->
+  <path d="M 290 398 C 290 440, 340 470, 340 468" class="flow-red"/>
+  <text x="300" y="428" class="small" fill="#a03030">gate FAIL → same role,</text>
+  <text x="300" y="441" class="small" fill="#a03030">retry ≤ 2, findings carried</text>
+
+  <!-- terminal states -->
+  <rect x="20" y="590" width="1140" height="80" class="lane"/>
+  <text x="36" y="612" class="lane-title">5 · Stop rules — distinct non-success terminals</text>
+  <rect x="60" y="626" width="180" height="34" class="node-term"/><text x="72" y="647" class="label">EXHAUSTED — never grants acceptance</text>
+  <rect x="260" y="626" width="150" height="34" class="node-term"/><text x="272" y="647" class="label">BLOCKED — retries gone</text>
+  <rect x="430" y="626" width="150" height="34" class="node-term"/><text x="442" y="647" class="label">STOPPED — human</text>
+  <rect x="600" y="626" width="200" height="34" class="node-term"/><text x="612" y="647" class="label">INSPECT_REQUIRED — mismatch</text>
+  <rect x="820" y="626" width="320" height="34" class="node-code"/>
+  <text x="832" y="647" class="small">restart on trigger → new case id → the cycle repeats</text>
+
+  <!-- footer annotations -->
+  <text x="36" y="700" class="small">Invariants enforced by the controller, not by prompt goodwill:  network only during SOURCES_FROZEN ·  writes only under cases/ and output/ ·</text>
+  <text x="36" y="716" class="small">data/frozen/ immutable (re-hashed at adoption) ·  every quoted number resolves to a metric_id and an accession ·  missing input → not_available, never zero.</text>
+  <text x="36" y="740" class="small">Evolution: diagnose → scoped patch → QT guard (limits/tolerances/probe/stop-rules untouchable) → fixed dev cases → held-out assessment → 70-test suite → owner approval → registry + rollback.</text>
+</svg>

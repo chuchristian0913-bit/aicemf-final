@@ -1,0 +1,2071 @@
+{
+  "case_id": "case-01",
+  "cutoff": "2026-04-30",
+  "cutoff_evidence": {
+    "FI": {
+      "distinct_rejected_accn": 3,
+      "max_filed_admitted": "2026-02-19",
+      "min_filed_rejected": "2026-05-06",
+      "rows_admissible": 2444,
+      "rows_rejected_after_cutoff": 119,
+      "rows_total": 2563
+    },
+    "GPN": {
+      "distinct_rejected_accn": 3,
+      "max_filed_admitted": "2026-02-20",
+      "min_filed_rejected": "2026-05-08",
+      "rows_admissible": 3251,
+      "rows_rejected_after_cutoff": 119,
+      "rows_total": 3370
+    },
+    "MA": {
+      "distinct_rejected_accn": 2,
+      "max_filed_admitted": "2026-04-30",
+      "min_filed_rejected": "2026-07-30",
+      "rows_admissible": 3108,
+      "rows_rejected_after_cutoff": 88,
+      "rows_total": 3196
+    },
+    "PYPL": {
+      "distinct_rejected_accn": 3,
+      "max_filed_admitted": "2026-04-07",
+      "min_filed_rejected": "2026-05-05",
+      "rows_admissible": 2014,
+      "rows_rejected_after_cutoff": 127,
+      "rows_total": 2141
+    },
+    "V": {
+      "distinct_rejected_accn": 2,
+      "max_filed_admitted": "2026-04-29",
+      "min_filed_rejected": "2026-07-29",
+      "rows_admissible": 2125,
+      "rows_rejected_after_cutoff": 59,
+      "rows_total": 2184
+    }
+  },
+  "drift": [
+    {
+      "alternatives": [
+        {
+          "concept": "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest",
+          "value": 6356000000
+        }
+      ],
+      "chosen_tag": "StockholdersEquity",
+      "chosen_value": 6298000000,
+      "fy": "FY2022",
+      "metric": "equity",
+      "rel_diff_vs_worst_alternative": 0.009209,
+      "requires_note_disclosure": true,
+      "ticker": "MA",
+      "why": "competing tag reports a materially different value in the same filing; chosen by documented priority, not by magnitude"
+    },
+    {
+      "alternatives": [
+        {
+          "concept": "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest",
+          "value": 6975000000
+        }
+      ],
+      "chosen_tag": "StockholdersEquity",
+      "chosen_value": 6929000000,
+      "fy": "FY2023",
+      "metric": "equity",
+      "rel_diff_vs_worst_alternative": 0.006639,
+      "requires_note_disclosure": true,
+      "ticker": "MA",
+      "why": "competing tag reports a materially different value in the same filing; chosen by documented priority, not by magnitude"
+    },
+    {
+      "alternatives": [
+        {
+          "concept": "ProfitLoss",
+          "value": 2582000000
+        }
+      ],
+      "chosen_tag": "NetIncomeLoss",
+      "chosen_value": 2530000000,
+      "fy": "FY2022",
+      "metric": "net_income",
+      "rel_diff_vs_worst_alternative": 0.020553,
+      "requires_note_disclosure": true,
+      "ticker": "FI",
+      "why": "competing tag reports a materially different value in the same filing; chosen by documented priority, not by magnitude"
+    },
+    {
+      "alternatives": [
+        {
+          "concept": "OtherDepreciationAndAmortization",
+          "value": 1320000000
+        }
+      ],
+      "chosen_tag": "DepreciationDepletionAndAmortization",
+      "chosen_value": 3212000000,
+      "fy": "FY2022",
+      "metric": "da",
+      "rel_diff_vs_worst_alternative": 0.589041,
+      "requires_note_disclosure": true,
+      "ticker": "FI",
+      "why": "competing tag reports a materially different value in the same filing; chosen by documented priority, not by magnitude"
+    },
+    {
+      "alternatives": [
+        {
+          "concept": "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest",
+          "value": 31527000000
+        }
+      ],
+      "chosen_tag": "StockholdersEquity",
+      "chosen_value": 30828000000,
+      "fy": "FY2022",
+      "metric": "equity",
+      "rel_diff_vs_worst_alternative": 0.022674,
+      "requires_note_disclosure": true,
+      "ticker": "FI",
+      "why": "competing tag reports a materially different value in the same filing; chosen by documented priority, not by magnitude"
+    },
+    {
+      "alternatives": [
+        {
+          "concept": "ProfitLoss",
+          "value": 3129000000
+        }
+      ],
+      "chosen_tag": "NetIncomeLoss",
+      "chosen_value": 3068000000,
+      "fy": "FY2023",
+      "metric": "net_income",
+      "rel_diff_vs_worst_alternative": 0.019883,
+      "requires_note_disclosure": true,
+      "ticker": "FI",
+      "why": "competing tag reports a materially different value in the same filing; chosen by documented priority, not by magnitude"
+    },
+    {
+      "alternatives": [
+        {
+          "concept": "OtherDepreciationAndAmortization",
+          "value": 1479000000
+        }
+      ],
+      "chosen_tag": "DepreciationDepletionAndAmortization",
+      "chosen_value": 3162000000,
+      "fy": "FY2023",
+      "metric": "da",
+      "rel_diff_vs_worst_alternative": 0.532258,
+      "requires_note_disclosure": true,
+      "ticker": "FI",
+      "why": "competing tag reports a materially different value in the same filing; chosen by documented priority, not by magnitude"
+    },
+    {
+      "alternatives": [
+        {
+          "concept": "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest",
+          "value": 30508000000
+        }
+      ],
+      "chosen_tag": "StockholdersEquity",
+      "chosen_value": 29857000000,
+      "fy": "FY2023",
+      "metric": "equity",
+      "rel_diff_vs_worst_alternative": 0.021804,
+      "requires_note_disclosure": true,
+      "ticker": "FI",
+      "why": "competing tag reports a materially different value in the same filing; chosen by documented priority, not by magnitude"
+    },
+    {
+      "alternatives": [
+        {
+          "concept": "ProfitLoss",
+          "value": 3180000000
+        }
+      ],
+      "chosen_tag": "NetIncomeLoss",
+      "chosen_value": 3131000000,
+      "fy": "FY2024",
+      "metric": "net_income",
+      "rel_diff_vs_worst_alternative": 0.01565,
+      "requires_note_disclosure": true,
+      "ticker": "FI",
+      "why": "competing tag reports a materially different value in the same filing; chosen by documented priority, not by magnitude"
+    },
+    {
+      "alternatives": [
+        {
+          "concept": "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest",
+          "value": 27686000000
+        }
+      ],
+      "chosen_tag": "StockholdersEquity",
+      "chosen_value": 27068000000,
+      "fy": "FY2024",
+      "metric": "equity",
+      "rel_diff_vs_worst_alternative": 0.022831,
+      "requires_note_disclosure": true,
+      "ticker": "FI",
+      "why": "competing tag reports a materially different value in the same filing; chosen by documented priority, not by magnitude"
+    },
+    {
+      "alternatives": [
+        {
+          "concept": "ProfitLoss",
+          "value": 143313000
+        }
+      ],
+      "chosen_tag": "NetIncomeLoss",
+      "chosen_value": 111493000,
+      "fy": "FY2022",
+      "metric": "net_income",
+      "rel_diff_vs_worst_alternative": 0.285399,
+      "requires_note_disclosure": true,
+      "ticker": "GPN",
+      "why": "competing tag reports a materially different value in the same filing; chosen by documented priority, not by magnitude"
+    },
+    {
+      "alternatives": [
+        {
+          "concept": "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest",
+          "value": 22540210000
+        }
+      ],
+      "chosen_tag": "StockholdersEquity",
+      "chosen_value": 22303506000,
+      "fy": "FY2022",
+      "metric": "equity",
+      "rel_diff_vs_worst_alternative": 0.010613,
+      "requires_note_disclosure": true,
+      "ticker": "GPN",
+      "why": "competing tag reports a materially different value in the same filing; chosen by documented priority, not by magnitude"
+    },
+    {
+      "alternatives": [
+        {
+          "concept": "ProfitLoss",
+          "value": 1028823000
+        }
+      ],
+      "chosen_tag": "NetIncomeLoss",
+      "chosen_value": 986233000,
+      "fy": "FY2023",
+      "metric": "net_income",
+      "rel_diff_vs_worst_alternative": 0.043185,
+      "requires_note_disclosure": true,
+      "ticker": "GPN",
+      "why": "competing tag reports a materially different value in the same filing; chosen by documented priority, not by magnitude"
+    },
+    {
+      "alternatives": [
+        {
+          "concept": "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest",
+          "value": 23279550000
+        }
+      ],
+      "chosen_tag": "StockholdersEquity",
+      "chosen_value": 22999210000,
+      "fy": "FY2023",
+      "metric": "equity",
+      "rel_diff_vs_worst_alternative": 0.012189,
+      "requires_note_disclosure": true,
+      "ticker": "GPN",
+      "why": "competing tag reports a materially different value in the same filing; chosen by documented priority, not by magnitude"
+    },
+    {
+      "alternatives": [
+        {
+          "concept": "ProfitLoss",
+          "value": 1644153000
+        }
+      ],
+      "chosen_tag": "NetIncomeLoss",
+      "chosen_value": 1570365000,
+      "fy": "FY2024",
+      "metric": "net_income",
+      "rel_diff_vs_worst_alternative": 0.046988,
+      "requires_note_disclosure": true,
+      "ticker": "GPN",
+      "why": "competing tag reports a materially different value in the same filing; chosen by documented priority, not by magnitude"
+    },
+    {
+      "alternatives": [
+        {
+          "concept": "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest",
+          "value": 22855944000
+        }
+      ],
+      "chosen_tag": "StockholdersEquity",
+      "chosen_value": 22280686000,
+      "fy": "FY2024",
+      "metric": "equity",
+      "rel_diff_vs_worst_alternative": 0.025819,
+      "requires_note_disclosure": true,
+      "ticker": "GPN",
+      "why": "competing tag reports a materially different value in the same filing; chosen by documented priority, not by magnitude"
+    },
+    {
+      "alternatives": [
+        {
+          "concept": "ProfitLoss",
+          "value": 1456047000
+        }
+      ],
+      "chosen_tag": "NetIncomeLoss",
+      "chosen_value": 1400107000,
+      "fy": "FY2025",
+      "metric": "net_income",
+      "rel_diff_vs_worst_alternative": 0.039954,
+      "requires_note_disclosure": true,
+      "ticker": "GPN",
+      "why": "competing tag reports a materially different value in the same filing; chosen by documented priority, not by magnitude"
+    },
+    {
+      "alternatives": [
+        {
+          "concept": "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest",
+          "value": 23578478000
+        }
+      ],
+      "chosen_tag": "StockholdersEquity",
+      "chosen_value": 22888767000,
+      "fy": "FY2025",
+      "metric": "equity",
+      "rel_diff_vs_worst_alternative": 0.030133,
+      "requires_note_disclosure": true,
+      "ticker": "GPN",
+      "why": "competing tag reports a materially different value in the same filing; chosen by documented priority, not by magnitude"
+    }
+  ],
+  "generated_by": "pcd.standardize (deterministic, no model in the loop)",
+  "restatements": [
+    {
+      "concept": "CashAndCashEquivalentsAtCarryingValue",
+      "first_filed": "2025-02-04",
+      "first_value": 6561000000,
+      "fy": "FY2024",
+      "last_filed": "2026-02-03",
+      "last_value": 6662000000,
+      "metric": "cash",
+      "rel_diff": 0.015394,
+      "ticker": "PYPL",
+      "used": "latest filing at or before cutoff"
+    },
+    {
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "first_filed": "2024-02-14",
+      "first_value": 9654419000,
+      "fy": "FY2023",
+      "last_filed": "2026-02-20",
+      "last_value": 7379784000,
+      "metric": "revenue",
+      "rel_diff": 0.235606,
+      "ticker": "GPN",
+      "used": "latest filing at or before cutoff"
+    },
+    {
+      "concept": "OperatingIncomeLoss",
+      "first_filed": "2024-02-14",
+      "first_value": 1716386000,
+      "fy": "FY2023",
+      "last_filed": "2026-02-20",
+      "last_value": 1315614000,
+      "metric": "operating_income",
+      "rel_diff": 0.233498,
+      "ticker": "GPN",
+      "used": "latest filing at or before cutoff"
+    },
+    {
+      "concept": "NetCashProvidedByUsedInOperatingActivities",
+      "first_filed": "2024-02-14",
+      "first_value": 2248741000,
+      "fy": "FY2023",
+      "last_filed": "2026-02-20",
+      "last_value": 2549805000,
+      "metric": "cfo",
+      "rel_diff": 0.133881,
+      "ticker": "GPN",
+      "used": "latest filing at or before cutoff"
+    },
+    {
+      "concept": "IncomeTaxExpenseBenefit",
+      "first_filed": "2024-02-14",
+      "first_value": 209020000,
+      "fy": "FY2023",
+      "last_filed": "2026-02-20",
+      "last_value": 186517000,
+      "metric": "tax_expense",
+      "rel_diff": 0.10766,
+      "ticker": "GPN",
+      "used": "latest filing at or before cutoff"
+    },
+    {
+      "concept": "DepreciationDepletionAndAmortization",
+      "first_filed": "2024-02-14",
+      "first_value": 1776692000,
+      "fy": "FY2023",
+      "last_filed": "2026-02-20",
+      "last_value": 1141894000,
+      "metric": "da",
+      "rel_diff": 0.357292,
+      "ticker": "GPN",
+      "used": "latest filing at or before cutoff"
+    },
+    {
+      "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "first_filed": "2025-02-14",
+      "first_value": 10105894000,
+      "fy": "FY2024",
+      "last_filed": "2026-02-20",
+      "last_value": 7735970000,
+      "metric": "revenue",
+      "rel_diff": 0.234509,
+      "ticker": "GPN",
+      "used": "latest filing at or before cutoff"
+    },
+    {
+      "concept": "OperatingIncomeLoss",
+      "first_filed": "2025-02-14",
+      "first_value": 2333605000,
+      "fy": "FY2024",
+      "last_filed": "2026-02-20",
+      "last_value": 1974500000,
+      "metric": "operating_income",
+      "rel_diff": 0.153884,
+      "ticker": "GPN",
+      "used": "latest filing at or before cutoff"
+    },
+    {
+      "concept": "NetCashProvidedByUsedInOperatingActivities",
+      "first_filed": "2025-02-14",
+      "first_value": 3532683000,
+      "fy": "FY2024",
+      "last_filed": "2026-02-20",
+      "last_value": 3057583000,
+      "metric": "cfo",
+      "rel_diff": 0.134487,
+      "ticker": "GPN",
+      "used": "latest filing at or before cutoff"
+    },
+    {
+      "concept": "IncomeTaxExpenseBenefit",
+      "first_filed": "2025-02-14",
+      "first_value": 295133000,
+      "fy": "FY2024",
+      "last_filed": "2026-02-20",
+      "last_value": 241513000,
+      "metric": "tax_expense",
+      "rel_diff": 0.181681,
+      "ticker": "GPN",
+      "used": "latest filing at or before cutoff"
+    },
+    {
+      "concept": "CashAndCashEquivalentsAtCarryingValue",
+      "first_filed": "2025-02-14",
+      "first_value": 2538416000,
+      "fy": "FY2024",
+      "last_filed": "2026-02-20",
+      "last_value": 2356470000,
+      "metric": "cash",
+      "rel_diff": 0.071677,
+      "ticker": "GPN",
+      "used": "latest filing at or before cutoff"
+    },
+    {
+      "concept": "DepreciationDepletionAndAmortization",
+      "first_filed": "2025-02-14",
+      "first_value": 1862331000,
+      "fy": "FY2024",
+      "last_filed": "2026-02-20",
+      "last_value": 1217288000,
+      "metric": "da",
+      "rel_diff": 0.346363,
+      "ticker": "GPN",
+      "used": "latest filing at or before cutoff"
+    }
+  ],
+  "series_breaks": [
+    {
+      "from_fy": "FY2023",
+      "from_tag": "DepreciationDepletionAndAmortization",
+      "from_value": 3162000000,
+      "kind": "tag_change",
+      "metric": "da",
+      "reported_change": -0.471221,
+      "requires_note_disclosure": true,
+      "ticker": "FI",
+      "to_fy": "FY2024",
+      "to_tag": "OtherDepreciationAndAmortization",
+      "to_value": 1672000000,
+      "why": "issuer changed XBRL concept; the year-on-year change is a definition change"
+    },
+    {
+      "affected_fys": [
+        "FY2024"
+      ],
+      "comparison_basis_changes_before": "FY2024",
+      "kind": "recast",
+      "max_rel_revision": 0.071677,
+      "metric": "cash",
+      "not_comparable_fys": [
+        "FY2022",
+        "FY2023"
+      ],
+      "requires_note_disclosure": true,
+      "ticker": "GPN",
+      "why": "prior years re-presented in a later filing; values before the earliest re-presented year are on a different basis"
+    },
+    {
+      "affected_fys": [
+        "FY2023",
+        "FY2024"
+      ],
+      "comparison_basis_changes_before": "FY2023",
+      "kind": "recast",
+      "max_rel_revision": 0.134487,
+      "metric": "cfo",
+      "not_comparable_fys": [
+        "FY2022"
+      ],
+      "requires_note_disclosure": true,
+      "ticker": "GPN",
+      "why": "prior years re-presented in a later filing; values before the earliest re-presented year are on a different basis"
+    },
+    {
+      "affected_fys": [
+        "FY2023",
+        "FY2024"
+      ],
+      "comparison_basis_changes_before": "FY2023",
+      "kind": "recast",
+      "max_rel_revision": 0.357292,
+      "metric": "da",
+      "not_comparable_fys": [
+        "FY2022"
+      ],
+      "requires_note_disclosure": true,
+      "ticker": "GPN",
+      "why": "prior years re-presented in a later filing; values before the earliest re-presented year are on a different basis"
+    },
+    {
+      "affected_fys": [
+        "FY2023",
+        "FY2024"
+      ],
+      "comparison_basis_changes_before": "FY2023",
+      "kind": "recast",
+      "max_rel_revision": 0.233498,
+      "metric": "operating_income",
+      "not_comparable_fys": [
+        "FY2022"
+      ],
+      "requires_note_disclosure": true,
+      "ticker": "GPN",
+      "why": "prior years re-presented in a later filing; values before the earliest re-presented year are on a different basis"
+    },
+    {
+      "affected_fys": [
+        "FY2023",
+        "FY2024"
+      ],
+      "comparison_basis_changes_before": "FY2023",
+      "kind": "recast",
+      "max_rel_revision": 0.235606,
+      "metric": "revenue",
+      "not_comparable_fys": [
+        "FY2022"
+      ],
+      "requires_note_disclosure": true,
+      "ticker": "GPN",
+      "why": "prior years re-presented in a later filing; values before the earliest re-presented year are on a different basis"
+    },
+    {
+      "affected_fys": [
+        "FY2023",
+        "FY2024"
+      ],
+      "comparison_basis_changes_before": "FY2023",
+      "kind": "recast",
+      "max_rel_revision": 0.181681,
+      "metric": "tax_expense",
+      "not_comparable_fys": [
+        "FY2022"
+      ],
+      "requires_note_disclosure": true,
+      "ticker": "GPN",
+      "why": "prior years re-presented in a later filing; values before the earliest re-presented year are on a different basis"
+    }
+  ],
+  "tag_policy": {
+    "capex": [
+      "PaymentsToAcquirePropertyPlantAndEquipment",
+      "PaymentsToAcquireProductiveAssets"
+    ],
+    "da": [
+      "DepreciationDepletionAndAmortization",
+      "DepreciationAndAmortization",
+      "DepreciationAmortizationAndAccretionNet",
+      "OtherDepreciationAndAmortization"
+    ],
+    "eps": [
+      "EarningsPerShareDiluted"
+    ],
+    "equity": [
+      "StockholdersEquity",
+      "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest"
+    ],
+    "revenue": [
+      "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "RevenueFromContractWithCustomerIncludingAssessedTax",
+      "RevenuesNetOfInterestExpense",
+      "Revenues",
+      "SalesRevenueNet"
+    ],
+    "shares": [
+      "WeightedAverageNumberOfDilutedSharesOutstanding",
+      "CommonStockSharesOutstanding"
+    ]
+  },
+  "tickers": {
+    "FI": {
+      "cik": "0000798354",
+      "entity_name": "FISERV, INC.",
+      "fiscal_year_end_month": "12",
+      "not_available": [],
+      "series_breaks": [
+        {
+          "from_fy": "FY2023",
+          "from_tag": "DepreciationDepletionAndAmortization",
+          "from_value": 3162000000,
+          "kind": "tag_change",
+          "metric": "da",
+          "reported_change": -0.471221,
+          "requires_note_disclosure": true,
+          "ticker": "FI",
+          "to_fy": "FY2024",
+          "to_tag": "OtherDepreciationAndAmortization",
+          "to_value": 1672000000,
+          "why": "issuer changed XBRL concept; the year-on-year change is a definition change"
+        }
+      ],
+      "years": {
+        "FY2022": {
+          "fy_end": "2022-12-31",
+          "provenance": {
+            "capex": [
+              "FI|PaymentsToAcquirePropertyPlantAndEquipment|2022-12-31|0000798354-25-000047"
+            ],
+            "cash": [
+              "FI|CashAndCashEquivalentsAtCarryingValue|2022-12-31|0000798354-25-000047"
+            ],
+            "cfo": [
+              "FI|NetCashProvidedByUsedInOperatingActivities|2022-12-31|0000798354-25-000047"
+            ],
+            "da": [
+              "FI|DepreciationDepletionAndAmortization|2022-12-31|0000798354-24-000037"
+            ],
+            "eps_diluted": [
+              "FI|EarningsPerShareDiluted|2022-12-31|0000798354-25-000047"
+            ],
+            "equity": [
+              "FI|StockholdersEquity|2022-12-31|0000798354-24-000037"
+            ],
+            "net_income": [
+              "FI|NetIncomeLoss|2022-12-31|0000798354-25-000047"
+            ],
+            "operating_income": [
+              "FI|OperatingIncomeLoss|2022-12-31|0000798354-25-000047"
+            ],
+            "revenue": [
+              "FI|Revenues|2022-12-31|0000798354-25-000047"
+            ],
+            "shares_diluted": [
+              "FI|WeightedAverageNumberOfDilutedSharesOutstanding|2022-12-31|0000798354-25-000047"
+            ],
+            "tax_expense": [
+              "FI|IncomeTaxExpenseBenefit|2022-12-31|0000798354-25-000047"
+            ]
+          },
+          "tags": {
+            "capex": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "cash": "CashAndCashEquivalentsAtCarryingValue",
+            "cfo": "NetCashProvidedByUsedInOperatingActivities",
+            "da": "DepreciationDepletionAndAmortization",
+            "eps_diluted": "EarningsPerShareDiluted",
+            "equity": "StockholdersEquity",
+            "net_income": "NetIncomeLoss",
+            "operating_income": "OperatingIncomeLoss",
+            "revenue": "Revenues",
+            "shares_diluted": "WeightedAverageNumberOfDilutedSharesOutstanding",
+            "tax_expense": "IncomeTaxExpenseBenefit"
+          },
+          "values": {
+            "capex": 1479000000,
+            "cash": 902000000,
+            "cfo": 4618000000,
+            "da": 3212000000,
+            "eps_diluted": 3.91,
+            "equity": 30828000000,
+            "net_income": 2530000000,
+            "operating_income": 3740000000,
+            "revenue": 17737000000,
+            "shares_diluted": 647900000,
+            "tax_expense": 551000000
+          }
+        },
+        "FY2023": {
+          "fy_end": "2023-12-31",
+          "provenance": {
+            "capex": [
+              "FI|PaymentsToAcquirePropertyPlantAndEquipment|2023-12-31|0000798354-26-000009"
+            ],
+            "cash": [
+              "FI|CashAndCashEquivalentsAtCarryingValue|2023-12-31|0000798354-26-000009"
+            ],
+            "cfo": [
+              "FI|NetCashProvidedByUsedInOperatingActivities|2023-12-31|0000798354-26-000009"
+            ],
+            "da": [
+              "FI|DepreciationDepletionAndAmortization|2023-12-31|0000798354-24-000037"
+            ],
+            "eps_diluted": [
+              "FI|EarningsPerShareDiluted|2023-12-31|0000798354-26-000009"
+            ],
+            "equity": [
+              "FI|StockholdersEquity|2023-12-31|0000798354-25-000047"
+            ],
+            "net_income": [
+              "FI|NetIncomeLoss|2023-12-31|0000798354-26-000009"
+            ],
+            "operating_income": [
+              "FI|OperatingIncomeLoss|2023-12-31|0000798354-26-000009"
+            ],
+            "revenue": [
+              "FI|Revenues|2023-12-31|0000798354-26-000009"
+            ],
+            "shares_diluted": [
+              "FI|WeightedAverageNumberOfDilutedSharesOutstanding|2023-12-31|0000798354-26-000009"
+            ],
+            "tax_expense": [
+              "FI|IncomeTaxExpenseBenefit|2023-12-31|0000798354-26-000009"
+            ]
+          },
+          "tags": {
+            "capex": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "cash": "CashAndCashEquivalentsAtCarryingValue",
+            "cfo": "NetCashProvidedByUsedInOperatingActivities",
+            "da": "DepreciationDepletionAndAmortization",
+            "eps_diluted": "EarningsPerShareDiluted",
+            "equity": "StockholdersEquity",
+            "net_income": "NetIncomeLoss",
+            "operating_income": "OperatingIncomeLoss",
+            "revenue": "Revenues",
+            "shares_diluted": "WeightedAverageNumberOfDilutedSharesOutstanding",
+            "tax_expense": "IncomeTaxExpenseBenefit"
+          },
+          "values": {
+            "capex": 1388000000,
+            "cash": 1204000000,
+            "cfo": 5162000000,
+            "da": 3162000000,
+            "eps_diluted": 4.98,
+            "equity": 29857000000,
+            "net_income": 3068000000,
+            "operating_income": 5014000000,
+            "revenue": 19093000000,
+            "shares_diluted": 615900000,
+            "tax_expense": 754000000
+          }
+        },
+        "FY2024": {
+          "fy_end": "2024-12-31",
+          "provenance": {
+            "capex": [
+              "FI|PaymentsToAcquirePropertyPlantAndEquipment|2024-12-31|0000798354-26-000009"
+            ],
+            "cash": [
+              "FI|CashAndCashEquivalentsAtCarryingValue|2024-12-31|0000798354-26-000009"
+            ],
+            "cfo": [
+              "FI|NetCashProvidedByUsedInOperatingActivities|2024-12-31|0000798354-26-000009"
+            ],
+            "da": [
+              "FI|OtherDepreciationAndAmortization|2024-12-31|0000798354-26-000009"
+            ],
+            "eps_diluted": [
+              "FI|EarningsPerShareDiluted|2024-12-31|0000798354-26-000009"
+            ],
+            "equity": [
+              "FI|StockholdersEquity|2024-12-31|0000798354-26-000009"
+            ],
+            "net_income": [
+              "FI|NetIncomeLoss|2024-12-31|0000798354-26-000009"
+            ],
+            "operating_income": [
+              "FI|OperatingIncomeLoss|2024-12-31|0000798354-26-000009"
+            ],
+            "revenue": [
+              "FI|Revenues|2024-12-31|0000798354-26-000009"
+            ],
+            "shares_diluted": [
+              "FI|WeightedAverageNumberOfDilutedSharesOutstanding|2024-12-31|0000798354-26-000009"
+            ],
+            "tax_expense": [
+              "FI|IncomeTaxExpenseBenefit|2024-12-31|0000798354-26-000009"
+            ]
+          },
+          "tags": {
+            "capex": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "cash": "CashAndCashEquivalentsAtCarryingValue",
+            "cfo": "NetCashProvidedByUsedInOperatingActivities",
+            "da": "OtherDepreciationAndAmortization",
+            "eps_diluted": "EarningsPerShareDiluted",
+            "equity": "StockholdersEquity",
+            "net_income": "NetIncomeLoss",
+            "operating_income": "OperatingIncomeLoss",
+            "revenue": "Revenues",
+            "shares_diluted": "WeightedAverageNumberOfDilutedSharesOutstanding",
+            "tax_expense": "IncomeTaxExpenseBenefit"
+          },
+          "values": {
+            "capex": 1569000000,
+            "cash": 1236000000,
+            "cfo": 6631000000,
+            "da": 1672000000,
+            "eps_diluted": 5.38,
+            "equity": 27068000000,
+            "net_income": 3131000000,
+            "operating_income": 5879000000,
+            "revenue": 20456000000,
+            "shares_diluted": 582100000,
+            "tax_expense": 641000000
+          }
+        },
+        "FY2025": {
+          "fy_end": "2025-12-31",
+          "provenance": {
+            "capex": [
+              "FI|PaymentsToAcquirePropertyPlantAndEquipment|2025-12-31|0000798354-26-000009"
+            ],
+            "cash": [
+              "FI|CashAndCashEquivalentsAtCarryingValue|2025-12-31|0000798354-26-000009"
+            ],
+            "cfo": [
+              "FI|NetCashProvidedByUsedInOperatingActivities|2025-12-31|0000798354-26-000009"
+            ],
+            "da": [
+              "FI|OtherDepreciationAndAmortization|2025-12-31|0000798354-26-000009"
+            ],
+            "eps_diluted": [
+              "FI|EarningsPerShareDiluted|2025-12-31|0000798354-26-000009"
+            ],
+            "equity": [
+              "FI|StockholdersEquity|2025-12-31|0000798354-26-000009"
+            ],
+            "net_income": [
+              "FI|NetIncomeLoss|2025-12-31|0000798354-26-000009"
+            ],
+            "operating_income": [
+              "FI|OperatingIncomeLoss|2025-12-31|0000798354-26-000009"
+            ],
+            "revenue": [
+              "FI|Revenues|2025-12-31|0000798354-26-000009"
+            ],
+            "shares_diluted": [
+              "FI|WeightedAverageNumberOfDilutedSharesOutstanding|2025-12-31|0000798354-26-000009"
+            ],
+            "tax_expense": [
+              "FI|IncomeTaxExpenseBenefit|2025-12-31|0000798354-26-000009"
+            ]
+          },
+          "tags": {
+            "capex": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "cash": "CashAndCashEquivalentsAtCarryingValue",
+            "cfo": "NetCashProvidedByUsedInOperatingActivities",
+            "da": "OtherDepreciationAndAmortization",
+            "eps_diluted": "EarningsPerShareDiluted",
+            "equity": "StockholdersEquity",
+            "net_income": "NetIncomeLoss",
+            "operating_income": "OperatingIncomeLoss",
+            "revenue": "Revenues",
+            "shares_diluted": "WeightedAverageNumberOfDilutedSharesOutstanding",
+            "tax_expense": "IncomeTaxExpenseBenefit"
+          },
+          "values": {
+            "capex": 1763000000,
+            "cash": 798000000,
+            "cfo": 6062000000,
+            "da": 1857000000,
+            "eps_diluted": 6.34,
+            "equity": 25792000000,
+            "net_income": 3480000000,
+            "operating_income": 5818000000,
+            "revenue": 21193000000,
+            "shares_diluted": 549000000,
+            "tax_expense": 811000000
+          }
+        }
+      }
+    },
+    "GPN": {
+      "cik": "0001123360",
+      "entity_name": "GLOBAL PAYMENTS INC.",
+      "fiscal_year_end_month": "12",
+      "not_available": [],
+      "series_breaks": [
+        {
+          "affected_fys": [
+            "FY2024"
+          ],
+          "comparison_basis_changes_before": "FY2024",
+          "kind": "recast",
+          "max_rel_revision": 0.071677,
+          "metric": "cash",
+          "not_comparable_fys": [
+            "FY2022",
+            "FY2023"
+          ],
+          "requires_note_disclosure": true,
+          "ticker": "GPN",
+          "why": "prior years re-presented in a later filing; values before the earliest re-presented year are on a different basis"
+        },
+        {
+          "affected_fys": [
+            "FY2023",
+            "FY2024"
+          ],
+          "comparison_basis_changes_before": "FY2023",
+          "kind": "recast",
+          "max_rel_revision": 0.134487,
+          "metric": "cfo",
+          "not_comparable_fys": [
+            "FY2022"
+          ],
+          "requires_note_disclosure": true,
+          "ticker": "GPN",
+          "why": "prior years re-presented in a later filing; values before the earliest re-presented year are on a different basis"
+        },
+        {
+          "affected_fys": [
+            "FY2023",
+            "FY2024"
+          ],
+          "comparison_basis_changes_before": "FY2023",
+          "kind": "recast",
+          "max_rel_revision": 0.357292,
+          "metric": "da",
+          "not_comparable_fys": [
+            "FY2022"
+          ],
+          "requires_note_disclosure": true,
+          "ticker": "GPN",
+          "why": "prior years re-presented in a later filing; values before the earliest re-presented year are on a different basis"
+        },
+        {
+          "affected_fys": [
+            "FY2023",
+            "FY2024"
+          ],
+          "comparison_basis_changes_before": "FY2023",
+          "kind": "recast",
+          "max_rel_revision": 0.233498,
+          "metric": "operating_income",
+          "not_comparable_fys": [
+            "FY2022"
+          ],
+          "requires_note_disclosure": true,
+          "ticker": "GPN",
+          "why": "prior years re-presented in a later filing; values before the earliest re-presented year are on a different basis"
+        },
+        {
+          "affected_fys": [
+            "FY2023",
+            "FY2024"
+          ],
+          "comparison_basis_changes_before": "FY2023",
+          "kind": "recast",
+          "max_rel_revision": 0.235606,
+          "metric": "revenue",
+          "not_comparable_fys": [
+            "FY2022"
+          ],
+          "requires_note_disclosure": true,
+          "ticker": "GPN",
+          "why": "prior years re-presented in a later filing; values before the earliest re-presented year are on a different basis"
+        },
+        {
+          "affected_fys": [
+            "FY2023",
+            "FY2024"
+          ],
+          "comparison_basis_changes_before": "FY2023",
+          "kind": "recast",
+          "max_rel_revision": 0.181681,
+          "metric": "tax_expense",
+          "not_comparable_fys": [
+            "FY2022"
+          ],
+          "requires_note_disclosure": true,
+          "ticker": "GPN",
+          "why": "prior years re-presented in a later filing; values before the earliest re-presented year are on a different basis"
+        }
+      ],
+      "years": {
+        "FY2022": {
+          "fy_end": "2022-12-31",
+          "provenance": {
+            "capex": [
+              "GPN|PaymentsToAcquireProductiveAssets|2022-12-31|0001123360-25-000011"
+            ],
+            "cash": [
+              "GPN|CashAndCashEquivalentsAtCarryingValue|2022-12-31|0001123360-24-000004"
+            ],
+            "cfo": [
+              "GPN|NetCashProvidedByUsedInOperatingActivities|2022-12-31|0001123360-25-000011"
+            ],
+            "da": [
+              "GPN|DepreciationDepletionAndAmortization|2022-12-31|0001123360-25-000011"
+            ],
+            "eps_diluted": [
+              "GPN|EarningsPerShareDiluted|2022-12-31|0001123360-25-000011"
+            ],
+            "equity": [
+              "GPN|StockholdersEquity|2022-12-31|0001123360-24-000004"
+            ],
+            "net_income": [
+              "GPN|NetIncomeLoss|2022-12-31|0001123360-25-000011"
+            ],
+            "operating_income": [
+              "GPN|OperatingIncomeLoss|2022-12-31|0001123360-25-000011"
+            ],
+            "revenue": [
+              "GPN|RevenueFromContractWithCustomerExcludingAssessedTax|2022-12-31|0001123360-25-000011"
+            ],
+            "shares_diluted": [
+              "GPN|WeightedAverageNumberOfDilutedSharesOutstanding|2022-12-31|0001123360-25-000011"
+            ],
+            "tax_expense": [
+              "GPN|IncomeTaxExpenseBenefit|2022-12-31|0001123360-25-000011"
+            ]
+          },
+          "tags": {
+            "capex": "PaymentsToAcquireProductiveAssets",
+            "cash": "CashAndCashEquivalentsAtCarryingValue",
+            "cfo": "NetCashProvidedByUsedInOperatingActivities",
+            "da": "DepreciationDepletionAndAmortization",
+            "eps_diluted": "EarningsPerShareDiluted",
+            "equity": "StockholdersEquity",
+            "net_income": "NetIncomeLoss",
+            "operating_income": "OperatingIncomeLoss",
+            "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "shares_diluted": "WeightedAverageNumberOfDilutedSharesOutstanding",
+            "tax_expense": "IncomeTaxExpenseBenefit"
+          },
+          "values": {
+            "capex": 615652000,
+            "cash": 1997566000,
+            "cfo": 2244040000,
+            "da": 1662455000,
+            "eps_diluted": 0.4,
+            "equity": 22303506000,
+            "net_income": 111493000,
+            "operating_income": 640151000,
+            "revenue": 8975515000,
+            "shares_diluted": 275576000,
+            "tax_expense": 166694000
+          }
+        },
+        "FY2023": {
+          "fy_end": "2023-12-31",
+          "provenance": {
+            "capex": [
+              "GPN|PaymentsToAcquireProductiveAssets|2023-12-31|0001123360-26-000008"
+            ],
+            "cash": [
+              "GPN|CashAndCashEquivalentsAtCarryingValue|2023-12-31|0001123360-25-000011"
+            ],
+            "cfo": [
+              "GPN|NetCashProvidedByUsedInOperatingActivities|2023-12-31|0001123360-26-000008"
+            ],
+            "da": [
+              "GPN|DepreciationDepletionAndAmortization|2023-12-31|0001123360-26-000008"
+            ],
+            "eps_diluted": [
+              "GPN|EarningsPerShareDiluted|2023-12-31|0001123360-26-000008"
+            ],
+            "equity": [
+              "GPN|StockholdersEquity|2023-12-31|0001123360-25-000011"
+            ],
+            "net_income": [
+              "GPN|NetIncomeLoss|2023-12-31|0001123360-26-000008"
+            ],
+            "operating_income": [
+              "GPN|OperatingIncomeLoss|2023-12-31|0001123360-26-000008"
+            ],
+            "revenue": [
+              "GPN|RevenueFromContractWithCustomerExcludingAssessedTax|2023-12-31|0001123360-26-000008"
+            ],
+            "shares_diluted": [
+              "GPN|WeightedAverageNumberOfDilutedSharesOutstanding|2023-12-31|0001123360-26-000008"
+            ],
+            "tax_expense": [
+              "GPN|IncomeTaxExpenseBenefit|2023-12-31|0001123360-26-000008"
+            ]
+          },
+          "tags": {
+            "capex": "PaymentsToAcquireProductiveAssets",
+            "cash": "CashAndCashEquivalentsAtCarryingValue",
+            "cfo": "NetCashProvidedByUsedInOperatingActivities",
+            "da": "DepreciationDepletionAndAmortization",
+            "eps_diluted": "EarningsPerShareDiluted",
+            "equity": "StockholdersEquity",
+            "net_income": "NetIncomeLoss",
+            "operating_income": "OperatingIncomeLoss",
+            "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "shares_diluted": "WeightedAverageNumberOfDilutedSharesOutstanding",
+            "tax_expense": "IncomeTaxExpenseBenefit"
+          },
+          "values": {
+            "capex": 658142000,
+            "cash": 2088887000,
+            "cfo": 2549805000,
+            "da": 1141894000,
+            "eps_diluted": 3.77,
+            "equity": 22999210000,
+            "net_income": 986233000,
+            "operating_income": 1315614000,
+            "revenue": 7379784000,
+            "shares_diluted": 261698000,
+            "tax_expense": 186517000
+          }
+        },
+        "FY2024": {
+          "fy_end": "2024-12-31",
+          "provenance": {
+            "capex": [
+              "GPN|PaymentsToAcquireProductiveAssets|2024-12-31|0001123360-26-000008"
+            ],
+            "cash": [
+              "GPN|CashAndCashEquivalentsAtCarryingValue|2024-12-31|0001123360-26-000008"
+            ],
+            "cfo": [
+              "GPN|NetCashProvidedByUsedInOperatingActivities|2024-12-31|0001123360-26-000008"
+            ],
+            "da": [
+              "GPN|DepreciationDepletionAndAmortization|2024-12-31|0001123360-26-000008"
+            ],
+            "eps_diluted": [
+              "GPN|EarningsPerShareDiluted|2024-12-31|0001123360-26-000008"
+            ],
+            "equity": [
+              "GPN|StockholdersEquity|2024-12-31|0001123360-26-000008"
+            ],
+            "net_income": [
+              "GPN|NetIncomeLoss|2024-12-31|0001123360-26-000008"
+            ],
+            "operating_income": [
+              "GPN|OperatingIncomeLoss|2024-12-31|0001123360-26-000008"
+            ],
+            "revenue": [
+              "GPN|RevenueFromContractWithCustomerExcludingAssessedTax|2024-12-31|0001123360-26-000008"
+            ],
+            "shares_diluted": [
+              "GPN|WeightedAverageNumberOfDilutedSharesOutstanding|2024-12-31|0001123360-26-000008"
+            ],
+            "tax_expense": [
+              "GPN|IncomeTaxExpenseBenefit|2024-12-31|0001123360-26-000008"
+            ]
+          },
+          "tags": {
+            "capex": "PaymentsToAcquireProductiveAssets",
+            "cash": "CashAndCashEquivalentsAtCarryingValue",
+            "cfo": "NetCashProvidedByUsedInOperatingActivities",
+            "da": "DepreciationDepletionAndAmortization",
+            "eps_diluted": "EarningsPerShareDiluted",
+            "equity": "StockholdersEquity",
+            "net_income": "NetIncomeLoss",
+            "operating_income": "OperatingIncomeLoss",
+            "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "shares_diluted": "WeightedAverageNumberOfDilutedSharesOutstanding",
+            "tax_expense": "IncomeTaxExpenseBenefit"
+          },
+          "values": {
+            "capex": 674917000,
+            "cash": 2356470000,
+            "cfo": 3057583000,
+            "da": 1217288000,
+            "eps_diluted": 6.16,
+            "equity": 22280686000,
+            "net_income": 1570365000,
+            "operating_income": 1974500000,
+            "revenue": 7735970000,
+            "shares_diluted": 254845000,
+            "tax_expense": 241513000
+          }
+        },
+        "FY2025": {
+          "fy_end": "2025-12-31",
+          "provenance": {
+            "capex": [
+              "GPN|PaymentsToAcquireProductiveAssets|2025-12-31|0001123360-26-000008"
+            ],
+            "cash": [
+              "GPN|CashAndCashEquivalentsAtCarryingValue|2025-12-31|0001123360-26-000008"
+            ],
+            "cfo": [
+              "GPN|NetCashProvidedByUsedInOperatingActivities|2025-12-31|0001123360-26-000008"
+            ],
+            "da": [
+              "GPN|DepreciationDepletionAndAmortization|2025-12-31|0001123360-26-000008"
+            ],
+            "eps_diluted": [
+              "GPN|EarningsPerShareDiluted|2025-12-31|0001123360-26-000008"
+            ],
+            "equity": [
+              "GPN|StockholdersEquity|2025-12-31|0001123360-26-000008"
+            ],
+            "net_income": [
+              "GPN|NetIncomeLoss|2025-12-31|0001123360-26-000008"
+            ],
+            "operating_income": [
+              "GPN|OperatingIncomeLoss|2025-12-31|0001123360-26-000008"
+            ],
+            "revenue": [
+              "GPN|RevenueFromContractWithCustomerExcludingAssessedTax|2025-12-31|0001123360-26-000008"
+            ],
+            "shares_diluted": [
+              "GPN|WeightedAverageNumberOfDilutedSharesOutstanding|2025-12-31|0001123360-26-000008"
+            ],
+            "tax_expense": [
+              "GPN|IncomeTaxExpenseBenefit|2025-12-31|0001123360-26-000008"
+            ]
+          },
+          "tags": {
+            "capex": "PaymentsToAcquireProductiveAssets",
+            "cash": "CashAndCashEquivalentsAtCarryingValue",
+            "cfo": "NetCashProvidedByUsedInOperatingActivities",
+            "da": "DepreciationDepletionAndAmortization",
+            "eps_diluted": "EarningsPerShareDiluted",
+            "equity": "StockholdersEquity",
+            "net_income": "NetIncomeLoss",
+            "operating_income": "OperatingIncomeLoss",
+            "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "shares_diluted": "WeightedAverageNumberOfDilutedSharesOutstanding",
+            "tax_expense": "IncomeTaxExpenseBenefit"
+          },
+          "values": {
+            "capex": 617769000,
+            "cash": 8336402000,
+            "cfo": 2656592000,
+            "da": 1229208000,
+            "eps_diluted": 5.78,
+            "equity": 22888767000,
+            "net_income": 1400107000,
+            "operating_income": 1754624000,
+            "revenue": 7705878000,
+            "shares_diluted": 242008000,
+            "tax_expense": 251557000
+          }
+        }
+      }
+    },
+    "MA": {
+      "cik": "0001141391",
+      "entity_name": "Mastercard Incorporated",
+      "fiscal_year_end_month": "12",
+      "not_available": [],
+      "series_breaks": [],
+      "years": {
+        "FY2022": {
+          "fy_end": "2022-12-31",
+          "provenance": {
+            "capex": [
+              "MA|PaymentsToAcquirePropertyPlantAndEquipment|2022-12-31|0001141391-25-000011"
+            ],
+            "cash": [
+              "MA|CashAndCashEquivalentsAtCarryingValue|2022-12-31|0001141391-24-000022"
+            ],
+            "cfo": [
+              "MA|NetCashProvidedByUsedInOperatingActivities|2022-12-31|0001141391-25-000011"
+            ],
+            "da": [
+              "MA|DepreciationAndAmortization|2022-12-31|0001141391-25-000011"
+            ],
+            "eps_diluted": [
+              "MA|EarningsPerShareDiluted|2022-12-31|0001141391-25-000011"
+            ],
+            "equity": [
+              "MA|StockholdersEquity|2022-12-31|0001141391-24-000022"
+            ],
+            "net_income": [
+              "MA|ProfitLoss|2022-12-31|0001141391-25-000011"
+            ],
+            "operating_income": [
+              "MA|OperatingIncomeLoss|2022-12-31|0001141391-25-000011"
+            ],
+            "revenue": [
+              "MA|Revenues|2022-12-31|0001141391-25-000011"
+            ],
+            "shares_diluted": [
+              "MA|WeightedAverageNumberOfDilutedSharesOutstanding|2022-12-31|0001141391-25-000011"
+            ],
+            "tax_expense": [
+              "MA|IncomeTaxExpenseBenefit|2022-12-31|0001141391-25-000011"
+            ]
+          },
+          "tags": {
+            "capex": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "cash": "CashAndCashEquivalentsAtCarryingValue",
+            "cfo": "NetCashProvidedByUsedInOperatingActivities",
+            "da": "DepreciationAndAmortization",
+            "eps_diluted": "EarningsPerShareDiluted",
+            "equity": "StockholdersEquity",
+            "net_income": "ProfitLoss",
+            "operating_income": "OperatingIncomeLoss",
+            "revenue": "Revenues",
+            "shares_diluted": "WeightedAverageNumberOfDilutedSharesOutstanding",
+            "tax_expense": "IncomeTaxExpenseBenefit"
+          },
+          "values": {
+            "capex": 442000000,
+            "cash": 7008000000,
+            "cfo": 11195000000,
+            "da": 750000000,
+            "eps_diluted": 10.22,
+            "equity": 6298000000,
+            "net_income": 9930000000,
+            "operating_income": 12264000000,
+            "revenue": 22237000000,
+            "shares_diluted": 971000000,
+            "tax_expense": 1802000000
+          }
+        },
+        "FY2023": {
+          "fy_end": "2023-12-31",
+          "provenance": {
+            "capex": [
+              "MA|PaymentsToAcquirePropertyPlantAndEquipment|2023-12-31|0001141391-26-000013"
+            ],
+            "cash": [
+              "MA|CashAndCashEquivalentsAtCarryingValue|2023-12-31|0001141391-25-000011"
+            ],
+            "cfo": [
+              "MA|NetCashProvidedByUsedInOperatingActivities|2023-12-31|0001141391-26-000013"
+            ],
+            "da": [
+              "MA|DepreciationAndAmortization|2023-12-31|0001141391-26-000013"
+            ],
+            "eps_diluted": [
+              "MA|EarningsPerShareDiluted|2023-12-31|0001141391-26-000013"
+            ],
+            "equity": [
+              "MA|StockholdersEquity|2023-12-31|0001141391-25-000011"
+            ],
+            "net_income": [
+              "MA|ProfitLoss|2023-12-31|0001141391-26-000013"
+            ],
+            "operating_income": [
+              "MA|OperatingIncomeLoss|2023-12-31|0001141391-26-000013"
+            ],
+            "revenue": [
+              "MA|Revenues|2023-12-31|0001141391-26-000013"
+            ],
+            "shares_diluted": [
+              "MA|WeightedAverageNumberOfDilutedSharesOutstanding|2023-12-31|0001141391-26-000013"
+            ],
+            "tax_expense": [
+              "MA|IncomeTaxExpenseBenefit|2023-12-31|0001141391-26-000013"
+            ]
+          },
+          "tags": {
+            "capex": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "cash": "CashAndCashEquivalentsAtCarryingValue",
+            "cfo": "NetCashProvidedByUsedInOperatingActivities",
+            "da": "DepreciationAndAmortization",
+            "eps_diluted": "EarningsPerShareDiluted",
+            "equity": "StockholdersEquity",
+            "net_income": "ProfitLoss",
+            "operating_income": "OperatingIncomeLoss",
+            "revenue": "Revenues",
+            "shares_diluted": "WeightedAverageNumberOfDilutedSharesOutstanding",
+            "tax_expense": "IncomeTaxExpenseBenefit"
+          },
+          "values": {
+            "capex": 371000000,
+            "cash": 8588000000,
+            "cfo": 11980000000,
+            "da": 799000000,
+            "eps_diluted": 11.83,
+            "equity": 6929000000,
+            "net_income": 11195000000,
+            "operating_income": 14008000000,
+            "revenue": 25098000000,
+            "shares_diluted": 946000000,
+            "tax_expense": 2444000000
+          }
+        },
+        "FY2024": {
+          "fy_end": "2024-12-31",
+          "provenance": {
+            "capex": [
+              "MA|PaymentsToAcquirePropertyPlantAndEquipment|2024-12-31|0001141391-26-000013"
+            ],
+            "cash": [
+              "MA|CashAndCashEquivalentsAtCarryingValue|2024-12-31|0001141391-26-000013"
+            ],
+            "cfo": [
+              "MA|NetCashProvidedByUsedInOperatingActivities|2024-12-31|0001141391-26-000013"
+            ],
+            "da": [
+              "MA|DepreciationAndAmortization|2024-12-31|0001141391-26-000013"
+            ],
+            "eps_diluted": [
+              "MA|EarningsPerShareDiluted|2024-12-31|0001141391-26-000013"
+            ],
+            "equity": [
+              "MA|StockholdersEquity|2024-12-31|0001141391-26-000013"
+            ],
+            "net_income": [
+              "MA|ProfitLoss|2024-12-31|0001141391-26-000013"
+            ],
+            "operating_income": [
+              "MA|OperatingIncomeLoss|2024-12-31|0001141391-26-000013"
+            ],
+            "revenue": [
+              "MA|Revenues|2024-12-31|0001141391-26-000013"
+            ],
+            "shares_diluted": [
+              "MA|WeightedAverageNumberOfDilutedSharesOutstanding|2024-12-31|0001141391-26-000013"
+            ],
+            "tax_expense": [
+              "MA|IncomeTaxExpenseBenefit|2024-12-31|0001141391-26-000013"
+            ]
+          },
+          "tags": {
+            "capex": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "cash": "CashAndCashEquivalentsAtCarryingValue",
+            "cfo": "NetCashProvidedByUsedInOperatingActivities",
+            "da": "DepreciationAndAmortization",
+            "eps_diluted": "EarningsPerShareDiluted",
+            "equity": "StockholdersEquity",
+            "net_income": "ProfitLoss",
+            "operating_income": "OperatingIncomeLoss",
+            "revenue": "Revenues",
+            "shares_diluted": "WeightedAverageNumberOfDilutedSharesOutstanding",
+            "tax_expense": "IncomeTaxExpenseBenefit"
+          },
+          "values": {
+            "capex": 474000000,
+            "cash": 8442000000,
+            "cfo": 14780000000,
+            "da": 897000000,
+            "eps_diluted": 13.89,
+            "equity": 6485000000,
+            "net_income": 12874000000,
+            "operating_income": 15582000000,
+            "revenue": 28167000000,
+            "shares_diluted": 927000000,
+            "tax_expense": 2380000000
+          }
+        },
+        "FY2025": {
+          "fy_end": "2025-12-31",
+          "provenance": {
+            "capex": [
+              "MA|PaymentsToAcquirePropertyPlantAndEquipment|2025-12-31|0001141391-26-000013"
+            ],
+            "cash": [
+              "MA|CashAndCashEquivalentsAtCarryingValue|2025-12-31|0001141391-26-000013"
+            ],
+            "cfo": [
+              "MA|NetCashProvidedByUsedInOperatingActivities|2025-12-31|0001141391-26-000013"
+            ],
+            "da": [
+              "MA|DepreciationAndAmortization|2025-12-31|0001141391-26-000013"
+            ],
+            "eps_diluted": [
+              "MA|EarningsPerShareDiluted|2025-12-31|0001141391-26-000013"
+            ],
+            "equity": [
+              "MA|StockholdersEquity|2025-12-31|0001141391-26-000013"
+            ],
+            "net_income": [
+              "MA|ProfitLoss|2025-12-31|0001141391-26-000013"
+            ],
+            "operating_income": [
+              "MA|OperatingIncomeLoss|2025-12-31|0001141391-26-000013"
+            ],
+            "revenue": [
+              "MA|Revenues|2025-12-31|0001141391-26-000013"
+            ],
+            "shares_diluted": [
+              "MA|WeightedAverageNumberOfDilutedSharesOutstanding|2025-12-31|0001141391-26-000013"
+            ],
+            "tax_expense": [
+              "MA|IncomeTaxExpenseBenefit|2025-12-31|0001141391-26-000013"
+            ]
+          },
+          "tags": {
+            "capex": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "cash": "CashAndCashEquivalentsAtCarryingValue",
+            "cfo": "NetCashProvidedByUsedInOperatingActivities",
+            "da": "DepreciationAndAmortization",
+            "eps_diluted": "EarningsPerShareDiluted",
+            "equity": "StockholdersEquity",
+            "net_income": "ProfitLoss",
+            "operating_income": "OperatingIncomeLoss",
+            "revenue": "Revenues",
+            "shares_diluted": "WeightedAverageNumberOfDilutedSharesOutstanding",
+            "tax_expense": "IncomeTaxExpenseBenefit"
+          },
+          "values": {
+            "capex": 489000000,
+            "cash": 10566000000,
+            "cfo": 17648000000,
+            "da": 1143000000,
+            "eps_diluted": 16.52,
+            "equity": 7737000000,
+            "net_income": 14968000000,
+            "operating_income": 18897000000,
+            "revenue": 32791000000,
+            "shares_diluted": 906000000,
+            "tax_expense": 3610000000
+          }
+        }
+      }
+    },
+    "PYPL": {
+      "cik": "0001633917",
+      "entity_name": "PayPal Holdings, Inc.",
+      "fiscal_year_end_month": "12",
+      "not_available": [],
+      "series_breaks": [],
+      "years": {
+        "FY2022": {
+          "fy_end": "2022-12-31",
+          "provenance": {
+            "capex": [
+              "PYPL|PaymentsToAcquirePropertyPlantAndEquipment|2022-12-31|0001633917-25-000019"
+            ],
+            "cash": [
+              "PYPL|CashAndCashEquivalentsAtCarryingValue|2022-12-31|0001633917-25-000019"
+            ],
+            "cfo": [
+              "PYPL|NetCashProvidedByUsedInOperatingActivities|2022-12-31|0001633917-25-000019"
+            ],
+            "da": [
+              "PYPL|DepreciationDepletionAndAmortization|2022-12-31|0001633917-25-000019"
+            ],
+            "eps_diluted": [
+              "PYPL|EarningsPerShareDiluted|2022-12-31|0001633917-25-000019"
+            ],
+            "equity": [
+              "PYPL|StockholdersEquity|2022-12-31|0001633917-26-000024"
+            ],
+            "net_income": [
+              "PYPL|NetIncomeLoss|2022-12-31|0001633917-25-000019"
+            ],
+            "operating_income": [
+              "PYPL|OperatingIncomeLoss|2022-12-31|0001633917-25-000019"
+            ],
+            "revenue": [
+              "PYPL|Revenues|2022-12-31|0001633917-25-000019"
+            ],
+            "shares_diluted": [
+              "PYPL|WeightedAverageNumberOfDilutedSharesOutstanding|2022-12-31|0001633917-25-000019"
+            ],
+            "tax_expense": [
+              "PYPL|IncomeTaxExpenseBenefit|2022-12-31|0001633917-25-000019"
+            ]
+          },
+          "tags": {
+            "capex": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "cash": "CashAndCashEquivalentsAtCarryingValue",
+            "cfo": "NetCashProvidedByUsedInOperatingActivities",
+            "da": "DepreciationDepletionAndAmortization",
+            "eps_diluted": "EarningsPerShareDiluted",
+            "equity": "StockholdersEquity",
+            "net_income": "NetIncomeLoss",
+            "operating_income": "OperatingIncomeLoss",
+            "revenue": "Revenues",
+            "shares_diluted": "WeightedAverageNumberOfDilutedSharesOutstanding",
+            "tax_expense": "IncomeTaxExpenseBenefit"
+          },
+          "values": {
+            "capex": 706000000,
+            "cash": 7776000000,
+            "cfo": 5813000000,
+            "da": 1317000000,
+            "eps_diluted": 2.09,
+            "equity": 20274000000,
+            "net_income": 2419000000,
+            "operating_income": 3837000000,
+            "revenue": 27518000000,
+            "shares_diluted": 1158000000,
+            "tax_expense": 947000000
+          }
+        },
+        "FY2023": {
+          "fy_end": "2023-12-31",
+          "provenance": {
+            "capex": [
+              "PYPL|PaymentsToAcquirePropertyPlantAndEquipment|2023-12-31|0001633917-26-000024"
+            ],
+            "cash": [
+              "PYPL|CashAndCashEquivalentsAtCarryingValue|2023-12-31|0001633917-26-000024"
+            ],
+            "cfo": [
+              "PYPL|NetCashProvidedByUsedInOperatingActivities|2023-12-31|0001633917-26-000024"
+            ],
+            "da": [
+              "PYPL|DepreciationDepletionAndAmortization|2023-12-31|0001633917-26-000024"
+            ],
+            "eps_diluted": [
+              "PYPL|EarningsPerShareDiluted|2023-12-31|0001633917-26-000024"
+            ],
+            "equity": [
+              "PYPL|StockholdersEquity|2023-12-31|0001633917-26-000024"
+            ],
+            "net_income": [
+              "PYPL|NetIncomeLoss|2023-12-31|0001633917-26-000024"
+            ],
+            "operating_income": [
+              "PYPL|OperatingIncomeLoss|2023-12-31|0001633917-26-000024"
+            ],
+            "revenue": [
+              "PYPL|Revenues|2023-12-31|0001633917-26-000024"
+            ],
+            "shares_diluted": [
+              "PYPL|WeightedAverageNumberOfDilutedSharesOutstanding|2023-12-31|0001633917-26-000024"
+            ],
+            "tax_expense": [
+              "PYPL|IncomeTaxExpenseBenefit|2023-12-31|0001633917-26-000024"
+            ]
+          },
+          "tags": {
+            "capex": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "cash": "CashAndCashEquivalentsAtCarryingValue",
+            "cfo": "NetCashProvidedByUsedInOperatingActivities",
+            "da": "DepreciationDepletionAndAmortization",
+            "eps_diluted": "EarningsPerShareDiluted",
+            "equity": "StockholdersEquity",
+            "net_income": "NetIncomeLoss",
+            "operating_income": "OperatingIncomeLoss",
+            "revenue": "Revenues",
+            "shares_diluted": "WeightedAverageNumberOfDilutedSharesOutstanding",
+            "tax_expense": "IncomeTaxExpenseBenefit"
+          },
+          "values": {
+            "capex": 623000000,
+            "cash": 9081000000,
+            "cfo": 4843000000,
+            "da": 1072000000,
+            "eps_diluted": 3.84,
+            "equity": 21051000000,
+            "net_income": 4246000000,
+            "operating_income": 5028000000,
+            "revenue": 29771000000,
+            "shares_diluted": 1107000000,
+            "tax_expense": 1165000000
+          }
+        },
+        "FY2024": {
+          "fy_end": "2024-12-31",
+          "provenance": {
+            "capex": [
+              "PYPL|PaymentsToAcquirePropertyPlantAndEquipment|2024-12-31|0001633917-26-000024"
+            ],
+            "cash": [
+              "PYPL|CashAndCashEquivalentsAtCarryingValue|2024-12-31|0001633917-26-000024"
+            ],
+            "cfo": [
+              "PYPL|NetCashProvidedByUsedInOperatingActivities|2024-12-31|0001633917-26-000024"
+            ],
+            "da": [
+              "PYPL|DepreciationDepletionAndAmortization|2024-12-31|0001633917-26-000024"
+            ],
+            "eps_diluted": [
+              "PYPL|EarningsPerShareDiluted|2024-12-31|0001633917-26-000024"
+            ],
+            "equity": [
+              "PYPL|StockholdersEquity|2024-12-31|0001633917-26-000024"
+            ],
+            "net_income": [
+              "PYPL|NetIncomeLoss|2024-12-31|0001633917-26-000024"
+            ],
+            "operating_income": [
+              "PYPL|OperatingIncomeLoss|2024-12-31|0001633917-26-000024"
+            ],
+            "revenue": [
+              "PYPL|Revenues|2024-12-31|0001633917-26-000024"
+            ],
+            "shares_diluted": [
+              "PYPL|WeightedAverageNumberOfDilutedSharesOutstanding|2024-12-31|0001633917-26-000024"
+            ],
+            "tax_expense": [
+              "PYPL|IncomeTaxExpenseBenefit|2024-12-31|0001633917-26-000024"
+            ]
+          },
+          "tags": {
+            "capex": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "cash": "CashAndCashEquivalentsAtCarryingValue",
+            "cfo": "NetCashProvidedByUsedInOperatingActivities",
+            "da": "DepreciationDepletionAndAmortization",
+            "eps_diluted": "EarningsPerShareDiluted",
+            "equity": "StockholdersEquity",
+            "net_income": "NetIncomeLoss",
+            "operating_income": "OperatingIncomeLoss",
+            "revenue": "Revenues",
+            "shares_diluted": "WeightedAverageNumberOfDilutedSharesOutstanding",
+            "tax_expense": "IncomeTaxExpenseBenefit"
+          },
+          "values": {
+            "capex": 683000000,
+            "cash": 6662000000,
+            "cfo": 7450000000,
+            "da": 1032000000,
+            "eps_diluted": 3.99,
+            "equity": 20417000000,
+            "net_income": 4147000000,
+            "operating_income": 5325000000,
+            "revenue": 31797000000,
+            "shares_diluted": 1039000000,
+            "tax_expense": 1182000000
+          }
+        },
+        "FY2025": {
+          "fy_end": "2025-12-31",
+          "provenance": {
+            "capex": [
+              "PYPL|PaymentsToAcquirePropertyPlantAndEquipment|2025-12-31|0001633917-26-000024"
+            ],
+            "cash": [
+              "PYPL|CashAndCashEquivalentsAtCarryingValue|2025-12-31|0001633917-26-000024"
+            ],
+            "cfo": [
+              "PYPL|NetCashProvidedByUsedInOperatingActivities|2025-12-31|0001633917-26-000024"
+            ],
+            "da": [
+              "PYPL|DepreciationDepletionAndAmortization|2025-12-31|0001633917-26-000024"
+            ],
+            "eps_diluted": [
+              "PYPL|EarningsPerShareDiluted|2025-12-31|0001633917-26-000024"
+            ],
+            "equity": [
+              "PYPL|StockholdersEquity|2025-12-31|0001633917-26-000024"
+            ],
+            "net_income": [
+              "PYPL|NetIncomeLoss|2025-12-31|0001633917-26-000024"
+            ],
+            "operating_income": [
+              "PYPL|OperatingIncomeLoss|2025-12-31|0001633917-26-000024"
+            ],
+            "revenue": [
+              "PYPL|Revenues|2025-12-31|0001633917-26-000024"
+            ],
+            "shares_diluted": [
+              "PYPL|WeightedAverageNumberOfDilutedSharesOutstanding|2025-12-31|0001633917-26-000024"
+            ],
+            "tax_expense": [
+              "PYPL|IncomeTaxExpenseBenefit|2025-12-31|0001633917-26-000024"
+            ]
+          },
+          "tags": {
+            "capex": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "cash": "CashAndCashEquivalentsAtCarryingValue",
+            "cfo": "NetCashProvidedByUsedInOperatingActivities",
+            "da": "DepreciationDepletionAndAmortization",
+            "eps_diluted": "EarningsPerShareDiluted",
+            "equity": "StockholdersEquity",
+            "net_income": "NetIncomeLoss",
+            "operating_income": "OperatingIncomeLoss",
+            "revenue": "Revenues",
+            "shares_diluted": "WeightedAverageNumberOfDilutedSharesOutstanding",
+            "tax_expense": "IncomeTaxExpenseBenefit"
+          },
+          "values": {
+            "capex": 852000000,
+            "cash": 8049000000,
+            "cfo": 6416000000,
+            "da": 963000000,
+            "eps_diluted": 5.41,
+            "equity": 20256000000,
+            "net_income": 5233000000,
+            "operating_income": 6065000000,
+            "revenue": 33172000000,
+            "shares_diluted": 968000000,
+            "tax_expense": 1059000000
+          }
+        }
+      }
+    },
+    "V": {
+      "cik": "0001403161",
+      "entity_name": "VISA INC.",
+      "fiscal_year_end_month": "09",
+      "not_available": [
+        {
+          "action": "render not_available; do not substitute zero",
+          "metric": "V.FY2022.shares_diluted",
+          "reason": "no admissible fact for any of ['WeightedAverageNumberOfDilutedSharesOutstanding', 'CommonStockSharesOutstanding']"
+        },
+        {
+          "action": "render not_available; do not substitute zero",
+          "metric": "V.FY2022.eps_diluted",
+          "reason": "no admissible fact for any of ['EarningsPerShareDiluted']"
+        },
+        {
+          "action": "render not_available; do not substitute zero",
+          "metric": "V.FY2023.shares_diluted",
+          "reason": "no admissible fact for any of ['WeightedAverageNumberOfDilutedSharesOutstanding', 'CommonStockSharesOutstanding']"
+        },
+        {
+          "action": "render not_available; do not substitute zero",
+          "metric": "V.FY2023.eps_diluted",
+          "reason": "no admissible fact for any of ['EarningsPerShareDiluted']"
+        },
+        {
+          "action": "render not_available; do not substitute zero",
+          "metric": "V.FY2024.shares_diluted",
+          "reason": "no admissible fact for any of ['WeightedAverageNumberOfDilutedSharesOutstanding', 'CommonStockSharesOutstanding']"
+        },
+        {
+          "action": "render not_available; do not substitute zero",
+          "metric": "V.FY2024.eps_diluted",
+          "reason": "no admissible fact for any of ['EarningsPerShareDiluted']"
+        },
+        {
+          "action": "render not_available; do not substitute zero",
+          "metric": "V.FY2025.shares_diluted",
+          "reason": "no admissible fact for any of ['WeightedAverageNumberOfDilutedSharesOutstanding', 'CommonStockSharesOutstanding']"
+        },
+        {
+          "action": "render not_available; do not substitute zero",
+          "metric": "V.FY2025.eps_diluted",
+          "reason": "no admissible fact for any of ['EarningsPerShareDiluted']"
+        }
+      ],
+      "series_breaks": [],
+      "years": {
+        "FY2022": {
+          "fy_end": "2022-09-30",
+          "provenance": {
+            "capex": [
+              "V|PaymentsToAcquireProductiveAssets|2022-09-30|0001403161-24-000058"
+            ],
+            "cash": [
+              "V|CashAndCashEquivalentsAtCarryingValue|2022-09-30|0001403161-23-000099"
+            ],
+            "cfo": [
+              "V|NetCashProvidedByUsedInOperatingActivities|2022-09-30|0001403161-24-000058"
+            ],
+            "da": [
+              "V|DepreciationAndAmortization|2022-09-30|0001403161-24-000058"
+            ],
+            "equity": [
+              "V|StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest|2022-09-30|0001403161-25-000089"
+            ],
+            "net_income": [
+              "V|NetIncomeLoss|2022-09-30|0001403161-24-000058"
+            ],
+            "operating_income": [
+              "V|OperatingIncomeLoss|2022-09-30|0001403161-24-000058"
+            ],
+            "revenue": [
+              "V|RevenueFromContractWithCustomerExcludingAssessedTax|2022-09-30|0001403161-24-000058"
+            ],
+            "tax_expense": [
+              "V|IncomeTaxExpenseBenefit|2022-09-30|0001403161-24-000058"
+            ]
+          },
+          "tags": {
+            "capex": "PaymentsToAcquireProductiveAssets",
+            "cash": "CashAndCashEquivalentsAtCarryingValue",
+            "cfo": "NetCashProvidedByUsedInOperatingActivities",
+            "da": "DepreciationAndAmortization",
+            "equity": "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest",
+            "net_income": "NetIncomeLoss",
+            "operating_income": "OperatingIncomeLoss",
+            "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "tax_expense": "IncomeTaxExpenseBenefit"
+          },
+          "values": {
+            "capex": 970000000,
+            "cash": 15689000000,
+            "cfo": 18849000000,
+            "da": 861000000,
+            "equity": 35581000000,
+            "net_income": 14957000000,
+            "operating_income": 18813000000,
+            "revenue": 29310000000,
+            "tax_expense": 3179000000
+          }
+        },
+        "FY2023": {
+          "fy_end": "2023-09-30",
+          "provenance": {
+            "capex": [
+              "V|PaymentsToAcquireProductiveAssets|2023-09-30|0001403161-25-000089"
+            ],
+            "cash": [
+              "V|CashAndCashEquivalentsAtCarryingValue|2023-09-30|0001403161-24-000058"
+            ],
+            "cfo": [
+              "V|NetCashProvidedByUsedInOperatingActivities|2023-09-30|0001403161-25-000089"
+            ],
+            "da": [
+              "V|DepreciationAndAmortization|2023-09-30|0001403161-25-000089"
+            ],
+            "equity": [
+              "V|StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest|2023-09-30|0001403161-25-000089"
+            ],
+            "net_income": [
+              "V|NetIncomeLoss|2023-09-30|0001403161-25-000089"
+            ],
+            "operating_income": [
+              "V|OperatingIncomeLoss|2023-09-30|0001403161-25-000089"
+            ],
+            "revenue": [
+              "V|RevenueFromContractWithCustomerExcludingAssessedTax|2023-09-30|0001403161-25-000089"
+            ],
+            "tax_expense": [
+              "V|IncomeTaxExpenseBenefit|2023-09-30|0001403161-25-000089"
+            ]
+          },
+          "tags": {
+            "capex": "PaymentsToAcquireProductiveAssets",
+            "cash": "CashAndCashEquivalentsAtCarryingValue",
+            "cfo": "NetCashProvidedByUsedInOperatingActivities",
+            "da": "DepreciationAndAmortization",
+            "equity": "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest",
+            "net_income": "NetIncomeLoss",
+            "operating_income": "OperatingIncomeLoss",
+            "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "tax_expense": "IncomeTaxExpenseBenefit"
+          },
+          "values": {
+            "capex": 1059000000,
+            "cash": 16286000000,
+            "cfo": 20755000000,
+            "da": 943000000,
+            "equity": 38733000000,
+            "net_income": 17273000000,
+            "operating_income": 21000000000,
+            "revenue": 32653000000,
+            "tax_expense": 3764000000
+          }
+        },
+        "FY2024": {
+          "fy_end": "2024-09-30",
+          "provenance": {
+            "capex": [
+              "V|PaymentsToAcquireProductiveAssets|2024-09-30|0001403161-25-000089"
+            ],
+            "cash": [
+              "V|CashAndCashEquivalentsAtCarryingValue|2024-09-30|0001403161-25-000089"
+            ],
+            "cfo": [
+              "V|NetCashProvidedByUsedInOperatingActivities|2024-09-30|0001403161-25-000089"
+            ],
+            "da": [
+              "V|DepreciationAndAmortization|2024-09-30|0001403161-25-000089"
+            ],
+            "equity": [
+              "V|StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest|2024-09-30|0001403161-25-000089"
+            ],
+            "net_income": [
+              "V|NetIncomeLoss|2024-09-30|0001403161-25-000089"
+            ],
+            "operating_income": [
+              "V|OperatingIncomeLoss|2024-09-30|0001403161-25-000089"
+            ],
+            "revenue": [
+              "V|RevenueFromContractWithCustomerExcludingAssessedTax|2024-09-30|0001403161-25-000089"
+            ],
+            "tax_expense": [
+              "V|IncomeTaxExpenseBenefit|2024-09-30|0001403161-25-000089"
+            ]
+          },
+          "tags": {
+            "capex": "PaymentsToAcquireProductiveAssets",
+            "cash": "CashAndCashEquivalentsAtCarryingValue",
+            "cfo": "NetCashProvidedByUsedInOperatingActivities",
+            "da": "DepreciationAndAmortization",
+            "equity": "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest",
+            "net_income": "NetIncomeLoss",
+            "operating_income": "OperatingIncomeLoss",
+            "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "tax_expense": "IncomeTaxExpenseBenefit"
+          },
+          "values": {
+            "capex": 1257000000,
+            "cash": 11975000000,
+            "cfo": 19950000000,
+            "da": 1034000000,
+            "equity": 39137000000,
+            "net_income": 19743000000,
+            "operating_income": 23595000000,
+            "revenue": 35926000000,
+            "tax_expense": 4173000000
+          }
+        },
+        "FY2025": {
+          "fy_end": "2025-09-30",
+          "provenance": {
+            "capex": [
+              "V|PaymentsToAcquireProductiveAssets|2025-09-30|0001403161-25-000089"
+            ],
+            "cash": [
+              "V|CashAndCashEquivalentsAtCarryingValue|2025-09-30|0001403161-25-000089"
+            ],
+            "cfo": [
+              "V|NetCashProvidedByUsedInOperatingActivities|2025-09-30|0001403161-25-000089"
+            ],
+            "da": [
+              "V|DepreciationAndAmortization|2025-09-30|0001403161-25-000089"
+            ],
+            "equity": [
+              "V|StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest|2025-09-30|0001403161-25-000089"
+            ],
+            "net_income": [
+              "V|NetIncomeLoss|2025-09-30|0001403161-25-000089"
+            ],
+            "operating_income": [
+              "V|OperatingIncomeLoss|2025-09-30|0001403161-25-000089"
+            ],
+            "revenue": [
+              "V|RevenueFromContractWithCustomerExcludingAssessedTax|2025-09-30|0001403161-25-000089"
+            ],
+            "tax_expense": [
+              "V|IncomeTaxExpenseBenefit|2025-09-30|0001403161-25-000089"
+            ]
+          },
+          "tags": {
+            "capex": "PaymentsToAcquireProductiveAssets",
+            "cash": "CashAndCashEquivalentsAtCarryingValue",
+            "cfo": "NetCashProvidedByUsedInOperatingActivities",
+            "da": "DepreciationAndAmortization",
+            "equity": "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest",
+            "net_income": "NetIncomeLoss",
+            "operating_income": "OperatingIncomeLoss",
+            "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "tax_expense": "IncomeTaxExpenseBenefit"
+          },
+          "values": {
+            "capex": 1482000000,
+            "cash": 17164000000,
+            "cfo": 23059000000,
+            "da": 1220000000,
+            "equity": 37909000000,
+            "net_income": 20058000000,
+            "operating_income": 23994000000,
+            "revenue": 40000000000,
+            "tax_expense": 4136000000
+          }
+        }
+      }
+    }
+  },
+  "years": [
+    2022,
+    2023,
+    2024,
+    2025
+  ]
+}

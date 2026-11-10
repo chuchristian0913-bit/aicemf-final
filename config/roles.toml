@@ -1,0 +1,112 @@
+# roles.toml — role contracts.
+# A contract fixes four things: what the role receives, what it may do, what it must
+# return, and who checks it. `can_advance_state` is false for every agent role: only
+# the controller (src/pcd/state.py) moves the run forward.
+
+[[role]]
+id            = "pcd-orchestrator"
+kind          = "controller+agent"
+tools         = ["Read", "Glob", "Grep", "Bash"]
+write_scope   = ["cases/<case>/state.json", "cases/<case>/trace.jsonl", "cases/<case>/request.json"]
+reads         = ["config/", "cases/<case>/"]
+contract_in   = "mandate (run.toml), current state, open findings, submitted artifacts"
+contract_out  = "one of: dispatch request | repair packet | terminal decision"
+can_advance_state = true
+cannot        = ["edit any evidence artifact", "compute a published number", "approve its own route"]
+
+[[role]]
+id            = "pcd-generator"
+kind          = "agent (lead)"
+tools         = ["Read", "Glob", "Grep", "Write", "Bash", "Agent"]
+subagents     = ["pcd-sources", "pcd-model", "pcd-note"]
+write_scope   = ["cases/<case>/rounds/"]
+reads         = ["data/frozen/", "config/assumptions/", "prompts/", "skills/"]
+contract_in   = "request.json (stage, constraints, carried findings)"
+contract_out  = "candidate/ manifest: artifact paths + hashes + metric registry + claims"
+can_advance_state = false
+cannot        = ["accept its own candidate", "write to output/", "change the acceptance standard"]
+
+[[role]]
+id            = "pcd-sources"
+kind          = "agent (specialist)"
+tools         = ["Read", "Write", "Bash"]
+bash_allow    = ["python -m pcd.sources", "python -m pcd.standardize"]
+write_scope   = ["cases/<case>/rounds/<r>/sources/"]
+contract_in   = "universe, cutoff, concept whitelist"
+contract_out  = "sources.jsonl (one record per admitted value) + drift log + restatement log"
+can_advance_state = false
+cannot        = ["admit a value filed after cutoff", "network access after freeze"]
+
+[[role]]
+id            = "pcd-model"
+kind          = "agent (specialist)"
+tools         = ["Read", "Write", "Bash"]
+bash_allow    = ["python -m pcd.model"]
+write_scope   = ["cases/<case>/rounds/<r>/model/"]
+contract_in   = "standardized financials, assumptions file (read-only)"
+contract_out  = "model.json (metrics + forecast + DCF + sensitivity) with metric_ids"
+can_advance_state = false
+cannot        = ["write a ticker constant into src/", "set a target value and back-solve", "edit assumptions"]
+
+[[role]]
+id            = "pcd-note"
+kind          = "agent (specialist)"
+tools         = ["Read", "Write", "Bash"]
+bash_allow    = ["python -m pcd.report"]
+write_scope   = ["cases/<case>/rounds/<r>/note/"]
+contract_in   = "model.json (verified), findings ledger"
+contract_out  = "note.tex + note claims list (every number carries a metric_id)"
+can_advance_state = false
+cannot        = ["write to output/", "introduce a number that is not in model.json"]
+
+[[role]]
+id            = "pcd-critic"
+kind          = "agent (lead)"
+tools         = ["Read", "Glob", "Grep", "Bash", "Agent"]
+subagents     = ["pcd-tieout", "pcd-provenance", "pcd-model-review"]
+write_scope   = ["cases/<case>/rounds/<r>/critic/"]
+reads         = ["data/frozen/", "cases/<case>/rounds/<r>/", "config/gates.toml"]
+contract_in   = "candidate manifest + frozen snapshot + fixed acceptance criteria"
+contract_out  = "findings (severity, target, evidence) + verdict accept|revise|stop"
+can_advance_state = false
+cannot        = ["edit the candidate", "relax a gate", "read the generator's reasoning trace"]
+
+[[role]]
+id            = "pcd-tieout"
+kind          = "agent (specialist, fresh context each round)"
+tools         = ["Read", "Grep", "Bash"]
+bash_allow    = ["python -m pcd.gates --only G07,G09"]
+write_scope   = ["cases/<case>/rounds/<r>/critic/tieout.json"]
+contract_out  = "every published number recomputed from frozen files; deltas and pass/fail"
+can_advance_state = false
+cannot        = ["reuse the generator's intermediate output", "write outside its own report"]
+
+[[role]]
+id            = "pcd-provenance"
+kind          = "agent (specialist, fresh context each round)"
+tools         = ["Read", "Grep", "Bash"]
+bash_allow    = ["python -m pcd.gates --only G04,G05,G06,G08,G12"]
+write_scope   = ["cases/<case>/rounds/<r>/critic/provenance.json"]
+contract_out  = "source id -> accession -> filing date chain for every cited figure"
+can_advance_state = false
+cannot        = ["accept a manual input without attestation"]
+
+[[role]]
+id            = "pcd-model-review"
+kind          = "agent (specialist, fresh context each round)"
+tools         = ["Read", "Grep", "Bash"]
+bash_allow    = ["python -m pcd.gates --only G10,G11,G13"]
+write_scope   = ["cases/<case>/rounds/<r>/critic/model_review.json"]
+contract_out  = "assumption completeness, no-plug check, period alignment, leakage probe"
+can_advance_state = false
+cannot        = ["propose a fix itself (that is the generator's job)"]
+
+[[role]]
+id            = "human-analyst"
+kind          = "human"
+tools         = ["Read"]
+write_scope   = ["cases/<case>/approval.json"]
+contract_in   = "passing verdict packet + open findings + all gate results"
+contract_out  = "approve | reject | defer, with name, timestamp and scope"
+can_advance_state = true
+note          = "Publishing is consequential. Only this role can authorise it."

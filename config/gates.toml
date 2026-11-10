@@ -1,0 +1,99 @@
+# gates.toml — executable acceptance criteria.
+# A gate is a function that reads files and returns PASS / FAIL / NOT_CHECKED with
+# evidence. Gates are cheap, deterministic and re-runnable: they never call a model.
+# `run_by` says who must be able to reproduce the result, which is why no gate lives
+# only inside the producing agent.
+
+[gates.G01]
+name        = "schema"
+run_by      = "controller"
+blocking    = true
+description = "Submission validates against docs/schema/submission.schema.json: keys, types, no extra fields."
+on_fail    = "reject submission, stay at current role"
+
+[gates.G02]
+name        = "identity"
+run_by      = "controller"
+blocking    = true
+description = "request_id, case_id and candidate_id in the submission match the open request; role id matches the dispatched role."
+
+[gates.G03]
+name        = "completeness"
+run_by      = "generator+critic"
+blocking    = true
+description = "Every ticker in the universe carries every required metric for every required fiscal year. A missing value must be an explicit not_available with a reason, never 0 and never omitted."
+required_metrics = [
+  "revenue", "operating_income", "net_income", "cfo", "capex",
+  "diluted_shares", "ebit_margin", "net_margin", "fcf_conversion",
+  "revenue_growth", "fcf", "ebitda_proxy",
+]
+
+[gates.G04]
+name        = "cutoff"
+run_by      = "critic (provenance)"
+blocking    = true
+description = "No admitted source record has filed > case cutoff. Any concept value whose filing date is after the cutoff must be absent from the registry, not merely unused."
+evidence    = "max(filed) over registry <= cutoff, plus a list of rejected post-cutoff candidates"
+
+[gates.G05]
+name        = "tag_drift"
+run_by      = "critic (provenance)"
+blocking    = true
+description = "Every ticker-year revenue resolves to exactly one XBRL tag by the documented priority, taken from the latest 10-K at or before cutoff. If a competing tag in the same filing would change the value by more than tolerance, the case must carry a TAG_DRIFT finding naming both tags."
+tolerance   = 0.005
+
+[gates.G06]
+name        = "restatement"
+run_by      = "critic (provenance)"
+blocking    = true
+description = "For each (concept, period) with more than one filed value at or before cutoff, a restatement record must exist and any revision above tolerance must appear in the note's limitations."
+tolerance   = 0.005
+
+[gates.G07]
+name        = "tie_out"
+run_by      = "critic (tieout)"
+blocking    = true
+description = "Every number quoted in the note is reached through a metric_id, and the value recomputed independently from data/frozen/ matches the quoted value."
+tolerance_rel = 0.0005
+tolerance_abs = 0.05
+description_2 = "A quoted number with no metric_id is an automatic FAIL, even if it happens to be right."
+
+[gates.G08]
+name        = "provenance"
+run_by      = "critic (provenance)"
+blocking    = true
+description = "Every metric_id resolves to one or more source records that exist in sources.jsonl, each carrying accession, form, filed date and url. Analyst-supplied inputs are a separate provenance class and require an attestation record; an unattested analyst input may not feed a published figure."
+
+[gates.G09]
+name        = "arithmetic"
+run_by      = "critic (tieout)"
+blocking    = true
+description = "Ratios are recomputed from unrounded numerators and denominators, not from the rounded numbers printed in the note."
+tolerance_rel = 1e-9
+
+[gates.G10]
+name        = "model_integrity"
+run_by      = "critic (model review)"
+blocking    = true
+description = "The forecast and DCF are recomputed from config/assumptions and the standardized financials. There is no plug: intrinsic value must equal the arithmetic result. No ticker literal may appear in src/pcd/model.py."
+forbidden_patterns_in = "src/pcd/model.py"
+forbidden_tokens      = ["V", "MA", "PYPL", "FI", "GPN"]
+
+[gates.G11]
+name        = "period_alignment"
+run_by      = "critic (model review)"
+blocking    = true
+description = "If the peer table mixes fiscal-year end months, the note must carry a period_alignment footnote key that is referenced from every comparative sentence. Comparing a September year with a December year without saying so is a FAIL, not a style issue."
+
+[gates.G12]
+name        = "permissions"
+run_by      = "controller"
+blocking    = true
+description = "No write outside write_roots, no write inside forbid_write, no network after SOURCES_FROZEN, critic roles performed only read-only calls. Verified from trace.jsonl, not from the role's own claim."
+
+[gates.G13]
+name        = "leakage"
+run_by      = "critic (model review)"
+blocking    = true
+description = "Perturbation probe: inject a synthetic post-cutoff row with an absurd value, recompute, and assert that every pre-cutoff output is byte-identical. A workflow that reads the whole file and filters late can still leak through aggregates."
+probe_value = 999999999999.0

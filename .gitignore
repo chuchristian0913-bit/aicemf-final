@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# Build products that can be regenerated deterministically
+output/build/
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# Runtime scratch
+temp/
+*.tmp
+.tmp/
+
+# Case state is committed on purpose: it is the audit trail.
+# Only byte-level caches are ignored.
+cases/**/cache/
+
+# Secrets must never enter the repository (see design note, section 2.6)
+.env
+secrets/
+*.pem
+*.key
+
+# OS noise
+Thumbs.db
+desktop.ini
+.DS_Store

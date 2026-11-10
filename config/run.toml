@@ -1,0 +1,49 @@
+# run.toml — the mandate for one research cycle.
+# Everything here is fixed before a run starts and cannot be edited by any agent
+# role. Changing it creates a new mandate version (see design note, section 2.5).
+
+[case]
+id            = "case-01"
+title         = "Global payments coverage update - FY2025 annual cycle"
+desk          = "Payments coverage (sell-side)"
+analyst       = "Christian (analyst of record)"
+cutoff        = "2026-02-28"   # information cutoff: no source filed later may be used
+universe      = ["V", "MA", "PYPL", "FI", "GPN"]
+fiscal_years  = [2022, 2023, 2024, 2025]
+base_currency = "USD"
+
+# Why this is a recurring task, not a one-shot: the cycle restarts every time the
+# last peer in the universe files its annual report, and each cycle must be
+# compared against the previous one without rewriting history.
+[trigger]
+kind              = "filing_event"
+watch             = "last 10-K filed among universe, filed <= cutoff"
+monthly_fallback  = "first business day after the 20th"
+reopen_previous   = false   # a published case is never silently recomputed
+
+[limits]
+max_rounds            = 3     # full critic rounds per candidate
+max_retries           = 2     # per role, per stage
+max_tool_calls        = 120
+max_llm_calls         = 40
+max_wall_clock_sec    = 900
+max_bytes_written     = 5000000
+max_open_findings     = 12
+
+[retry]
+transient_errors      = ["TimeoutError", "HTTPError5xx", "IncompleteRead"]
+backoff_seconds       = [2, 8]
+# A retry never re-runs a stage whose output already exists with a matching hash.
+
+[stop_rules]
+exhaust_rounds        = "EXHAUSTED"   # never grants acceptance
+exhaust_retries       = "BLOCKED"
+invalid_evidence      = "stay at current role, then BLOCKED on second failure"
+uncertain_completion  = "inspect before resuming"
+human_stop            = "STOPPED"
+
+[permissions]
+# Enforced by the controller, not by the prompt.
+network_allowed_stages = ["SOURCES_FROZEN"]
+write_roots            = ["cases/", "output/"]
+forbid_write           = ["data/frozen/", "config/", "src/", "prompts/", ".git/"]

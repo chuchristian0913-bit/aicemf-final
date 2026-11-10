@@ -130,7 +130,20 @@ def cmd_init(args) -> int:
 def cmd_prepare(args) -> int:
     st = ctl.load_state(args.case)
     require(st is not None, "no state: run init first")
-    p = _paths(args.case)
+    _deterministic_run(args.case, st)
+    if st.stage == "MODELED":
+        print("deterministic stages complete; dispatch the generator with `request`")
+    return 0
+
+
+def _deterministic_run(case: str, st) -> None:
+    """Freeze -> standardise -> model. Safe to call from prepare AND from resume.
+
+    Kept in one place so that resume cannot disagree with prepare about what a
+    re-run means: both go through run_stage, which skips completed work and
+    recomputes only what is missing or invalidated.
+    """
+    p = _paths(case)
     run = _run_cfg()
     cutoff = run["case"]["cutoff"]
 
@@ -144,7 +157,7 @@ def cmd_prepare(args) -> int:
             require(check["ok"], f"frozen snapshot failed integrity: {check['problems']}")
             st.stage_hashes["sources"] = ctl.stage_fingerprint([repo_root() / "config" / "run.toml"], cutoff)
             ctl.save_state(st)
-            ctl.trace(args.case, "snapshot_adopted", stage="INIT", role="pcd-orchestrator",
+            ctl.trace(case, "snapshot_adopted", stage="INIT", role="pcd-orchestrator",
                       fingerprint=st.stage_hashes["sources"][:16], cutoff=check["cutoff"], verified=True)
             print("snapshot present and verified; adopting it instead of re-fetching")
         else:
@@ -152,7 +165,7 @@ def cmd_prepare(args) -> int:
                 st, "sources",
                 inputs=[repo_root() / "config" / "run.toml"],
                 outputs=[p["frozen"] / "MANIFEST.json"],
-                fn=lambda: freeze(args.case, p["frozen"], cutoff),
+                fn=lambda: freeze(case, p["frozen"], cutoff),
                 extra=cutoff,
             )
         ctl.advance(st, "SOURCES_FROZEN", "snapshot frozen and hashed")
@@ -163,7 +176,7 @@ def cmd_prepare(args) -> int:
             st, "standardize",
             inputs=[p["frozen"] / "MANIFEST.json", p["frozen"] / "raw" / "V.json"],
             outputs=[p["work"] / "standardized.json", p["work"] / "sources.jsonl"],
-            fn=lambda: standardize(args.case, p["frozen"], p["work"]),
+            fn=lambda: standardize(case, p["frozen"], p["work"]),
         )
         ctl.advance(st, "STANDARDIZED", "annual facts resolved and admitted at cutoff")
         print("STANDARDIZED")
@@ -171,16 +184,36 @@ def cmd_prepare(args) -> int:
     if st.stage == "STANDARDIZED":
         ctl.run_stage(
             st, "model",
-            inputs=[p["work"] / "standardized.json", repo_root() / "config" / "assumptions" / f"{args.case}.toml"],
+            inputs=[p["work"] / "standardized.json", repo_root() / "config" / "assumptions" / f"{case}.toml"],
             outputs=[p["work"] / "metrics.json"],
-            fn=lambda: build_model(args.case, p["work"]),
+            fn=lambda: build_model(case, p["work"]),
         )
         ctl.advance(st, "MODELED", "metrics and valuation computed from the assumption file")
         print("MODELED")
 
+    # A later stage with a missing output: recompute in dependency order without
+    # moving the state machine, so resume repairs the gap but does not invent
+    # progress. (MODELED with metrics.json missing, and anything downstream of a
+    # lost standardized.json, lands here.)
     if st.stage == "MODELED":
-        print("deterministic stages complete; dispatch the generator with `request`")
-    return 0
+        std_missing = not (p["work"] / "standardized.json").exists()
+        model_missing = not (p["work"] / "metrics.json").exists()
+        if std_missing:
+            ctl.run_stage(
+                st, "standardize",
+                inputs=[p["frozen"] / "MANIFEST.json", p["frozen"] / "raw" / "V.json"],
+                outputs=[p["work"] / "standardized.json", p["work"] / "sources.jsonl"],
+                fn=lambda: standardize(case, p["frozen"], p["work"]),
+            )
+            print("STANDARDIZED (recomputed)")
+        if std_missing or model_missing:
+            ctl.run_stage(
+                st, "model",
+                inputs=[p["work"] / "standardized.json", repo_root() / "config" / "assumptions" / f"{case}.toml"],
+                outputs=[p["work"] / "metrics.json"],
+                fn=lambda: build_model(case, p["work"]),
+            )
+            print("MODELED (recomputed)")
 
 
 def cmd_request(args) -> int:
@@ -447,6 +480,16 @@ def cmd_resume(args) -> int:
     if info["stage"] in ("INIT", "SOURCES_FROZEN", "STANDARDIZED"):
         return cmd_prepare(args)
     if info["stage"] == "MODELED":
+        # A missing deterministic output must be recomputed BEFORE anything is
+        # dispatched. The first version of resume went straight to `request` here,
+        # which would have sent the generator to work against a registry that did
+        # not exist. Dispatch only when the deterministic chain is intact.
+        if any(p["kind"] == "output_missing" for p in problems):
+            _deterministic_run(args.case, st)
+            st = ctl.load_state(args.case)
+            require(st.stage == "MODELED" and not ctl.inspect(st)["problems"],
+                    "deterministic re-run left problems; inspect before dispatching")
+            print("deterministic outputs restored; dispatching")
         return cmd_request(argparse.Namespace(case=args.case, role="pcd-generator"))
     print("nothing to do automatically; the run is waiting on a role or a human")
     return 0

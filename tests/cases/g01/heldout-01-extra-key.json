@@ -1,0 +1,16 @@
+{
+  "name": "heldout-01-extra-submission-key",
+  "set": "heldout",
+  "origin": "not used while developing the patch; run once for final assessment",
+  "submission": {
+    "request_id": "req-71eb3eef4d3a00c4",
+    "case_id": "case-01",
+    "candidate_id": "cand-a1",
+    "role": "pcd-generator",
+    "artifacts": ["note/claims.json"],
+    "claims_file": "note/claims.json",
+    "note": "prose does not belong in a schema"
+  },
+  "note": null,
+  "expect_kinds": ["extra_keys"]
+}

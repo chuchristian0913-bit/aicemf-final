@@ -1,0 +1,23 @@
+{
+  "name": "heldout-02-orphan-footnote-key",
+  "set": "heldout",
+  "origin": "not used while developing the patch; run once for final assessment",
+  "submission": {
+    "request_id": "req-71eb3eef4d3a00c4",
+    "case_id": "case-01",
+    "candidate_id": "cand-a1",
+    "role": "pcd-generator",
+    "artifacts": ["note/claims.json"],
+    "claims_file": "note/claims.json"
+  },
+  "note": {
+    "title": "t",
+    "claims": [],
+    "limitations": [{"key": "period_alignment", "text": "Visa ends in September."}],
+    "footnote_refs": [],
+    "blocks": [
+      {"kind": "footnotes", "keys": ["period_alignment", "nonexistent_limitation"]}
+    ]
+  },
+  "expect_kinds": ["footnote_without_limitation"]
+}

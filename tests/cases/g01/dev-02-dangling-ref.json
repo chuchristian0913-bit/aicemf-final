@@ -1,0 +1,21 @@
+{
+  "name": "dev-02-dangling-footnote-ref",
+  "set": "dev",
+  "origin": "developed alongside dev-01: a marker in prose pointing at a limitation that does not exist renders a dagger with nothing after it",
+  "submission": {
+    "request_id": "req-71eb3eef4d3a00c4",
+    "case_id": "case-01",
+    "candidate_id": "cand-a1",
+    "role": "pcd-generator",
+    "artifacts": ["note/claims.json"],
+    "claims_file": "note/claims.json"
+  },
+  "note": {
+    "title": "t",
+    "claims": [],
+    "limitations": [{"key": "period_alignment", "text": "Visa ends in September."}],
+    "footnote_refs": ["period_alignment", "ghost_key"],
+    "blocks": []
+  },
+  "expect_kinds": ["footnote_ref_without_limitation"]
+}

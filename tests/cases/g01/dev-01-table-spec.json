@@ -1,0 +1,25 @@
+{
+  "name": "dev-01-dcf-table-spec",
+  "set": "dev",
+  "origin": "the real publish-time defect of 2026-11-10: the archived run cases/case-01/archive/published-run-broken-pdf published a note whose DCF table declared six columns under a five-column spec; every gate passed and latexmk failed",
+  "submission": {
+    "request_id": "req-71eb3eef4d3a00c4",
+    "case_id": "case-01",
+    "candidate_id": "cand-a1",
+    "role": "pcd-generator",
+    "artifacts": ["note/claims.json"],
+    "claims_file": "note/claims.json"
+  },
+  "note": {
+    "title": "Payments coverage: FY2025 annual update",
+    "claims": [],
+    "limitations": [{"key": "period_alignment", "text": "Visa ends in September; the others in December."}],
+    "footnote_refs": ["period_alignment"],
+    "blocks": [
+      {"kind": "table", "spec": "lrrrr",
+       "columns": ["", "Equity value ($bn)", "Per share ($)", "Cost of equity", "Terminal growth", "Terminal share"],
+       "rows": [{"label": "Visa", "cells": ["{c33}", "n/a", "{c42}", "{c50}", "{c45}"]}]}
+    ]
+  },
+  "expect_kinds": ["table_spec_mismatch"]
+}

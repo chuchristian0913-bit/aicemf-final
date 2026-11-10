@@ -1,0 +1,111 @@
+{
+  "components": {
+    "G01": {
+      "active": "v1.1",
+      "history": [
+        {
+          "at": "2026-11-10T07:18:46Z",
+          "event": "rollback",
+          "operator": "Christian",
+          "reason": "drill: prove rollback to the superseded version is available",
+          "to": "v1.0"
+        },
+        {
+          "at": "2026-11-10T07:18:46Z",
+          "event": "rollback",
+          "operator": "Christian",
+          "reason": "drill complete; v1.1 re-verified by the regression suite",
+          "to": "v1.1"
+        }
+      ],
+      "versions": [
+        {
+          "approver": "Christian",
+          "evaluation": {
+            "candidate_v1.1": {
+              "cases": [],
+              "note": "envelope-only baseline",
+              "passed": 2,
+              "total": 4
+            },
+            "verdict": "adopt"
+          },
+          "impl_sha256": "84cb8cc46294b205305455e259193f84ad897480d908fc5ed488a0b4c5742ecc",
+          "proposal_id": "prop-baseline-g01",
+          "registered_at": "2026-11-10T07:18:46Z",
+          "status": "superseded",
+          "touches": [
+            "src/pcd/gates.py:G01 (initial)"
+          ],
+          "version": "v1.0"
+        },
+        {
+          "approver": "Christian",
+          "evaluation": {
+            "candidate_v1.1": {
+              "cases": [
+                {
+                  "case": "dev-01-dcf-table-spec",
+                  "caught": [
+                    "table_spec_mismatch"
+                  ],
+                  "expected": [
+                    "table_spec_mismatch"
+                  ],
+                  "kind": "dev",
+                  "pass": true
+                },
+                {
+                  "case": "dev-02-dangling-footnote-ref",
+                  "caught": [
+                    "footnote_ref_without_limitation"
+                  ],
+                  "expected": [
+                    "footnote_ref_without_limitation"
+                  ],
+                  "kind": "dev",
+                  "pass": true
+                },
+                {
+                  "case": "heldout-01-extra-submission-key",
+                  "caught": [
+                    "extra_keys"
+                  ],
+                  "expected": [
+                    "extra_keys"
+                  ],
+                  "kind": "heldout",
+                  "pass": true
+                },
+                {
+                  "case": "heldout-02-orphan-footnote-key",
+                  "caught": [
+                    "footnote_without_limitation"
+                  ],
+                  "expected": [
+                    "footnote_without_limitation"
+                  ],
+                  "kind": "heldout",
+                  "pass": true
+                }
+              ],
+              "passed": 4,
+              "total": 4
+            },
+            "verdict": "adopt"
+          },
+          "impl_sha256": "84cb8cc46294b205305455e259193f84ad897480d908fc5ed488a0b4c5742ecc",
+          "proposal_id": "prop-2026-11-10-g01",
+          "registered_at": "2026-11-10T07:18:46Z",
+          "status": "active",
+          "touches": [
+            "src/pcd/gates.py:g01_schema (validate_note_schema)",
+            "tests/test_gates.py",
+            "tests/cases/g01/*"
+          ],
+          "version": "v1.1"
+        }
+      ]
+    }
+  }
+}

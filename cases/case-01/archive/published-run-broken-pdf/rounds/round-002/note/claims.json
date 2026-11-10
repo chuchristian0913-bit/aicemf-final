@@ -1,0 +1,582 @@
+{
+  "candidate_id": "cand-a1b",
+  "title": "Payments coverage: FY2025 annual update",
+  "standfirst": "Mastercard grew fastest and Visa turned the most revenue into cash; the two networks again out-earned the processors on every margin line.",
+  "claims": [
+    {
+      "claim_id": "c01",
+      "metric_id": "V.FY2025.revenue",
+      "quoted_value": 40000000000.0,
+      "fmt": "usd_b",
+      "note": "V FY2025 revenue"
+    },
+    {
+      "claim_id": "c02",
+      "metric_id": "V.FY2025.revenue_growth",
+      "quoted_value": 0.11339976618604908,
+      "fmt": "pct1",
+      "note": "V FY2025 revenue_growth"
+    },
+    {
+      "claim_id": "c03",
+      "metric_id": "V.FY2025.ebit_margin",
+      "quoted_value": 0.59985,
+      "fmt": "pct1",
+      "note": "V FY2025 ebit_margin"
+    },
+    {
+      "claim_id": "c04",
+      "metric_id": "V.FY2025.net_margin",
+      "quoted_value": 0.50145,
+      "fmt": "pct1",
+      "note": "V FY2025 net_margin"
+    },
+    {
+      "claim_id": "c05",
+      "metric_id": "V.FY2025.fcf_conversion",
+      "quoted_value": 1.0757303818925117,
+      "fmt": "pct1",
+      "note": "V FY2025 fcf_conversion"
+    },
+    {
+      "claim_id": "c06",
+      "metric_id": "MA.FY2025.revenue",
+      "quoted_value": 32791000000.0,
+      "fmt": "usd_b",
+      "note": "MA FY2025 revenue"
+    },
+    {
+      "claim_id": "c07",
+      "metric_id": "MA.FY2025.revenue_growth",
+      "quoted_value": 0.16416373770724602,
+      "fmt": "pct1",
+      "note": "MA FY2025 revenue_growth"
+    },
+    {
+      "claim_id": "c08",
+      "metric_id": "MA.FY2025.ebit_margin",
+      "quoted_value": 0.5762861760849013,
+      "fmt": "pct1",
+      "note": "MA FY2025 ebit_margin"
+    },
+    {
+      "claim_id": "c09",
+      "metric_id": "MA.FY2025.net_margin",
+      "quoted_value": 0.45646671342746487,
+      "fmt": "pct1",
+      "note": "MA FY2025 net_margin"
+    },
+    {
+      "claim_id": "c10",
+      "metric_id": "MA.FY2025.fcf_conversion",
+      "quoted_value": 1.1463789417423838,
+      "fmt": "pct1",
+      "note": "MA FY2025 fcf_conversion"
+    },
+    {
+      "claim_id": "c11",
+      "metric_id": "PYPL.FY2025.revenue",
+      "quoted_value": 33172000000.0,
+      "fmt": "usd_b",
+      "note": "PYPL FY2025 revenue"
+    },
+    {
+      "claim_id": "c12",
+      "metric_id": "PYPL.FY2025.revenue_growth",
+      "quoted_value": 0.04324307324590371,
+      "fmt": "pct1",
+      "note": "PYPL FY2025 revenue_growth"
+    },
+    {
+      "claim_id": "c13",
+      "metric_id": "PYPL.FY2025.ebit_margin",
+      "quoted_value": 0.1828349210177258,
+      "fmt": "pct1",
+      "note": "PYPL FY2025 ebit_margin"
+    },
+    {
+      "claim_id": "c14",
+      "metric_id": "PYPL.FY2025.net_margin",
+      "quoted_value": 0.15775352707102375,
+      "fmt": "pct1",
+      "note": "PYPL FY2025 net_margin"
+    },
+    {
+      "claim_id": "c15",
+      "metric_id": "PYPL.FY2025.fcf_conversion",
+      "quoted_value": 1.063252436460921,
+      "fmt": "pct1",
+      "note": "PYPL FY2025 fcf_conversion"
+    },
+    {
+      "claim_id": "c16",
+      "metric_id": "FI.FY2025.revenue",
+      "quoted_value": 21193000000.0,
+      "fmt": "usd_b",
+      "note": "FI FY2025 revenue"
+    },
+    {
+      "claim_id": "c17",
+      "metric_id": "FI.FY2025.revenue_growth",
+      "quoted_value": 0.03602854908095421,
+      "fmt": "pct1",
+      "note": "FI FY2025 revenue_growth"
+    },
+    {
+      "claim_id": "c18",
+      "metric_id": "FI.FY2025.ebit_margin",
+      "quoted_value": 0.2745246071816166,
+      "fmt": "pct1",
+      "note": "FI FY2025 ebit_margin"
+    },
+    {
+      "claim_id": "c19",
+      "metric_id": "FI.FY2025.net_margin",
+      "quoted_value": 0.16420516208181946,
+      "fmt": "pct1",
+      "note": "FI FY2025 net_margin"
+    },
+    {
+      "claim_id": "c20",
+      "metric_id": "FI.FY2025.fcf_conversion",
+      "quoted_value": 1.235344827586207,
+      "fmt": "pct1",
+      "note": "FI FY2025 fcf_conversion"
+    },
+    {
+      "claim_id": "c21",
+      "metric_id": "GPN.FY2025.revenue",
+      "quoted_value": 7705878000.0,
+      "fmt": "usd_b",
+      "note": "GPN FY2025 revenue"
+    },
+    {
+      "claim_id": "c22",
+      "metric_id": "GPN.FY2025.revenue_growth",
+      "quoted_value": -0.003889880648451305,
+      "fmt": "pct1",
+      "note": "GPN FY2025 revenue_growth"
+    },
+    {
+      "claim_id": "c23",
+      "metric_id": "GPN.FY2025.ebit_margin",
+      "quoted_value": 0.2276994263340271,
+      "fmt": "pct1",
+      "note": "GPN FY2025 ebit_margin"
+    },
+    {
+      "claim_id": "c24",
+      "metric_id": "GPN.FY2025.net_margin",
+      "quoted_value": 0.181693377445114,
+      "fmt": "pct1",
+      "note": "GPN FY2025 net_margin"
+    },
+    {
+      "claim_id": "c25",
+      "metric_id": "GPN.FY2025.fcf_conversion",
+      "quoted_value": 1.456190848270882,
+      "fmt": "pct1",
+      "note": "GPN FY2025 fcf_conversion"
+    },
+    {
+      "claim_id": "c26",
+      "metric_id": "V.FY2022-FY2025.revenue_cagr",
+      "quoted_value": 0.10921242130254294,
+      "fmt": "pct1",
+      "note": "V FY2022-FY2025 revenue_cagr"
+    },
+    {
+      "claim_id": "c27",
+      "metric_id": "MA.FY2022-FY2025.revenue_cagr",
+      "quoted_value": 0.1382198495222513,
+      "fmt": "pct1",
+      "note": "MA FY2022-FY2025 revenue_cagr"
+    },
+    {
+      "claim_id": "c28",
+      "metric_id": "PYPL.FY2022-FY2025.revenue_cagr",
+      "quoted_value": 0.06426945232818149,
+      "fmt": "pct1",
+      "note": "PYPL FY2022-FY2025 revenue_cagr"
+    },
+    {
+      "claim_id": "c29",
+      "metric_id": "FI.FY2022-FY2025.revenue_cagr",
+      "quoted_value": 0.06113528837230442,
+      "fmt": "pct1",
+      "note": "FI FY2022-FY2025 revenue_cagr"
+    },
+    {
+      "claim_id": "c30",
+      "metric_id": "GPN.FY2023-FY2025.revenue_cagr",
+      "quoted_value": 0.02185491737019918,
+      "fmt": "pct1",
+      "note": "GPN FY2023-FY2025 revenue_cagr"
+    },
+    {
+      "claim_id": "c31",
+      "metric_id": "V.FY2025.fcf",
+      "quoted_value": 21577000000.0,
+      "fmt": "usd_b",
+      "note": "V FY2025 fcf"
+    },
+    {
+      "claim_id": "c32",
+      "metric_id": "MA.FY2025.fcf",
+      "quoted_value": 17159000000.0,
+      "fmt": "usd_b",
+      "note": "MA FY2025 fcf"
+    },
+    {
+      "claim_id": "c33",
+      "metric_id": "V.DCF.equity_value",
+      "quoted_value": 391017838931.2022,
+      "fmt": "usd_b",
+      "note": "V DCF equity_value"
+    },
+    {
+      "claim_id": "c34",
+      "metric_id": "MA.DCF.equity_value",
+      "quoted_value": 315219927434.57715,
+      "fmt": "usd_b",
+      "note": "MA DCF equity_value"
+    },
+    {
+      "claim_id": "c35",
+      "metric_id": "PYPL.DCF.equity_value",
+      "quoted_value": 81104142920.05583,
+      "fmt": "usd_b",
+      "note": "PYPL DCF equity_value"
+    },
+    {
+      "claim_id": "c36",
+      "metric_id": "FI.DCF.equity_value",
+      "quoted_value": 69952745474.6899,
+      "fmt": "usd_b",
+      "note": "FI DCF equity_value"
+    },
+    {
+      "claim_id": "c37",
+      "metric_id": "GPN.DCF.equity_value",
+      "quoted_value": 29018515198.667305,
+      "fmt": "usd_b",
+      "note": "GPN DCF equity_value"
+    },
+    {
+      "claim_id": "c38",
+      "metric_id": "MA.DCF.per_share",
+      "quoted_value": 347.9248647180763,
+      "fmt": "usd_ps",
+      "note": "MA DCF value_per_share"
+    },
+    {
+      "claim_id": "c39",
+      "metric_id": "PYPL.DCF.per_share",
+      "quoted_value": 83.78527161162792,
+      "fmt": "usd_ps",
+      "note": "PYPL DCF value_per_share"
+    },
+    {
+      "claim_id": "c40",
+      "metric_id": "FI.DCF.per_share",
+      "quoted_value": 127.41847991746793,
+      "fmt": "usd_ps",
+      "note": "FI DCF value_per_share"
+    },
+    {
+      "claim_id": "c41",
+      "metric_id": "GPN.DCF.per_share",
+      "quoted_value": 119.90725595297388,
+      "fmt": "usd_ps",
+      "note": "GPN DCF value_per_share"
+    },
+    {
+      "claim_id": "c42",
+      "metric_id": "V.DCF.ke",
+      "quoted_value": 0.0895,
+      "fmt": "pct1",
+      "note": "V DCF cost_of_equity"
+    },
+    {
+      "claim_id": "c43",
+      "metric_id": "MA.DCF.ke",
+      "quoted_value": 0.0945,
+      "fmt": "pct1",
+      "note": "MA DCF cost_of_equity"
+    },
+    {
+      "claim_id": "c44",
+      "metric_id": "PYPL.DCF.ke",
+      "quoted_value": 0.10950000000000001,
+      "fmt": "pct1",
+      "note": "PYPL DCF cost_of_equity"
+    },
+    {
+      "claim_id": "c45",
+      "metric_id": "V.DCF.terminal_share",
+      "quoted_value": 0.8391812425644575,
+      "fmt": "pct1",
+      "note": "V DCF terminal_share"
+    },
+    {
+      "claim_id": "c46",
+      "metric_id": "PYPL.DCF.terminal_share",
+      "quoted_value": 0.7951743156850455,
+      "fmt": "pct1",
+      "note": "PYPL DCF terminal_share"
+    },
+    {
+      "claim_id": "c47",
+      "metric_id": "GPN.DCF.terminal_share",
+      "quoted_value": 0.8109690346880165,
+      "fmt": "pct1",
+      "note": "GPN DCF terminal_share"
+    },
+    {
+      "claim_id": "c48",
+      "metric_id": "MA.DCF.terminal_share",
+      "quoted_value": 0.8320890172816524,
+      "fmt": "pct1",
+      "note": "MA DCF terminal_share"
+    },
+    {
+      "claim_id": "c49",
+      "metric_id": "FI.DCF.terminal_share",
+      "quoted_value": 0.8245056202761526,
+      "fmt": "pct1",
+      "note": "FI DCF terminal_share"
+    },
+    {
+      "claim_id": "c50",
+      "metric_id": "PCD.ASSUMP.terminal_growth",
+      "quoted_value": 0.025,
+      "fmt": "pct1",
+      "note": "PCD case terminal_growth"
+    }
+  ],
+  "blocks": [
+    {
+      "kind": "heading",
+      "text": "What we compared"
+    },
+    {
+      "kind": "para",
+      "text": "We standardised the annual filings of five listed payments businesses from SEC EDGAR XBRL, using each issuer's latest annual report filed on or before the information cutoff. Revenue, operating income, net income, operating cash flow and capital expenditure are taken as reported in the filings; every ratio below is computed from unrounded figures rather than from the rounded numbers printed here. The fiscal year-ends do not align.[[period_alignment]]"
+    },
+    {
+      "kind": "table",
+      "spec": "lrrrrr",
+      "caption": "Latest reported fiscal year. Revenue in $bn; growth is year on year; margins and conversion are ratios of reported values.",
+      "columns": [
+        "",
+        "Revenue ($bn)",
+        "Growth",
+        "Operating margin",
+        "Net margin",
+        "FCF conversion"
+      ],
+      "rows": [
+        {
+          "label": "Visa (Sep-25)",
+          "cells": [
+            "{c01}",
+            "{c02}",
+            "{c03}",
+            "{c04}",
+            "{c05}"
+          ]
+        },
+        {
+          "label": "Mastercard (Dec-25)",
+          "cells": [
+            "{c06}",
+            "{c07}",
+            "{c08}",
+            "{c09}",
+            "{c10}"
+          ]
+        },
+        {
+          "label": "PayPal (Dec-25)",
+          "cells": [
+            "{c11}",
+            "{c12}",
+            "{c13}",
+            "{c14}",
+            "{c15}"
+          ]
+        },
+        {
+          "label": "Fiserv (Dec-25)",
+          "cells": [
+            "{c16}",
+            "{c17}",
+            "{c18}",
+            "{c19}",
+            "{c20}"
+          ]
+        },
+        {
+          "label": "Global Payments (Dec-25)",
+          "cells": [
+            "{c21}",
+            "{c22}",
+            "{c23}",
+            "{c24}",
+            "{c25}"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "heading",
+      "text": "Growth"
+    },
+    {
+      "kind": "para",
+      "text": "Mastercard grew revenue {c07} to ${c06}bn, the fastest in the group, and its three-year compound rate of {c27} is the only one above ten percent. Visa added {c02} to ${c01}bn, a three-year compound rate of {c26}. PayPal and Fiserv grew {c12} and {c17} respectively, with compound rates of {c28} and {c29}. Global Payments reported {c22} at ${c21}bn; that figure is on a post-divestiture basis, so the two-year compound rate of {c30} is the only growth measure comparable with the business as it now stands."
+    },
+    {
+      "kind": "heading",
+      "text": "Profitability and cash generation"
+    },
+    {
+      "kind": "para",
+      "text": "The networks remain a structurally different business from the processors. Visa earned an operating margin of {c03} and a net margin of {c04}, Mastercard {c08} and {c09}. Global Payments ({c23}) and Fiserv ({c18}) sit in the twenties and PayPal is lowest at {c13}. Cash conversion is uniformly strong: every company converted more than its reported net income into free cash flow in the year, from {c15} at PayPal to {c25} at Global Payments, with Visa generating ${c31}bn and Mastercard ${c32}bn of free cash flow."
+    },
+    {
+      "kind": "heading",
+      "text": "Valuation"
+    },
+    {
+      "kind": "para",
+      "text": "Our equity DCF discounts three years of free cash flow at a cost of equity between {c42} and {c44}, and assumes terminal growth of {c50}. On that basis Visa is worth ${c33}bn of equity and Mastercard ${c34}bn; per share, Mastercard ${c38}, Fiserv ${c40}, Global Payments ${c41} and PayPal ${c39}. Visa's per-share value is withheld: the company does not tag a diluted share count in its XBRL filings, and we do not estimate an input we cannot source."
+    },
+    {
+      "kind": "table",
+      "spec": "lrrrr",
+      "caption": "Equity DCF at the assumption file dated with this case. Per-share values use reported diluted weighted-average shares; the terminal share is the fraction of value coming from the terminal assumption.",
+      "columns": [
+        "",
+        "Equity value ($bn)",
+        "Per share ($)",
+        "Cost of equity",
+        "Terminal growth",
+        "Terminal share"
+      ],
+      "rows": [
+        {
+          "label": "Visa",
+          "cells": [
+            "{c33}",
+            "n/a",
+            "{c42}",
+            "{c50}",
+            "{c45}"
+          ]
+        },
+        {
+          "label": "Mastercard",
+          "cells": [
+            "{c34}",
+            "{c38}",
+            "{c43}",
+            "{c50}",
+            "{c48}"
+          ]
+        },
+        {
+          "label": "PayPal",
+          "cells": [
+            "{c35}",
+            "{c39}",
+            "{c44}",
+            "{c50}",
+            "{c46}"
+          ]
+        },
+        {
+          "label": "Fiserv",
+          "cells": [
+            "{c36}",
+            "{c40}",
+            "{c43}",
+            "{c50}",
+            "{c49}"
+          ]
+        },
+        {
+          "label": "Global Payments",
+          "cells": [
+            "{c37}",
+            "{c41}",
+            "{c43}",
+            "{c50}",
+            "{c47}"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "para",
+      "text": "Between {c46} and {c45} of each valuation comes from the terminal assumption. These are therefore consistency checks on the assumptions rather than price targets, and no market price is used anywhere in this note."
+    },
+    {
+      "kind": "footnotes",
+      "keys": [
+        "period_alignment",
+        "tag_change:FI:da",
+        "recast:GPN:revenue",
+        "recast:GPN:operating_income",
+        "recast:GPN:cfo",
+        "recast:GPN:da",
+        "recast:GPN:tax_expense",
+        "shares_V"
+      ]
+    },
+    {
+      "kind": "sources"
+    },
+    {
+      "kind": "footer_note",
+      "text": "AI use and approval. The draft was produced by the PCD generator role from the verified metric registry; the figures were recomputed independently by the critic role; publication requires a recorded approval from the analyst of record. Internal research exercise, not investment advice."
+    }
+  ],
+  "limitations": [
+    {
+      "key": "period_alignment",
+      "text": "Visa's fiscal year ends in September; the other four end in December. The comparison is between each company's latest annual report, not a common calendar year, and Visa's figures therefore cover a period ending roughly nine months earlier than the December year-ends."
+    },
+    {
+      "key": "tag_change:FI:da",
+      "text": "Fiserv changed the XBRL tag behind depreciation and amortisation between FY2023 and FY2024, from DepreciationDepletionAndAmortization to OtherDepreciationAndAmortization. The reported series falls from roughly $3.2bn to $1.7bn with no economic event behind it, so EBITDA-based measures are not used anywhere in this note."
+    },
+    {
+      "key": "recast:GPN:revenue",
+      "text": "Global Payments re-presented FY2023 and FY2024 after its divestitures: FY2023 revenue is $9.65bn as first filed and $7.38bn as restated in the FY2025 annual report. Growth rates spanning the recast are not like-for-like, so only the FY2023-FY2025 window is used."
+    },
+    {
+      "key": "recast:GPN:operating_income",
+      "text": "Operating income for FY2023 and FY2024 was re-presented on the same post-divestiture basis as revenue; the same window restriction applies to any margin comparison."
+    },
+    {
+      "key": "recast:GPN:cfo",
+      "text": "Cash flow from operations for FY2023 and FY2024 was re-presented following the divestitures; the FY2022 value remains on the pre-divestiture basis."
+    },
+    {
+      "key": "recast:GPN:da",
+      "text": "Depreciation and amortisation for FY2023 and FY2024 was re-presented following the divestitures."
+    },
+    {
+      "key": "recast:GPN:tax_expense",
+      "text": "Tax expense for FY2023 and FY2024 was re-presented following the divestitures."
+    },
+    {
+      "key": "shares_V",
+      "text": "Visa does not tag a diluted share count or diluted EPS in XBRL at or before the cutoff. Its per-share intrinsic value is withheld rather than estimated; an attested cover-page share count would be required to publish one."
+    }
+  ],
+  "footnote_refs": [
+    "period_alignment"
+  ]
+}

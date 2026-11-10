@@ -1,0 +1,11 @@
+{
+  "request_id": "req-bbbfde1c88c7f65a",
+  "case_id": "case-01",
+  "candidate_id": "cand-a1b",
+  "role": "pcd-generator",
+  "artifacts": [
+    "note/claims.json",
+    "note/author_claims.py"
+  ],
+  "claims_file": "note/claims.json"
+}

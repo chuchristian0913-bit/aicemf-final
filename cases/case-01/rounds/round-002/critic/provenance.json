@@ -1,0 +1,51 @@
+{
+  "role": "pcd-critic-provenance",
+  "round": "round-002",
+  "candidate_id": "cand-a1b",
+  "checked": [
+    "re-hashed all frozen payloads against MANIFEST.json",
+    "resolved 512 source references against sources.jsonl and the cutoff",
+    "cross-checked the note's sources block and disclosure obligations"
+  ],
+  "evidence": {
+    "snapshot_rehashed": 5,
+    "snapshot_mismatches": [],
+    "source_refs_checked": 512,
+    "unregistered": [],
+    "post_cutoff": [],
+    "claims_accessions": [
+      "0000798354-25-000047",
+      "0000798354-26-000009",
+      "0001123360-26-000008",
+      "0001141391-25-000011",
+      "0001141391-26-000013",
+      "0001403161-24-000058",
+      "0001403161-25-000089",
+      "0001633917-25-000019",
+      "0001633917-26-000024"
+    ],
+    "sources_block_present": true,
+    "disclosure_owed": [
+      "F-BREAK-FI-da-tag_change",
+      "F-BASIS-GPN",
+      "F-BREAK-GPN-cfo-recast",
+      "F-BREAK-GPN-da-recast",
+      "F-BREAK-GPN-operating_income-recast",
+      "F-BREAK-GPN-revenue-recast",
+      "F-BREAK-GPN-tax_expense-recast",
+      "F-SHARES-V"
+    ],
+    "disclosure_covered": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "findings": [],
+  "verdict_hint": "clean"
+}

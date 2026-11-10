@@ -1,0 +1,501 @@
+{
+  "case_id": "case-01",
+  "claims": [
+    {
+      "claim_id": "c01",
+      "comparability": "comparable",
+      "display": "40.0",
+      "metric_id": "V.FY2025.revenue",
+      "sources": [
+        "V|RevenueFromContractWithCustomerExcludingAssessedTax|2025-09-30|0001403161-25-000089"
+      ],
+      "value": 40000000000.0
+    },
+    {
+      "claim_id": "c02",
+      "comparability": "comparable",
+      "display": "11.3%",
+      "metric_id": "V.FY2025.revenue_growth",
+      "sources": [
+        "V|RevenueFromContractWithCustomerExcludingAssessedTax|2024-09-30|0001403161-25-000089",
+        "V|RevenueFromContractWithCustomerExcludingAssessedTax|2025-09-30|0001403161-25-000089"
+      ],
+      "value": 0.11339976618604908
+    },
+    {
+      "claim_id": "c03",
+      "comparability": "comparable",
+      "display": "60.0%",
+      "metric_id": "V.FY2025.ebit_margin",
+      "sources": [
+        "V|OperatingIncomeLoss|2025-09-30|0001403161-25-000089",
+        "V|RevenueFromContractWithCustomerExcludingAssessedTax|2025-09-30|0001403161-25-000089"
+      ],
+      "value": 0.59985
+    },
+    {
+      "claim_id": "c04",
+      "comparability": "comparable",
+      "display": "50.1%",
+      "metric_id": "V.FY2025.net_margin",
+      "sources": [
+        "V|NetIncomeLoss|2025-09-30|0001403161-25-000089",
+        "V|RevenueFromContractWithCustomerExcludingAssessedTax|2025-09-30|0001403161-25-000089"
+      ],
+      "value": 0.50145
+    },
+    {
+      "claim_id": "c05",
+      "comparability": "comparable",
+      "display": "107.6%",
+      "metric_id": "V.FY2025.fcf_conversion",
+      "sources": [
+        "V|NetCashProvidedByUsedInOperatingActivities|2025-09-30|0001403161-25-000089",
+        "V|NetIncomeLoss|2025-09-30|0001403161-25-000089",
+        "V|PaymentsToAcquireProductiveAssets|2025-09-30|0001403161-25-000089"
+      ],
+      "value": 1.0757303818925117
+    },
+    {
+      "claim_id": "c06",
+      "comparability": "comparable",
+      "display": "32.8",
+      "metric_id": "MA.FY2025.revenue",
+      "sources": [
+        "MA|Revenues|2025-12-31|0001141391-26-000013"
+      ],
+      "value": 32791000000.0
+    },
+    {
+      "claim_id": "c07",
+      "comparability": "comparable",
+      "display": "16.4%",
+      "metric_id": "MA.FY2025.revenue_growth",
+      "sources": [
+        "MA|Revenues|2024-12-31|0001141391-26-000013",
+        "MA|Revenues|2025-12-31|0001141391-26-000013"
+      ],
+      "value": 0.16416373770724602
+    },
+    {
+      "claim_id": "c08",
+      "comparability": "comparable",
+      "display": "57.6%",
+      "metric_id": "MA.FY2025.ebit_margin",
+      "sources": [
+        "MA|OperatingIncomeLoss|2025-12-31|0001141391-26-000013",
+        "MA|Revenues|2025-12-31|0001141391-26-000013"
+      ],
+      "value": 0.5762861760849013
+    },
+    {
+      "claim_id": "c09",
+      "comparability": "comparable",
+      "display": "45.6%",
+      "metric_id": "MA.FY2025.net_margin",
+      "sources": [
+        "MA|ProfitLoss|2025-12-31|0001141391-26-000013",
+        "MA|Revenues|2025-12-31|0001141391-26-000013"
+      ],
+      "value": 0.45646671342746487
+    },
+    {
+      "claim_id": "c10",
+      "comparability": "comparable",
+      "display": "114.6%",
+      "metric_id": "MA.FY2025.fcf_conversion",
+      "sources": [
+        "MA|NetCashProvidedByUsedInOperatingActivities|2025-12-31|0001141391-26-000013",
+        "MA|PaymentsToAcquirePropertyPlantAndEquipment|2025-12-31|0001141391-26-000013",
+        "MA|ProfitLoss|2025-12-31|0001141391-26-000013"
+      ],
+      "value": 1.1463789417423838
+    },
+    {
+      "claim_id": "c11",
+      "comparability": "comparable",
+      "display": "33.2",
+      "metric_id": "PYPL.FY2025.revenue",
+      "sources": [
+        "PYPL|Revenues|2025-12-31|0001633917-26-000024"
+      ],
+      "value": 33172000000.0
+    },
+    {
+      "claim_id": "c12",
+      "comparability": "comparable",
+      "display": "4.3%",
+      "metric_id": "PYPL.FY2025.revenue_growth",
+      "sources": [
+        "PYPL|Revenues|2024-12-31|0001633917-26-000024",
+        "PYPL|Revenues|2025-12-31|0001633917-26-000024"
+      ],
+      "value": 0.04324307324590371
+    },
+    {
+      "claim_id": "c13",
+      "comparability": "comparable",
+      "display": "18.3%",
+      "metric_id": "PYPL.FY2025.ebit_margin",
+      "sources": [
+        "PYPL|OperatingIncomeLoss|2025-12-31|0001633917-26-000024",
+        "PYPL|Revenues|2025-12-31|0001633917-26-000024"
+      ],
+      "value": 0.1828349210177258
+    },
+    {
+      "claim_id": "c14",
+      "comparability": "comparable",
+      "display": "15.8%",
+      "metric_id": "PYPL.FY2025.net_margin",
+      "sources": [
+        "PYPL|NetIncomeLoss|2025-12-31|0001633917-26-000024",
+        "PYPL|Revenues|2025-12-31|0001633917-26-000024"
+      ],
+      "value": 0.15775352707102375
+    },
+    {
+      "claim_id": "c15",
+      "comparability": "comparable",
+      "display": "106.3%",
+      "metric_id": "PYPL.FY2025.fcf_conversion",
+      "sources": [
+        "PYPL|NetCashProvidedByUsedInOperatingActivities|2025-12-31|0001633917-26-000024",
+        "PYPL|NetIncomeLoss|2025-12-31|0001633917-26-000024",
+        "PYPL|PaymentsToAcquirePropertyPlantAndEquipment|2025-12-31|0001633917-26-000024"
+      ],
+      "value": 1.063252436460921
+    },
+    {
+      "claim_id": "c16",
+      "comparability": "comparable",
+      "display": "21.2",
+      "metric_id": "FI.FY2025.revenue",
+      "sources": [
+        "FI|Revenues|2025-12-31|0000798354-26-000009"
+      ],
+      "value": 21193000000.0
+    },
+    {
+      "claim_id": "c17",
+      "comparability": "comparable",
+      "display": "3.6%",
+      "metric_id": "FI.FY2025.revenue_growth",
+      "sources": [
+        "FI|Revenues|2024-12-31|0000798354-26-000009",
+        "FI|Revenues|2025-12-31|0000798354-26-000009"
+      ],
+      "value": 0.03602854908095421
+    },
+    {
+      "claim_id": "c18",
+      "comparability": "comparable",
+      "display": "27.5%",
+      "metric_id": "FI.FY2025.ebit_margin",
+      "sources": [
+        "FI|OperatingIncomeLoss|2025-12-31|0000798354-26-000009",
+        "FI|Revenues|2025-12-31|0000798354-26-000009"
+      ],
+      "value": 0.2745246071816166
+    },
+    {
+      "claim_id": "c19",
+      "comparability": "comparable",
+      "display": "16.4%",
+      "metric_id": "FI.FY2025.net_margin",
+      "sources": [
+        "FI|NetIncomeLoss|2025-12-31|0000798354-26-000009",
+        "FI|Revenues|2025-12-31|0000798354-26-000009"
+      ],
+      "value": 0.16420516208181946
+    },
+    {
+      "claim_id": "c20",
+      "comparability": "comparable",
+      "display": "123.5%",
+      "metric_id": "FI.FY2025.fcf_conversion",
+      "sources": [
+        "FI|NetCashProvidedByUsedInOperatingActivities|2025-12-31|0000798354-26-000009",
+        "FI|NetIncomeLoss|2025-12-31|0000798354-26-000009",
+        "FI|PaymentsToAcquirePropertyPlantAndEquipment|2025-12-31|0000798354-26-000009"
+      ],
+      "value": 1.235344827586207
+    },
+    {
+      "claim_id": "c21",
+      "comparability": "comparable",
+      "display": "7.7",
+      "metric_id": "GPN.FY2025.revenue",
+      "sources": [
+        "GPN|RevenueFromContractWithCustomerExcludingAssessedTax|2025-12-31|0001123360-26-000008"
+      ],
+      "value": 7705878000.0
+    },
+    {
+      "claim_id": "c22",
+      "comparability": "comparable",
+      "display": "-0.4%",
+      "metric_id": "GPN.FY2025.revenue_growth",
+      "sources": [
+        "GPN|RevenueFromContractWithCustomerExcludingAssessedTax|2024-12-31|0001123360-26-000008",
+        "GPN|RevenueFromContractWithCustomerExcludingAssessedTax|2025-12-31|0001123360-26-000008"
+      ],
+      "value": -0.003889880648451305
+    },
+    {
+      "claim_id": "c23",
+      "comparability": "comparable",
+      "display": "22.8%",
+      "metric_id": "GPN.FY2025.ebit_margin",
+      "sources": [
+        "GPN|OperatingIncomeLoss|2025-12-31|0001123360-26-000008",
+        "GPN|RevenueFromContractWithCustomerExcludingAssessedTax|2025-12-31|0001123360-26-000008"
+      ],
+      "value": 0.2276994263340271
+    },
+    {
+      "claim_id": "c24",
+      "comparability": "comparable",
+      "display": "18.2%",
+      "metric_id": "GPN.FY2025.net_margin",
+      "sources": [
+        "GPN|NetIncomeLoss|2025-12-31|0001123360-26-000008",
+        "GPN|RevenueFromContractWithCustomerExcludingAssessedTax|2025-12-31|0001123360-26-000008"
+      ],
+      "value": 0.181693377445114
+    },
+    {
+      "claim_id": "c25",
+      "comparability": "comparable",
+      "display": "145.6%",
+      "metric_id": "GPN.FY2025.fcf_conversion",
+      "sources": [
+        "GPN|NetCashProvidedByUsedInOperatingActivities|2025-12-31|0001123360-26-000008",
+        "GPN|NetIncomeLoss|2025-12-31|0001123360-26-000008",
+        "GPN|PaymentsToAcquireProductiveAssets|2025-12-31|0001123360-26-000008"
+      ],
+      "value": 1.456190848270882
+    },
+    {
+      "claim_id": "c26",
+      "comparability": "comparable",
+      "display": "10.9%",
+      "metric_id": "V.FY2022-FY2025.revenue_cagr",
+      "sources": [
+        "V|RevenueFromContractWithCustomerExcludingAssessedTax|2022-09-30|0001403161-24-000058",
+        "V|RevenueFromContractWithCustomerExcludingAssessedTax|2025-09-30|0001403161-25-000089"
+      ],
+      "value": 0.10921242130254294
+    },
+    {
+      "claim_id": "c27",
+      "comparability": "comparable",
+      "display": "13.8%",
+      "metric_id": "MA.FY2022-FY2025.revenue_cagr",
+      "sources": [
+        "MA|Revenues|2022-12-31|0001141391-25-000011",
+        "MA|Revenues|2025-12-31|0001141391-26-000013"
+      ],
+      "value": 0.1382198495222513
+    },
+    {
+      "claim_id": "c28",
+      "comparability": "comparable",
+      "display": "6.4%",
+      "metric_id": "PYPL.FY2022-FY2025.revenue_cagr",
+      "sources": [
+        "PYPL|Revenues|2022-12-31|0001633917-25-000019",
+        "PYPL|Revenues|2025-12-31|0001633917-26-000024"
+      ],
+      "value": 0.06426945232818149
+    },
+    {
+      "claim_id": "c29",
+      "comparability": "comparable",
+      "display": "6.1%",
+      "metric_id": "FI.FY2022-FY2025.revenue_cagr",
+      "sources": [
+        "FI|Revenues|2022-12-31|0000798354-25-000047",
+        "FI|Revenues|2025-12-31|0000798354-26-000009"
+      ],
+      "value": 0.06113528837230442
+    },
+    {
+      "claim_id": "c30",
+      "comparability": "comparable",
+      "display": "2.2%",
+      "metric_id": "GPN.FY2023-FY2025.revenue_cagr",
+      "sources": [
+        "GPN|RevenueFromContractWithCustomerExcludingAssessedTax|2023-12-31|0001123360-26-000008",
+        "GPN|RevenueFromContractWithCustomerExcludingAssessedTax|2025-12-31|0001123360-26-000008"
+      ],
+      "value": 0.02185491737019918
+    },
+    {
+      "claim_id": "c31",
+      "comparability": "comparable",
+      "display": "21.6",
+      "metric_id": "V.FY2025.fcf",
+      "sources": [
+        "V|NetCashProvidedByUsedInOperatingActivities|2025-09-30|0001403161-25-000089",
+        "V|PaymentsToAcquireProductiveAssets|2025-09-30|0001403161-25-000089"
+      ],
+      "value": 21577000000.0
+    },
+    {
+      "claim_id": "c32",
+      "comparability": "comparable",
+      "display": "17.2",
+      "metric_id": "MA.FY2025.fcf",
+      "sources": [
+        "MA|NetCashProvidedByUsedInOperatingActivities|2025-12-31|0001141391-26-000013",
+        "MA|PaymentsToAcquirePropertyPlantAndEquipment|2025-12-31|0001141391-26-000013"
+      ],
+      "value": 17159000000.0
+    },
+    {
+      "claim_id": "c33",
+      "comparability": "forecast",
+      "display": "391.0",
+      "metric_id": "V.DCF.equity_value",
+      "sources": [],
+      "value": 391017838931.2022
+    },
+    {
+      "claim_id": "c34",
+      "comparability": "forecast",
+      "display": "315.2",
+      "metric_id": "MA.DCF.equity_value",
+      "sources": [],
+      "value": 315219927434.57715
+    },
+    {
+      "claim_id": "c35",
+      "comparability": "forecast",
+      "display": "81.1",
+      "metric_id": "PYPL.DCF.equity_value",
+      "sources": [],
+      "value": 81104142920.05583
+    },
+    {
+      "claim_id": "c36",
+      "comparability": "forecast",
+      "display": "70.0",
+      "metric_id": "FI.DCF.equity_value",
+      "sources": [],
+      "value": 69952745474.6899
+    },
+    {
+      "claim_id": "c37",
+      "comparability": "forecast",
+      "display": "29.0",
+      "metric_id": "GPN.DCF.equity_value",
+      "sources": [],
+      "value": 29018515198.667305
+    },
+    {
+      "claim_id": "c38",
+      "comparability": "forecast",
+      "display": "347.92",
+      "metric_id": "MA.DCF.per_share",
+      "sources": [],
+      "value": 347.9248647180763
+    },
+    {
+      "claim_id": "c39",
+      "comparability": "forecast",
+      "display": "83.79",
+      "metric_id": "PYPL.DCF.per_share",
+      "sources": [],
+      "value": 83.78527161162792
+    },
+    {
+      "claim_id": "c40",
+      "comparability": "forecast",
+      "display": "127.42",
+      "metric_id": "FI.DCF.per_share",
+      "sources": [],
+      "value": 127.41847991746793
+    },
+    {
+      "claim_id": "c41",
+      "comparability": "forecast",
+      "display": "119.91",
+      "metric_id": "GPN.DCF.per_share",
+      "sources": [],
+      "value": 119.90725595297388
+    },
+    {
+      "claim_id": "c42",
+      "comparability": "forecast",
+      "display": "8.9%",
+      "metric_id": "V.DCF.ke",
+      "sources": [],
+      "value": 0.0895
+    },
+    {
+      "claim_id": "c43",
+      "comparability": "forecast",
+      "display": "9.4%",
+      "metric_id": "MA.DCF.ke",
+      "sources": [],
+      "value": 0.0945
+    },
+    {
+      "claim_id": "c44",
+      "comparability": "forecast",
+      "display": "11.0%",
+      "metric_id": "PYPL.DCF.ke",
+      "sources": [],
+      "value": 0.10950000000000001
+    },
+    {
+      "claim_id": "c45",
+      "comparability": "forecast",
+      "display": "83.9%",
+      "metric_id": "V.DCF.terminal_share",
+      "sources": [],
+      "value": 0.8391812425644575
+    },
+    {
+      "claim_id": "c46",
+      "comparability": "forecast",
+      "display": "79.5%",
+      "metric_id": "PYPL.DCF.terminal_share",
+      "sources": [],
+      "value": 0.7951743156850455
+    },
+    {
+      "claim_id": "c47",
+      "comparability": "forecast",
+      "display": "81.1%",
+      "metric_id": "GPN.DCF.terminal_share",
+      "sources": [],
+      "value": 0.8109690346880165
+    },
+    {
+      "claim_id": "c48",
+      "comparability": "forecast",
+      "display": "83.2%",
+      "metric_id": "MA.DCF.terminal_share",
+      "sources": [],
+      "value": 0.8320890172816524
+    },
+    {
+      "claim_id": "c49",
+      "comparability": "forecast",
+      "display": "82.5%",
+      "metric_id": "FI.DCF.terminal_share",
+      "sources": [],
+      "value": 0.8245056202761526
+    },
+    {
+      "claim_id": "c50",
+      "comparability": "forecast",
+      "display": "2.5%",
+      "metric_id": "PCD.ASSUMP.terminal_growth",
+      "sources": [],
+      "value": 0.025
+    }
+  ]
+}

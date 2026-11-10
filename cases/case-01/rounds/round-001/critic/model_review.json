@@ -1,0 +1,51 @@
+{
+  "role": "pcd-critic-model-review",
+  "round": "round-001",
+  "candidate_id": "cand-a1b",
+  "checked": [
+    "re-derived ke, the 3-year forecast, terminal value and equity value for all 5 tickers from config/assumptions/case-01.toml with independent arithmetic",
+    "re-checked per-share consistency against the share provenance field",
+    "checked sensitivity grid monotonicity in both axes and terminal-share range"
+  ],
+  "evidence": {
+    "per_ticker": {
+      "V": {
+        "ke_recomputed": 0.0895,
+        "ke_stored": 0.0895,
+        "equity_recomputed": 391017838931.2,
+        "equity_stored": 391017838931.2,
+        "match": true
+      },
+      "MA": {
+        "ke_recomputed": 0.0945,
+        "ke_stored": 0.0945,
+        "equity_recomputed": 315219927434.58,
+        "equity_stored": 315219927434.58,
+        "match": true
+      },
+      "PYPL": {
+        "ke_recomputed": 0.1095,
+        "ke_stored": 0.10950000000000001,
+        "equity_recomputed": 81104142920.06,
+        "equity_stored": 81104142920.06,
+        "match": true
+      },
+      "FI": {
+        "ke_recomputed": 0.0945,
+        "ke_stored": 0.0945,
+        "equity_recomputed": 69952745474.69,
+        "equity_stored": 69952745474.69,
+        "match": true
+      },
+      "GPN": {
+        "ke_recomputed": 0.0995,
+        "ke_stored": 0.0995,
+        "equity_recomputed": 29018515198.67,
+        "equity_stored": 29018515198.67,
+        "match": true
+      }
+    }
+  },
+  "findings": [],
+  "verdict_hint": "clean"
+}

@@ -1,0 +1,127 @@
+{
+  "role": "pcd-critic-tieout",
+  "round": "round-002",
+  "candidate_id": "cand-a1b",
+  "checked": [
+    "recomputed ebit_margin/net_margin/fcf_conversion/revenue_growth for 5 tickers from standardized source values",
+    "checked all 50 quoted_value claims against the registry",
+    "checked CAGR windows against recast comparability"
+  ],
+  "evidence": {
+    "per_ticker": {
+      "V": {
+        "ebit_margin": {
+          "recomputed": 0.59985,
+          "registry": 0.59985,
+          "match": true
+        },
+        "net_margin": {
+          "recomputed": 0.50145,
+          "registry": 0.50145,
+          "match": true
+        },
+        "fcf_conversion": {
+          "recomputed": 1.0757303819,
+          "registry": 1.0757303819,
+          "match": true
+        },
+        "revenue_growth": {
+          "recomputed": 0.1133997662,
+          "registry": 0.1133997662,
+          "match": true
+        }
+      },
+      "MA": {
+        "ebit_margin": {
+          "recomputed": 0.5762861761,
+          "registry": 0.5762861761,
+          "match": true
+        },
+        "net_margin": {
+          "recomputed": 0.4564667134,
+          "registry": 0.4564667134,
+          "match": true
+        },
+        "fcf_conversion": {
+          "recomputed": 1.1463789417,
+          "registry": 1.1463789417,
+          "match": true
+        },
+        "revenue_growth": {
+          "recomputed": 0.1641637377,
+          "registry": 0.1641637377,
+          "match": true
+        }
+      },
+      "PYPL": {
+        "ebit_margin": {
+          "recomputed": 0.182834921,
+          "registry": 0.182834921,
+          "match": true
+        },
+        "net_margin": {
+          "recomputed": 0.1577535271,
+          "registry": 0.1577535271,
+          "match": true
+        },
+        "fcf_conversion": {
+          "recomputed": 1.0632524365,
+          "registry": 1.0632524365,
+          "match": true
+        },
+        "revenue_growth": {
+          "recomputed": 0.0432430732,
+          "registry": 0.0432430732,
+          "match": true
+        }
+      },
+      "FI": {
+        "ebit_margin": {
+          "recomputed": 0.2745246072,
+          "registry": 0.2745246072,
+          "match": true
+        },
+        "net_margin": {
+          "recomputed": 0.1642051621,
+          "registry": 0.1642051621,
+          "match": true
+        },
+        "fcf_conversion": {
+          "recomputed": 1.2353448276,
+          "registry": 1.2353448276,
+          "match": true
+        },
+        "revenue_growth": {
+          "recomputed": 0.0360285491,
+          "registry": 0.0360285491,
+          "match": true
+        }
+      },
+      "GPN": {
+        "ebit_margin": {
+          "recomputed": 0.2276994263,
+          "registry": 0.2276994263,
+          "match": true
+        },
+        "net_margin": {
+          "recomputed": 0.1816933774,
+          "registry": 0.1816933774,
+          "match": true
+        },
+        "fcf_conversion": {
+          "recomputed": 1.4561908483,
+          "registry": 1.4561908483,
+          "match": true
+        },
+        "revenue_growth": {
+          "recomputed": -0.0038898806,
+          "registry": -0.0038898806,
+          "match": true
+        }
+      }
+    },
+    "claims_checked": 50
+  },
+  "findings": [],
+  "verdict_hint": "clean"
+}

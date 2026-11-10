@@ -112,6 +112,28 @@ def g01_schema(ctx: Ctx) -> dict:
         failures.append({"kind": "missing_keys", "keys": sorted(missing)})
     if extra:
         failures.append({"kind": "extra_keys", "keys": sorted(extra)})
+
+    # The note artifact itself has a schema. v1 checked only the submission
+    # envelope, and a table that declared six columns under a five-column spec
+    # sailed through every gate and failed at publish time, inside latexmk.
+    note = ctx.note()
+    if note is not None and not missing:
+        lim_keys = {l["key"] for l in note.get("limitations", [])}
+        for i, block in enumerate(note.get("blocks", [])):
+            if block.get("kind") == "table":
+                ncols = len(block.get("columns", []))
+                spec = block.get("spec")
+                if spec and len(spec) != ncols:
+                    failures.append({"kind": "table_spec_mismatch", "block": i,
+                                     "spec_columns": len(spec), "declared_columns": ncols})
+            if block.get("kind") == "footnotes":
+                for key in block.get("keys", []):
+                    if key not in lim_keys:
+                        failures.append({"kind": "footnote_without_limitation", "block": i, "key": key})
+        for ref in note.get("footnote_refs", []):
+            if ref not in lim_keys:
+                failures.append({"kind": "footnote_ref_without_limitation", "ref": ref})
+
     return _result(
         "schema",
         "G01",

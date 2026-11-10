@@ -1,0 +1,37 @@
+{"case_id":"case-01","event":"case_initialised","mandate_hash":"a795963db94e9e3dd88b1a91e943b9da56798d3c5f7f7c980663f4d75524bb88","role":null,"stage":"INIT","ts":"2026-11-10T07:03:35Z"}
+{"case_id":"case-01","cutoff":"2026-04-30","event":"snapshot_adopted","fingerprint":"432c88ce5eb55f64","role":"pcd-orchestrator","stage":"INIT","ts":"2026-11-10T07:03:35Z","verified":true}
+{"case_id":"case-01","event":"transition","from":"INIT","reason":"snapshot frozen and hashed","role":"pcd-orchestrator","stage":"SOURCES_FROZEN","ts":"2026-11-10T07:03:35Z"}
+{"case_id":"case-01","event":"stage_completed","fingerprint":"54c05da8d441090e","name":"standardize","outputs":["cases/case-01/work/standardized.json","cases/case-01/work/sources.jsonl"],"role":"pcd-orchestrator","stage":"SOURCES_FROZEN","ts":"2026-11-10T07:03:36Z"}
+{"case_id":"case-01","event":"transition","from":"SOURCES_FROZEN","reason":"annual facts resolved and admitted at cutoff","role":"pcd-orchestrator","stage":"STANDARDIZED","ts":"2026-11-10T07:03:36Z"}
+{"case_id":"case-01","event":"stage_completed","fingerprint":"0a78e2180206bb9b","name":"model","outputs":["cases/case-01/work/metrics.json"],"role":"pcd-orchestrator","stage":"STANDARDIZED","ts":"2026-11-10T07:03:36Z"}
+{"case_id":"case-01","event":"transition","from":"STANDARDIZED","reason":"metrics and valuation computed from the assumption file","role":"pcd-orchestrator","stage":"MODELED","ts":"2026-11-10T07:03:36Z"}
+{"case_id":"case-01","event":"stage_completed","fingerprint":"54c05da8d441090e","name":"standardize","outputs":["cases/case-01/work/standardized.json","cases/case-01/work/sources.jsonl"],"role":"pcd-orchestrator","stage":"MODELED","ts":"2026-11-10T07:03:56Z"}
+{"case_id":"case-01","event":"stage_completed","fingerprint":"0a78e2180206bb9b","name":"model","outputs":["cases/case-01/work/metrics.json"],"role":"pcd-orchestrator","stage":"MODELED","ts":"2026-11-10T07:03:56Z"}
+{"case_id":"case-01","event":"request_issued","request_id":"req-5881c32590a00e8e","role":"pcd-orchestrator","round":1,"stage":"DRAFT_SUBMITTED","target_role":"pcd-generator","ts":"2026-11-10T07:03:56Z"}
+{"case_id":"case-01","event":"transition","from":"MODELED","reason":"generator dispatched","role":"pcd-orchestrator","stage":"DRAFT_SUBMITTED","ts":"2026-11-10T07:03:56Z"}
+{"case_id":"case-01","declared":true,"event":"write","path":"cases/case-01/rounds/round-001/note/author_claims.py","role":"pcd-generator","stage":"DRAFT_SUBMITTED","ts":"2026-11-10T07:05:15Z","undeclared":false}
+{"case_id":"case-01","declared":true,"event":"write","path":"cases/case-01/rounds/round-001/note/claims.json","role":"pcd-generator","stage":"DRAFT_SUBMITTED","ts":"2026-11-10T07:05:15Z","undeclared":false}
+{"blocking":[],"case_id":"case-01","counts":{"FAIL":0,"NOT_CHECKED":0,"PASS":13},"event":"gates_run","phase":"generator","role":"pcd-orchestrator","round":1,"stage":"DRAFT_SUBMITTED","ts":"2026-11-10T07:05:15Z","undeclared_writes":0}
+{"case_id":"case-01","event":"transition","from":"DRAFT_SUBMITTED","reason":"generator gates passed","role":"pcd-orchestrator","stage":"GEN_GATES_PASSED","ts":"2026-11-10T07:05:15Z"}
+{"case_id":"case-01","event":"transition","from":"GEN_GATES_PASSED","reason":"fresh critic dispatched","role":"pcd-orchestrator","stage":"IN_REVIEW","ts":"2026-11-10T07:08:03Z"}
+{"case_id":"case-01","event":"transition","from":"IN_REVIEW","reason":"critic verdict: clean","role":"pcd-orchestrator","stage":"REVIEWED","ts":"2026-11-10T07:08:04Z"}
+{"candidate_hash":"7eb996daedecef43","case_id":"case-01","event":"review_clean","role":"pcd-orchestrator","round":1,"stage":"REVIEWED","streak":1,"ts":"2026-11-10T07:08:04Z"}
+{"case_id":"case-01","decision":"repeat","event":"decision_recorded","role":"pcd-orchestrator","stage":"REVIEWED","ts":"2026-11-10T07:08:04Z","why":"clean round 1/2 on 7eb996daedec; a second clean review is required"}
+{"case_id":"case-01","event":"transition","from":"REVIEWED","reason":"next round dispatched after review routing","role":"pcd-orchestrator","stage":"DRAFT_SUBMITTED","ts":"2026-11-10T07:09:15Z"}
+{"case_id":"case-01","event":"request_issued","request_id":"req-bdb63fcdc1c7cb05","role":"pcd-orchestrator","round":2,"stage":"DRAFT_SUBMITTED","target_role":"pcd-generator","ts":"2026-11-10T07:09:15Z"}
+{"case_id":"case-01","declared":true,"event":"write","path":"cases/case-01/rounds/round-002/note/author_claims.py","role":"pcd-generator","stage":"DRAFT_SUBMITTED","ts":"2026-11-10T07:09:17Z","undeclared":false}
+{"case_id":"case-01","declared":true,"event":"write","path":"cases/case-01/rounds/round-002/note/claims.json","role":"pcd-generator","stage":"DRAFT_SUBMITTED","ts":"2026-11-10T07:09:17Z","undeclared":false}
+{"blocking":["G01"],"case_id":"case-01","counts":{"FAIL":1,"NOT_CHECKED":0,"PASS":12},"event":"gates_run","phase":"generator","role":"pcd-orchestrator","round":2,"stage":"DRAFT_SUBMITTED","ts":"2026-11-10T07:09:17Z","undeclared_writes":0}
+{"case_id":"case-01","declared":true,"event":"write","path":"cases/case-01/rounds/round-002/note/author_claims.py","role":"pcd-generator","stage":"DRAFT_SUBMITTED","ts":"2026-11-10T07:09:35Z","undeclared":false}
+{"case_id":"case-01","declared":true,"event":"write","path":"cases/case-01/rounds/round-002/note/claims.json","role":"pcd-generator","stage":"DRAFT_SUBMITTED","ts":"2026-11-10T07:09:35Z","undeclared":false}
+{"blocking":[],"case_id":"case-01","counts":{"FAIL":0,"NOT_CHECKED":0,"PASS":13},"event":"gates_run","phase":"generator","role":"pcd-orchestrator","round":2,"stage":"DRAFT_SUBMITTED","ts":"2026-11-10T07:09:35Z","undeclared_writes":0}
+{"case_id":"case-01","event":"transition","from":"DRAFT_SUBMITTED","reason":"generator gates passed","role":"pcd-orchestrator","stage":"GEN_GATES_PASSED","ts":"2026-11-10T07:09:35Z"}
+{"case_id":"case-01","event":"transition","from":"GEN_GATES_PASSED","reason":"fresh critic dispatched","role":"pcd-orchestrator","stage":"IN_REVIEW","ts":"2026-11-10T07:09:36Z"}
+{"case_id":"case-01","event":"transition","from":"IN_REVIEW","reason":"critic verdict: clean","role":"pcd-orchestrator","stage":"REVIEWED","ts":"2026-11-10T07:09:37Z"}
+{"candidate_hash":"7eb996daedecef43","case_id":"case-01","event":"review_clean","role":"pcd-orchestrator","round":2,"stage":"REVIEWED","streak":2,"ts":"2026-11-10T07:09:37Z"}
+{"case_id":"case-01","decision":"accept","event":"decision_recorded","role":"pcd-orchestrator","stage":"REVIEWED","ts":"2026-11-10T07:09:37Z","why":"2 consecutive clean rounds on 7eb996daedec"}
+{"case_id":"case-01","event":"transition","from":"REVIEWED","reason":"2 consecutive clean rounds on 7eb996daedec","role":"pcd-orchestrator","stage":"CANDIDATE_ACCEPTED","ts":"2026-11-10T07:09:37Z"}
+{"case_id":"case-01","event":"transition","from":"CANDIDATE_ACCEPTED","reason":"candidate accepted; publication needs a named human","role":"pcd-orchestrator","stage":"AWAITING_APPROVAL","ts":"2026-11-10T07:09:37Z"}
+{"approver":"Christian","case_id":"case-01","decision":"approve","event":"approval_recorded","role":"human-analyst","scope":"candidate 7eb996daedec","stage":"AWAITING_APPROVAL","ts":"2026-11-10T07:09:45Z"}
+{"case_id":"case-01","event":"transition","from":"AWAITING_APPROVAL","reason":"approved by Christian","role":"pcd-orchestrator","stage":"PUBLISHED","ts":"2026-11-10T07:09:45Z"}
+{"case_id":"case-01","event":"transition","from":"PUBLISHED","reason":"outputs written and archived","role":"pcd-orchestrator","stage":"ARCHIVED","ts":"2026-11-10T07:09:48Z"}

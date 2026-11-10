@@ -1,0 +1,11 @@
+{
+  "candidate_hash": "e8e5200a79a0c9eb58d7c34394bd432f0d96981b83c622405a99a00a59e39dd2",
+  "case_id": "case-01",
+  "clean_rounds": 2,
+  "decision": "accept",
+  "open_findings": [],
+  "recorded_at": "2026-11-10T07:13:29Z",
+  "round": 2,
+  "stage": "REVIEWED",
+  "why": "2 consecutive clean rounds on e8e5200a79a0"
+}

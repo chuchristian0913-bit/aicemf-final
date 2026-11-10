@@ -1,0 +1,13 @@
+{
+  "blocking_gates": [],
+  "candidate_hash": "7eb996daedecef43852abec573e5428b9ff1936bdfaa90b522a041060f66a6e6",
+  "high_severity": 0,
+  "open_findings": 0,
+  "reports": [
+    "pcd-critic-model-review",
+    "pcd-critic-provenance",
+    "pcd-critic-tieout"
+  ],
+  "round": 2,
+  "verdict": "clean"
+}

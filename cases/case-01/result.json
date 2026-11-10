@@ -1,0 +1,22 @@
+{
+  "approval": {
+    "approver": "Christian",
+    "authority": "human-analyst",
+    "case_id": "case-01",
+    "decided_at": "2026-11-10T07:13:29Z",
+    "decision": "approve",
+    "note": "Peer panel and DCF consistent; disclosures cover tag drift, GPN recast, Visa share-count gap, period misalignment.",
+    "scope": "candidate e8e5200a79a0"
+  },
+  "candidate_hash": "e8e5200a79a0c9eb58d7c34394bd432f0d96981b83c622405a99a00a59e39dd2",
+  "case_id": "case-01",
+  "generated_at": "2026-11-10T07:13:34Z",
+  "note_pdf": true,
+  "outputs": [
+    "output/note.pdf",
+    "output/note.html",
+    "output/panel.csv"
+  ],
+  "round": 2,
+  "terminal_stage": "PUBLISHED"
+}

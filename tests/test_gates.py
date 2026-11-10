@@ -11,16 +11,19 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from pcd.gates import run_gates, g07_tie_out, g11_period_alignment, Ctx
+from pcd.gates import run_gates, g07_tie_out, g11_period_alignment, g01_schema, Ctx
 from pcd.util import repo_root, read_json, write_json
 
 ROOT = repo_root()
 CASE = "case-01"
 ROUND = ROOT / "cases" / CASE / "rounds" / "round-001"
+# the full suite (which validates submission identity against the case's open
+# request) runs against the ACCEPTED round
+ACCEPTED = ROOT / "cases" / CASE / "rounds" / "round-002"
 
 
 def _run(only=None):
-    return run_gates(CASE, ROUND, only=only)
+    return run_gates(CASE, ACCEPTED, only=only)
 
 
 class GateMutationMixin(unittest.TestCase):
@@ -32,6 +35,8 @@ class GateMutationMixin(unittest.TestCase):
         claims = read_json(ROUND / "note" / "claims.json")
         mutate(claims)
         write_json(tmp / "note" / "claims.json", claims)
+        # gates read the submission envelope too; copy it so schema checks engage
+        shutil.copy(ROUND / "submission.json", tmp / "submission.json")
         self.addCleanup(lambda: shutil.rmtree(tmp, ignore_errors=True))
         return tmp
 
@@ -133,6 +138,47 @@ class TestG04Cutoff(unittest.TestCase):
         res = run_gates(CASE, None, only=["G04"])["gate_results"]["G04"]
         self.assertEqual(res["status"], "PASS")
         self.assertGreater(res["evidence"]["post_cutoff_rows_rejected"], 0)
+
+
+class TestG01Schema(GateMutationMixin, unittest.TestCase):
+    def test_table_spec_mismatch_fails(self):
+        # the publish-time defect: six declared columns under a five-column spec
+        def mutate(c):
+            for b in c["blocks"]:
+                if b.get("kind") == "table" and b.get("spec") == "lrrrrr":
+                    b["spec"] = "lrrrr"
+                    return
+        rd = self._mutated_round(mutate)
+        res = g01_schema(Ctx(CASE, rd))
+        self.assertEqual(res["status"], "FAIL")
+        kinds = {f["kind"] for f in res["failures"]}
+        self.assertIn("table_spec_mismatch", kinds)
+
+    def test_dangling_footnote_ref_fails(self):
+        def mutate(c):
+            c["footnote_refs"] = ["period_alignment", "ghost_key"]
+        rd = self._mutated_round(mutate)
+        res = g01_schema(Ctx(CASE, rd))
+        self.assertEqual(res["status"], "FAIL")
+        kinds = {f["kind"] for f in res["failures"]}
+        self.assertIn("footnote_ref_without_limitation", kinds)
+
+    def test_extra_submission_key_fails(self):
+        def mutate(c):
+            pass
+        rd = self._mutated_round(mutate)
+        ctx = Ctx(CASE, rd)
+        sub = read_json(rd / "note" / "claims.json")  # noqa: F841 (structure probe only)
+        # write a submission with an extra key
+        import json as _json
+
+        real = _json.loads((ROUND / "submission.json").read_text(encoding="utf-8"))
+        real["note"] = "prose does not belong in a schema"
+        (rd / "submission.json").write_text(_json.dumps(real), encoding="utf-8")
+        res = g01_schema(ctx)
+        self.assertEqual(res["status"], "FAIL")
+        kinds = {f["kind"] for f in res["failures"]}
+        self.assertIn("extra_keys", kinds)
 
 
 class TestG13Leakage(unittest.TestCase):

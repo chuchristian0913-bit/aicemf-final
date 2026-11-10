@@ -1,0 +1,62 @@
+{
+  "assumption_version": "assumptions-2026.04",
+  "case_id": "case-01",
+  "cutoff": "2026-04-30",
+  "rows": [
+    {
+      "ebit_margin": 0.59985,
+      "equity_value_usd": 391017838931.2022,
+      "fcf_conversion": 1.0757303818925117,
+      "fy": "FY2025",
+      "net_margin": 0.50145,
+      "revenue_growth": 0.11339976618604908,
+      "revenue_usd": 40000000000.0,
+      "ticker": "V",
+      "value_per_share": null
+    },
+    {
+      "ebit_margin": 0.5762861760849013,
+      "equity_value_usd": 315219927434.57715,
+      "fcf_conversion": 1.1463789417423838,
+      "fy": "FY2025",
+      "net_margin": 0.45646671342746487,
+      "revenue_growth": 0.16416373770724602,
+      "revenue_usd": 32791000000.0,
+      "ticker": "MA",
+      "value_per_share": 347.9248647180763
+    },
+    {
+      "ebit_margin": 0.1828349210177258,
+      "equity_value_usd": 81104142920.05583,
+      "fcf_conversion": 1.063252436460921,
+      "fy": "FY2025",
+      "net_margin": 0.15775352707102375,
+      "revenue_growth": 0.04324307324590371,
+      "revenue_usd": 33172000000.0,
+      "ticker": "PYPL",
+      "value_per_share": 83.78527161162792
+    },
+    {
+      "ebit_margin": 0.2745246071816166,
+      "equity_value_usd": 69952745474.6899,
+      "fcf_conversion": 1.235344827586207,
+      "fy": "FY2025",
+      "net_margin": 0.16420516208181946,
+      "revenue_growth": 0.03602854908095421,
+      "revenue_usd": 21193000000.0,
+      "ticker": "FI",
+      "value_per_share": 127.41847991746793
+    },
+    {
+      "ebit_margin": 0.2276994263340271,
+      "equity_value_usd": 29018515198.667305,
+      "fcf_conversion": 1.456190848270882,
+      "fy": "FY2025",
+      "net_margin": 0.181693377445114,
+      "revenue_growth": -0.003889880648451305,
+      "revenue_usd": 7705878000.0,
+      "ticker": "GPN",
+      "value_per_share": 119.90725595297388
+    }
+  ]
+}

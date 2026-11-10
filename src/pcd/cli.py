@@ -219,12 +219,22 @@ def _deterministic_run(case: str, st) -> None:
 def cmd_request(args) -> int:
     st = ctl.load_state(args.case)
     require(st is not None, "no state")
+    next_round_after_review = False
+    if st.stage == "REVIEWED":
+        # The review routed REPEAT or REPAIR: this dispatch starts the next round.
+        # (The first version of the CLI only accepted MODELED/DRAFT_SUBMITTED here,
+        # which made a review-driven next round undispatchable.)
+        next_round_after_review = True
+        ctl.advance(st, "DRAFT_SUBMITTED", "next round dispatched after review routing")
     require(st.stage in ("MODELED", "DRAFT_SUBMITTED"), f"cannot dispatch from {st.stage}")
     if st.stage == "MODELED":
         st.round = 1
-    elif st.stage == "DRAFT_SUBMITTED":
+        st.retries = {}
+    elif next_round_after_review:
         st.round += 1
         st.retries = {}
+    # else: re-dispatch within the same round after a gate rejection; the retry
+    # counter is preserved because the rejection, not the operator, owns it.
     constraints = {
         "universe": _run_cfg()["case"]["universe"],
         "cutoff": _run_cfg()["case"]["cutoff"],

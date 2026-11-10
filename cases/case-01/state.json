@@ -1,0 +1,23 @@
+{
+  "candidate_hash": "e8e5200a79a0c9eb58d7c34394bd432f0d96981b83c622405a99a00a59e39dd2",
+  "case_id": "case-01",
+  "clean_round_streak_for": "e8e5200a79a0c9eb58d7c34394bd432f0d96981b83c622405a99a00a59e39dd2",
+  "clean_rounds": 2,
+  "deadline": "2026-11-10T07:28:08Z",
+  "llm_calls": 0,
+  "mandate_hash": "a795963db94e9e3dd88b1a91e943b9da56798d3c5f7f7c980663f4d75524bb88",
+  "open_findings": [],
+  "pending_role": "pcd-generator",
+  "retries": {},
+  "round": 2,
+  "stage": "ARCHIVED",
+  "stage_hashes": {
+    "model": "0a78e2180206bb9b2f008509cbda11b1a14677d196d769a7ffbd7285afe967c3",
+    "sources": "432c88ce5eb55f64708a487f49fc433899f301bc4fc35f2f25d81563b3e063c6",
+    "standardize": "54c05da8d441090eb77e1f3267946b4534f47598ef9d36b8eb2dc16edd3872ce"
+  },
+  "started_at": "2026-11-10T07:13:08Z",
+  "terminal_reason": "outputs written and archived",
+  "tool_calls": 0,
+  "updated_at": "2026-11-10T07:13:34Z"
+}

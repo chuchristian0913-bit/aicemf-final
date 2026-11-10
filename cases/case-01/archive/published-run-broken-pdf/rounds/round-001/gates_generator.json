@@ -1,0 +1,372 @@
+{
+  "blocking_failures": [],
+  "case_id": "case-01",
+  "counts": {
+    "FAIL": 0,
+    "NOT_CHECKED": 0,
+    "PASS": 13
+  },
+  "gate_results": {
+    "G01": {
+      "blocking": true,
+      "evidence": {
+        "present": [
+          "artifacts",
+          "candidate_id",
+          "case_id",
+          "claims_file",
+          "request_id",
+          "role"
+        ],
+        "required": [
+          "artifacts",
+          "candidate_id",
+          "case_id",
+          "claims_file",
+          "request_id",
+          "role"
+        ]
+      },
+      "evidence_hash": "875a21bfe4848741294da6aee6327619e924ffef1bb1e1bfba2de8c867cd805e",
+      "failures": [],
+      "gate": "G01",
+      "name": "schema",
+      "status": "PASS"
+    },
+    "G02": {
+      "blocking": true,
+      "evidence": {
+        "checks": {
+          "case_id": true,
+          "request_id": true,
+          "role": true
+        },
+        "request_id": "req-5881c32590a00e8e",
+        "role": "pcd-generator"
+      },
+      "evidence_hash": "b784b174207e61f4a90747b3acbd44174c2541cd1b96a36afa7adc48d5b6047c",
+      "failures": [],
+      "gate": "G02",
+      "name": "identity",
+      "status": "PASS"
+    },
+    "G03": {
+      "blocking": true,
+      "evidence": {
+        "base_fy": "FY2025",
+        "explicit_not_available": 1,
+        "invented_zeros": [],
+        "not_available_detail": [
+          {
+            "metric_id": "V.FY2025.shares_diluted",
+            "reason": "no admissible fact for any of ['WeightedAverageNumberOfDilutedSharesOutstanding', 'CommonStockSharesOutstanding']. Rendered as not_available; no substitute value was created."
+          }
+        ],
+        "required": [
+          "revenue",
+          "operating_income",
+          "net_income",
+          "cfo",
+          "capex",
+          "shares_diluted",
+          "ebit_margin",
+          "net_margin",
+          "fcf_conversion",
+          "revenue_growth",
+          "fcf",
+          "ebitda_proxy"
+        ]
+      },
+      "evidence_hash": "fd39978df965c0a8c0dbe3984640407c1ce0ae2f18abf5b035dc4b3204830f24",
+      "failures": [],
+      "gate": "G03",
+      "name": "completeness",
+      "status": "PASS"
+    },
+    "G04": {
+      "blocking": true,
+      "evidence": {
+        "cutoff": "2026-04-30",
+        "max_filed_admitted": "2026-02-20",
+        "per_ticker": {
+          "FI": {
+            "distinct_rejected_accn": 3,
+            "max_filed_admitted": "2026-02-19",
+            "min_filed_rejected": "2026-05-06",
+            "rows_admissible": 2444,
+            "rows_rejected_after_cutoff": 119,
+            "rows_total": 2563
+          },
+          "GPN": {
+            "distinct_rejected_accn": 3,
+            "max_filed_admitted": "2026-02-20",
+            "min_filed_rejected": "2026-05-08",
+            "rows_admissible": 3251,
+            "rows_rejected_after_cutoff": 119,
+            "rows_total": 3370
+          },
+          "MA": {
+            "distinct_rejected_accn": 2,
+            "max_filed_admitted": "2026-04-30",
+            "min_filed_rejected": "2026-07-30",
+            "rows_admissible": 3108,
+            "rows_rejected_after_cutoff": 88,
+            "rows_total": 3196
+          },
+          "PYPL": {
+            "distinct_rejected_accn": 3,
+            "max_filed_admitted": "2026-04-07",
+            "min_filed_rejected": "2026-05-05",
+            "rows_admissible": 2014,
+            "rows_rejected_after_cutoff": 127,
+            "rows_total": 2141
+          },
+          "V": {
+            "distinct_rejected_accn": 2,
+            "max_filed_admitted": "2026-04-29",
+            "min_filed_rejected": "2026-07-29",
+            "rows_admissible": 2125,
+            "rows_rejected_after_cutoff": 59,
+            "rows_total": 2184
+          }
+        },
+        "post_cutoff_rows_rejected": 512,
+        "registry_rows": 212
+      },
+      "evidence_hash": "4bdb27b2fe7dde60f93ccd85c03fa32f2943fb4ee8aed9aad277f9946ebc09e9",
+      "failures": [],
+      "gate": "G04",
+      "name": "cutoff",
+      "status": "PASS"
+    },
+    "G05": {
+      "blocking": true,
+      "evidence": {
+        "cited_concepts": [
+          "capex",
+          "cfo",
+          "cost_of_equity",
+          "ebit_margin",
+          "equity_value",
+          "fcf",
+          "fcf_conversion",
+          "net_income",
+          "net_margin",
+          "operating_income",
+          "revenue",
+          "revenue_cagr",
+          "revenue_growth",
+          "terminal_growth",
+          "terminal_share",
+          "value_per_share"
+        ],
+        "disclosed": [],
+        "disclosure_required": [],
+        "same_year_conflicts": 18,
+        "series_definition_changes": 1
+      },
+      "evidence_hash": "582a0f8ed74e9d4be25652ec8d6e0c57442d6718d5fa229ad199b095741846e8",
+      "failures": [],
+      "gate": "G05",
+      "name": "tag_drift",
+      "status": "PASS"
+    },
+    "G06": {
+      "blocking": true,
+      "evidence": {
+        "cited_concepts": [
+          "capex",
+          "cfo",
+          "cost_of_equity",
+          "ebit_margin",
+          "equity_value",
+          "fcf",
+          "fcf_conversion",
+          "net_income",
+          "net_margin",
+          "operating_income",
+          "revenue",
+          "revenue_cagr",
+          "revenue_growth",
+          "terminal_growth",
+          "terminal_share",
+          "value_per_share"
+        ],
+        "disclosed": [
+          "recast:GPN:cfo",
+          "recast:GPN:operating_income",
+          "recast:GPN:revenue"
+        ],
+        "disclosure_required": [
+          "recast:GPN:cfo",
+          "recast:GPN:operating_income",
+          "recast:GPN:revenue"
+        ],
+        "material_over_tolerance": 12,
+        "restatements": 12,
+        "tolerance": 0.005
+      },
+      "evidence_hash": "c472f351025f9618336d78752727309b12cb1e6c7d50bce7b29842de29b9f4b1",
+      "failures": [],
+      "gate": "G06",
+      "name": "restatement",
+      "status": "PASS"
+    },
+    "G07": {
+      "blocking": true,
+      "evidence": {
+        "claims": 50,
+        "prose_numbers_scanned": 35,
+        "tied": 50,
+        "tolerances": {
+          "abs": 0.05,
+          "rel": 0.0005
+        },
+        "unreferenced_in_prose": 0
+      },
+      "evidence_hash": "48a1eaa80484c5bda49c94eb74d579b350bcc061b50d5c310ac30af538138d39",
+      "failures": [],
+      "gate": "G07",
+      "name": "tie_out",
+      "status": "PASS"
+    },
+    "G08": {
+      "blocking": true,
+      "evidence": {
+        "fully_traced": 346,
+        "registry_metrics": 413,
+        "source_records": 212,
+        "unattested_analyst_inputs": 0
+      },
+      "evidence_hash": "8f609c50fd1f9f1e9e49b821615b527f869ee89990c4db0f12ed6a9fd5b0cd38",
+      "failures": [],
+      "gate": "G08",
+      "name": "provenance",
+      "status": "PASS"
+    },
+    "G09": {
+      "blocking": true,
+      "evidence": {
+        "method": "ratios recomputed from unrounded stored numerators/denominators",
+        "recomputed": 60,
+        "tolerance": 1e-09
+      },
+      "evidence_hash": "68d1e2c52e4993cbdfdc7c8da4aff2b6f8a46b411fb614e5b2c1b7f05324cd04",
+      "failures": [],
+      "gate": "G09",
+      "name": "arithmetic",
+      "status": "PASS"
+    },
+    "G10": {
+      "blocking": true,
+      "evidence": {
+        "model_module_free_of_ticker_literals": true,
+        "recomputed": [
+          {
+            "abs_delta": 0.0,
+            "recomputed": 69952745474.6899,
+            "stored": 69952745474.6899,
+            "ticker": "FI"
+          },
+          {
+            "abs_delta": 0.0,
+            "recomputed": 29018515198.667305,
+            "stored": 29018515198.667305,
+            "ticker": "GPN"
+          },
+          {
+            "abs_delta": 0.0,
+            "recomputed": 315219927434.57715,
+            "stored": 315219927434.57715,
+            "ticker": "MA"
+          },
+          {
+            "abs_delta": 0.0,
+            "recomputed": 81104142920.05583,
+            "stored": 81104142920.05583,
+            "ticker": "PYPL"
+          },
+          {
+            "abs_delta": 0.0,
+            "recomputed": 391017838931.2022,
+            "stored": 391017838931.2022,
+            "ticker": "V"
+          }
+        ]
+      },
+      "evidence_hash": "f690f8a420aa4c75d7125ab20ca64515115486d51ae10f5a21ec18f9b3e18aaf",
+      "failures": [],
+      "gate": "G10",
+      "name": "model_integrity",
+      "status": "PASS"
+    },
+    "G11": {
+      "blocking": true,
+      "evidence": {
+        "fiscal_year_end_months": {
+          "FI": "12",
+          "GPN": "12",
+          "MA": "12",
+          "PYPL": "12",
+          "V": "09"
+        },
+        "footnote_present": true,
+        "footnote_referenced": true,
+        "mixed": true
+      },
+      "evidence_hash": "f2de3815e55ce3a905d531377ee0253355c79771a237af9e2158415e9c53619c",
+      "failures": [],
+      "gate": "G11",
+      "name": "period_alignment",
+      "status": "PASS"
+    },
+    "G12": {
+      "blocking": true,
+      "evidence": {
+        "events": 13,
+        "forbid_write": [
+          "data/frozen/",
+          "config/",
+          "src/",
+          "prompts/",
+          ".git/"
+        ],
+        "network_allowed_stages": [
+          "SOURCES_FROZEN"
+        ],
+        "write_roots": [
+          "cases/",
+          "output/"
+        ]
+      },
+      "evidence_hash": "7c85e726cc87d336bc1ba6d53b2e523c5b8b7058c256feb2a3972717d4994826",
+      "failures": [],
+      "gate": "G12",
+      "name": "permissions",
+      "status": "PASS"
+    },
+    "G13": {
+      "blocking": true,
+      "evidence": {
+        "baseline_signature": "8825a1972cb26e34",
+        "cutoff": "2026-04-30",
+        "interpretation": "post == baseline (no leak) and pre != baseline (probe is live)",
+        "post_cutoff_filed": "2026-05-30",
+        "post_perturbation_signature": "8825a1972cb26e34",
+        "pre_cutoff_filed": "2026-04-30",
+        "pre_perturbation_signature": "fcdbf49a691e9b43",
+        "probe": {
+          "concept": "NetIncomeLoss",
+          "ticker": "V",
+          "value": 999999999999.0
+        }
+      },
+      "evidence_hash": "321b7d266a8b99ecd6fcedece5b511a551bf5af4dc35f1f71e68bf2333fa7856",
+      "failures": [],
+      "gate": "G13",
+      "name": "leakage",
+      "status": "PASS"
+    }
+  },
+  "round": "round-001"
+}

@@ -9,6 +9,8 @@ published only with a named human approval.
 **Student:** 25210660135 (Christian) · **Git:** `chuchristian0913-bit` /
 `chuchristian0913@gmail.com` · **Course:** AI Coding in Finance, Fall 2026, FISF Fudan
 
+**Repository:** https://github.com/chuchristian0913-bit/aicemf-final.git
+
 ---
 
 ## The one-line design

@@ -306,3 +306,24 @@ def _main(argv: list[str] | None = None) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(_main())
+
+
+def verify_snapshot(case_dir: Path) -> dict:
+    """Re-hash the frozen payloads against the manifest.
+
+    Called before a run resumes. A mismatch means the evidence changed outside the
+    controller, which is a stop condition, not a warning.
+    """
+    manifest = read_json(case_dir / "MANIFEST.json")
+    if not manifest:
+        raise FileNotFoundError(f"no manifest at {rel(case_dir)}")
+    bad = []
+    for ticker, entry in manifest["tickers"].items():
+        path = case_dir / "raw" / f"{ticker}.json"
+        if not path.exists():
+            bad.append({"ticker": ticker, "reason": "payload missing"})
+            continue
+        actual = sha256_bytes(path.read_bytes())
+        if actual != entry["stored_sha256"]:
+            bad.append({"ticker": ticker, "reason": "hash mismatch", "expected": entry["stored_sha256"][:16], "actual": actual[:16]})
+    return {"case_id": manifest["case_id"], "cutoff": manifest["cutoff"], "ok": not bad, "problems": bad}

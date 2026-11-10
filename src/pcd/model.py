@@ -391,6 +391,11 @@ def build(case_id: str, out_dir: Path) -> dict:
             formula="sum(pv(fcf)) + pv(terminal_value)", comparability="forecast",
             note=f"terminal value is {terminal_share:.1%} of the total",
         )
+        registry[f"{ticker}.DCF.terminal_share"] = _rec(
+            f"{ticker}.DCF.terminal_share", ticker, "DCF", "terminal_share", terminal_share, "ratio", "derived",
+            formula="pv(terminal_value) / equity_value", comparability="forecast",
+            note="share of intrinsic value that comes from the terminal assumption",
+        )
         mid = f"{ticker}.DCF.per_share"
         if per_share is None:
             registry[mid] = _rec(
@@ -445,6 +450,19 @@ def build(case_id: str, out_dir: Path) -> dict:
                 row.append(eq2)
             grid.append({"ke": k2, "values": row})
         dcf_out[ticker]["sensitivity"] = {"ke_delta": sens["ke_delta"], "g_delta": sens["g_delta"], "grid": grid}
+
+    # case-level assumptions get metric ids too, so the note can cite them instead of
+    # hardcoding a discount rate in prose
+    for name, value, formula in (
+        ("terminal_growth", disc["terminal_growth"], "assumption: config/assumptions discounting.terminal_growth"),
+        ("risk_free", disc["risk_free"], "assumption: config/assumptions discounting.risk_free"),
+        ("equity_risk_premium", disc["equity_risk_premium"], "assumption: config/assumptions discounting.equity_risk_premium"),
+    ):
+        registry[f"PCD.ASSUMP.{name}"] = _rec(
+            f"PCD.ASSUMP.{name}", "PCD", "case", name, value, "ratio", "assumption",
+            formula=formula, comparability="forecast",
+            note=f"assumption version {assum['meta']['version']}",
+        )
 
     model = {
         "case_id": case_id,

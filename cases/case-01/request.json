@@ -1,0 +1,29 @@
+{
+  "acceptance": "all blocking gates PASS; no open finding of severity high",
+  "carried_findings": [],
+  "case_id": "case-01",
+  "constraints": {
+    "cutoff": "2026-04-30",
+    "metrics_file": "cases/case-01/work/metrics.json",
+    "must_cite": "every number in prose must be a claim with a metric_id",
+    "must_disclose": "any finding with requires_note_disclosure=true that applies to a cited metric",
+    "output": "cases/case-01/rounds/round-001/",
+    "universe": [
+      "V",
+      "MA",
+      "PYPL",
+      "FI",
+      "GPN"
+    ]
+  },
+  "issued_at": "2026-11-10T06:48:39Z",
+  "limits": {
+    "deadline": "2026-11-10T07:03:37Z",
+    "max_llm_calls": 12,
+    "max_tool_calls": 40
+  },
+  "request_id": "req-f699320c5b2b26e3",
+  "role": "pcd-generator",
+  "round": 1,
+  "stage": "DRAFT_SUBMITTED"
+}

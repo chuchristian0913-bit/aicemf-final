@@ -150,7 +150,9 @@ def g12_permissions(ctx: Ctx) -> dict:
         path = ev.get("path")
         if ev.get("event") == "write" and path:
             posix = path.replace("\\", "/")
-            if any(f in posix for f in forbid):
+            if ev.get("undeclared"):
+                violations.append({"kind": "undeclared_write", "path": posix, "stage": ev.get("stage")})
+            elif any(f in posix for f in forbid):
                 violations.append({"kind": "write_to_forbidden", "path": posix, "stage": ev.get("stage")})
             elif not any(posix.startswith(r) or f"/{r}" in posix for r in write_roots):
                 violations.append({"kind": "write_outside_roots", "path": posix, "stage": ev.get("stage")})
@@ -249,9 +251,11 @@ def g05_tag_drift(ctx: Ctx) -> dict:
     breaks = [b for b in std.get("series_breaks", []) if b["kind"] == "tag_change"]
     note = ctx.note()
     keys = {l["key"] for l in (note or {}).get("limitations", [])}
+    cited = _cited_names(note, ctx.model.get("registry", {})) if note else set()
     required = set()
     for b in breaks:
-        required.add(f"tag_change:{b['ticker']}:{b['metric']}")
+        if b["metric"] in cited:
+            required.add(f"tag_change:{b['ticker']}:{b['metric']}")
     undisclosed = sorted(k for k in required if k not in keys)
     failures = []
     if undisclosed and note is not None:
@@ -261,13 +265,14 @@ def g05_tag_drift(ctx: Ctx) -> dict:
         return _result(
             "tag_drift", "G05", "NOT_CHECKED",
             {"same_year_conflicts": len(drift), "series_definition_changes": len(breaks),
-             "disclosure_required": sorted(required),
+             "disclosure_required_for_cited": sorted(required),
              "reason": "note not submitted yet; disclosure cannot be checked"},
         )
     return _result(
         "tag_drift", "G05", "FAIL" if failures else "PASS",
         {"same_year_conflicts": len(drift), "series_definition_changes": len(breaks),
-         "disclosure_required": sorted(required), "disclosed": sorted(keys & required)},
+         "cited_concepts": sorted(cited), "disclosure_required": sorted(required),
+         "disclosed": sorted(keys & required)},
         failures,
     )
 
@@ -285,13 +290,15 @@ def g06_restatement(ctx: Ctx) -> dict:
              "reason": "note not submitted yet"},
         )
     keys = {l["key"] for l in note.get("limitations", [])}
-    required = {f"recast:{r['ticker']}:{r['metric']}" for r in material}
+    cited = _cited_names(note, ctx.model.get("registry", {}))
+    required = {f"recast:{r['ticker']}:{r['metric']}" for r in material if r["metric"] in cited}
     undisclosed = sorted(k for k in required if k not in keys)
     failures = [{"kind": "undisclosed_restatement", "keys": undisclosed}] if undisclosed else []
     return _result(
         "restatement", "G06", "FAIL" if failures else "PASS",
         {"restatements": len(rest), "material_over_tolerance": len(material),
-         "tolerance": tol, "disclosure_required": sorted(required)} | {"disclosed": sorted(keys & required)},
+         "tolerance": tol, "cited_concepts": sorted(cited),
+         "disclosure_required": sorted(required), "disclosed": sorted(keys & required)},
         failures,
     )
 
@@ -332,6 +339,41 @@ def g08_provenance(ctx: Ctx) -> dict:
 # ------------------------------------------------------------------ G07 / G09
 
 
+def _fill(text: str, resolved: dict) -> str:
+    from .report import fill
+
+    return fill(text, resolved)
+
+
+def _resolve(note: dict, registry: dict) -> dict:
+    from .report import resolve_claims
+
+    resolved, _ = resolve_claims(note.get("claims", []), registry)
+    return resolved
+
+
+def _cited_names(note: dict, registry: dict) -> set[str]:
+    """Names of the concepts the note actually relies on, including their inputs.
+
+    Disclosure is required for what you used. Demanding a footnote about a concept the
+    note never touches trains people to paste boilerplate, which is worse than silence.
+    A derived metric drags in its dependencies: citing FCF conversion obliges you to
+    disclose a break in cash flow from operations.
+    """
+    from .model import DERIVED_DEPS
+
+    names: set[str] = set()
+    for c in note.get("claims", []):
+        rec = registry.get(c.get("metric_id")) if c.get("metric_id") else None
+        if not rec:
+            continue
+        name = rec["name"]
+        names.add(name)
+        for dep in DERIVED_DEPS.get(name, []):
+            names.add(dep)
+    return names
+
+
 def g07_tie_out(ctx: Ctx) -> dict:
     note = ctx.note()
     if note is None:
@@ -366,9 +408,31 @@ def g07_tie_out(ctx: Ctx) -> dict:
                 {"kind": "value_mismatch", "metric_id": mid, "quoted": quoted, "registry": rec["value"], "abs_delta": delta}
             )
 
+    # Prose scan: a decimal or a percentage in a sentence that no claim produced is an
+    # unreferenced number, even when it happens to be right. Years and counts are
+    # excluded by construction (they carry no decimal point and no percent sign).
+    resolved = _resolve(note, reg)
+    displays = {it["display"] for it in resolved.values() if it["display"]}
+    token_re = re.compile(r"[-+]?\d+(?:\.\d+)?%|[-+]?\d+\.\d+")
+    prose_scanned, unreferenced = 0, []
+    for block in note.get("blocks", []):
+        if block.get("kind") != "para":
+            continue
+        filled = _fill(block["text"], resolved)
+        tokens = token_re.findall(filled)
+        prose_scanned += len(tokens)
+        for tok in tokens:
+            if tok not in displays:
+                idx = filled.find(tok)
+                unreferenced.append({"token": tok, "context": filled[max(0, idx - 45): idx + 30]})
+    if unreferenced:
+        failures.extend({"kind": "unreferenced_number", **u} for u in unreferenced)
+
     return _result(
         "tie_out", "G07", "FAIL" if failures else "PASS",
-        {"claims": len(note.get("claims", [])), "tied": checked, "tolerances": {"rel": rel_tol, "abs": abs_tol}},
+        {"claims": len(note.get("claims", [])), "tied": checked,
+         "prose_numbers_scanned": prose_scanned, "unreferenced_in_prose": len(unreferenced),
+         "tolerances": {"rel": rel_tol, "abs": abs_tol}},
         failures,
     )
 

@@ -627,6 +627,19 @@
       "unit": "USD/shares",
       "value": 127.41847991746793
     },
+    "FI.DCF.terminal_share": {
+      "comparability": "forecast",
+      "formula": "pv(terminal_value) / equity_value",
+      "kind": "derived",
+      "metric_id": "FI.DCF.terminal_share",
+      "name": "terminal_share",
+      "note": "share of intrinsic value that comes from the terminal assumption",
+      "period": "DCF",
+      "sources": [],
+      "ticker": "FI",
+      "unit": "ratio",
+      "value": 0.8245056202761526
+    },
     "FI.FY2022-FY2025.revenue_cagr": {
       "comparability": "comparable",
       "formula": "(revenue_2025 / revenue_2022)^(1/3) - 1",
@@ -1851,6 +1864,19 @@
       "ticker": "GPN",
       "unit": "USD/shares",
       "value": 119.90725595297388
+    },
+    "GPN.DCF.terminal_share": {
+      "comparability": "forecast",
+      "formula": "pv(terminal_value) / equity_value",
+      "kind": "derived",
+      "metric_id": "GPN.DCF.terminal_share",
+      "name": "terminal_share",
+      "note": "share of intrinsic value that comes from the terminal assumption",
+      "period": "DCF",
+      "sources": [],
+      "ticker": "GPN",
+      "unit": "ratio",
+      "value": 0.8109690346880165
     },
     "GPN.FY2022.capex": {
       "comparability": "comparable",
@@ -3077,6 +3103,19 @@
       "unit": "USD/shares",
       "value": 347.9248647180763
     },
+    "MA.DCF.terminal_share": {
+      "comparability": "forecast",
+      "formula": "pv(terminal_value) / equity_value",
+      "kind": "derived",
+      "metric_id": "MA.DCF.terminal_share",
+      "name": "terminal_share",
+      "note": "share of intrinsic value that comes from the terminal assumption",
+      "period": "DCF",
+      "sources": [],
+      "ticker": "MA",
+      "unit": "ratio",
+      "value": 0.8320890172816524
+    },
     "MA.FY2022-FY2025.revenue_cagr": {
       "comparability": "comparable",
       "formula": "(revenue_2025 / revenue_2022)^(1/3) - 1",
@@ -4263,6 +4302,45 @@
       "unit": "ratio",
       "value": 0.1
     },
+    "PCD.ASSUMP.equity_risk_premium": {
+      "comparability": "forecast",
+      "formula": "assumption: config/assumptions discounting.equity_risk_premium",
+      "kind": "assumption",
+      "metric_id": "PCD.ASSUMP.equity_risk_premium",
+      "name": "equity_risk_premium",
+      "note": "assumption version assumptions-2026.04",
+      "period": "case",
+      "sources": [],
+      "ticker": "PCD",
+      "unit": "ratio",
+      "value": 0.05
+    },
+    "PCD.ASSUMP.risk_free": {
+      "comparability": "forecast",
+      "formula": "assumption: config/assumptions discounting.risk_free",
+      "kind": "assumption",
+      "metric_id": "PCD.ASSUMP.risk_free",
+      "name": "risk_free",
+      "note": "assumption version assumptions-2026.04",
+      "period": "case",
+      "sources": [],
+      "ticker": "PCD",
+      "unit": "ratio",
+      "value": 0.042
+    },
+    "PCD.ASSUMP.terminal_growth": {
+      "comparability": "forecast",
+      "formula": "assumption: config/assumptions discounting.terminal_growth",
+      "kind": "assumption",
+      "metric_id": "PCD.ASSUMP.terminal_growth",
+      "name": "terminal_growth",
+      "note": "assumption version assumptions-2026.04",
+      "period": "case",
+      "sources": [],
+      "ticker": "PCD",
+      "unit": "ratio",
+      "value": 0.025
+    },
     "PYPL.DCF.equity_value": {
       "comparability": "forecast",
       "formula": "sum(pv(fcf)) + pv(terminal_value)",
@@ -4301,6 +4379,19 @@
       "ticker": "PYPL",
       "unit": "USD/shares",
       "value": 83.78527161162792
+    },
+    "PYPL.DCF.terminal_share": {
+      "comparability": "forecast",
+      "formula": "pv(terminal_value) / equity_value",
+      "kind": "derived",
+      "metric_id": "PYPL.DCF.terminal_share",
+      "name": "terminal_share",
+      "note": "share of intrinsic value that comes from the terminal assumption",
+      "period": "DCF",
+      "sources": [],
+      "ticker": "PYPL",
+      "unit": "ratio",
+      "value": 0.7951743156850455
     },
     "PYPL.FY2022-FY2025.revenue_cagr": {
       "comparability": "comparable",
@@ -5526,6 +5617,19 @@
       "ticker": "V",
       "unit": "USD/shares",
       "value": null
+    },
+    "V.DCF.terminal_share": {
+      "comparability": "forecast",
+      "formula": "pv(terminal_value) / equity_value",
+      "kind": "derived",
+      "metric_id": "V.DCF.terminal_share",
+      "name": "terminal_share",
+      "note": "share of intrinsic value that comes from the terminal assumption",
+      "period": "DCF",
+      "sources": [],
+      "ticker": "V",
+      "unit": "ratio",
+      "value": 0.8391812425644575
     },
     "V.FY2022-FY2025.revenue_cagr": {
       "comparability": "comparable",
